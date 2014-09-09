@@ -1,0 +1,137 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "normalize.scss";
+@import "foundation/components/grid";
+@import "foundation/components/accordion";
+@import "foundation/components/alert-boxes";
+@import "foundation/components/block-grid";
+@import "foundation/components/breadcrumbs";
+@import "foundation/components/button-groups";
+@import "foundation/components/buttons";
+@import "foundation/components/clearing";
+@import "foundation/components/dropdown";
+@import "foundation/components/dropdown-buttons";
+@import "foundation/components/flex-video";
+@import "foundation/components/forms";
+@import "foundation/components/icon-bar";
+@import "foundation/components/inline-lists";
+@import "foundation/components/joyride";
+@import "foundation/components/keystrokes";
+@import "foundation/components/labels";
+@import "foundation/components/magellan";
+@import "foundation/components/orbit";
+@import "foundation/components/pagination";
+@import "foundation/components/panels";
+@import "foundation/components/pricing-tables";
+@import "foundation/components/progress-bars";
+@import "foundation/components/range-slider";
+@import "foundation/components/reveal";
+@import "foundation/components/side-nav";
+@import "foundation/components/split-buttons";
+@import "foundation/components/sub-nav";
+@import "foundation/components/switches";
+@import "foundation/components/tables";
+@import "foundation/components/tabs";
+@import "foundation/components/thumbs";
+@import "foundation/components/tooltips";
+@import "foundation/components/top-bar";
+@import "foundation/components/type";
+@import "foundation/components/offcanvas";
+@import "foundation/components/visibility";
+
+// @mixin box-shadow($shadows...) {
+//   -moz-box-shadow: $shadows;
+//   -webkit-box-shadow: $shadows;
+//   box-shadow: $shadows;
+// }
+
+
+/*
+
+██╗   ██╗ █████╗ ██████╗ ██╗ █████╗ ██████╗ ██╗     ███████╗███████╗
+██║   ██║██╔══██╗██╔══██╗██║██╔══██╗██╔══██╗██║     ██╔════╝██╔════╝
+██║   ██║███████║██████╔╝██║███████║██████╔╝██║     █████╗  ███████╗
+╚██╗ ██╔╝██╔══██║██╔══██╗██║██╔══██║██╔══██╗██║     ██╔══╝  ╚════██║
+ ╚████╔╝ ██║  ██║██║  ██║██║██║  ██║██████╔╝███████╗███████╗███████║
+  ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝╚══════╝
+                                                                    
+
+*/
+$main_font        :'Montserrat';
+$second_font      :'Raleway';
+$main_color       : #d35400; //rgb(211,84,0)
+$second_color     : #f89406; //rgb(248,148,6)
+$third_color      : #416CAD;
+$background_color : #181716; //rgb(24,23,22)
+$background_bright: #fbfbfb;
+
+// Breakpoint
+
+$z_background    : 1;
+$z_section       : 5;
+$z_foreground    : 10;
+// $hex_size_project: 250px;
+// $hex_size_project_i: 90%;
+$nb_project : 3;
+// $size_project : $nb_project*100vh;
+$size_project : $nb_project*100vh;
+
+
+/*
+
+███╗   ███╗██╗██╗  ██╗██╗███╗   ██╗
+████╗ ████║██║╚██╗██╔╝██║████╗  ██║
+██╔████╔██║██║ ╚███╔╝ ██║██╔██╗ ██║
+██║╚██╔╝██║██║ ██╔██╗ ██║██║╚██╗██║
+██║ ╚═╝ ██║██║██╔╝ ██╗██║██║ ╚████║
+╚═╝     ╚═╝╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
+                                   
+
+*/
+@mixin font($font-family) {
+	font-family: $font-family, sans-serif;
+}
+
+@mixin border-box{
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing   : border-box;    /* Firefox, other Gecko */
+  box-sizing        : border-box;	
+}
+
+@mixin transition($transitions...){
+  transition        : $transitions;
+  -webkit-transition: $transitions;
+  -moz-transition   : $transitions;
+  -ms-transition    : $transitions;
+  -o-transition     : $transitions;
+}
+
+@mixin transform($transformation...){
+  transform        : $transformation;
+  -webkit-transform: $transformation;
+  -moz-transform   : $transformation;
+  -ms-transform    : $transformation;
+  -o-transform     : $transformation;
+}
+
+
+@mixin breakpoint($point) {
+  @if $point == phone {
+    @media (max-width: 480px) { @content; }
+  }
+  @else if $point == t_portrait {
+    @media (max-width: 767px) { @content; }
+  }
+  @else if $point == t_landscape {
+    @media (min-width: 768px) and (max-width: 979px)  { @content; }
+  }
+}
+
+// $phone: '(max-width: 480px)'
+// $tablet-portrait: '(max-width: 767px)'
+// $tablet-landscape-desktop: '(min-width: 768px) and (max-width: 979px)'
+// $large-desktop: '(min-width: 1200px)'
+
+

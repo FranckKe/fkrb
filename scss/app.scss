@@ -3,41 +3,18 @@
 @import "_settings";
 @import "_base.scss";
 
- /* SASS Feature to use: 
- 	Nesting, &         : parent element 
-		a{
-			color      : $main;
-
-                       &:hover{
-				color  : $second;
-			}
-		}
- */
-
 body{
   @include border-box;
   width                : 100%;
-  height               : 100%;
+  height               : 300vh;
   margin               : 0;
   z-index              : 0;
-}
-
-
-p, h1, h2,h3{
   @include font($main_font);
 }
 
-#fkrb h3{
-  // margin            : 0;
-  // position          : fixed;
-  padding-top          :20%;
-  // display           : inline-block;
-  color                : white;
-  text-align           : center;
-  font-size            : 7em;
-  font-weight          : bold;
-  opacity              : 0.9;
-}
+*::selection{background-color: rgba(0,0,0,0.3); color:$main_color;}
+
+
 
 #back_picture{
   position             : fixed;
@@ -56,6 +33,23 @@ p, h1, h2,h3{
   height               : 100vh;
   width                : 100%;
   z-index              : $z_section;
+}
+
+.back-fixed{
+  position: fixed;
+  width   : 100%;
+}
+
+#fkrb h3{
+  // margin            : 0;
+  // position          : fixed;
+  padding-top          :20%;
+  // display           : inline-block;
+  color                : white;
+  text-align           : center;
+  font-size            : 7em;
+  font-weight          : bold;
+  opacity              : 0.9;
 }
 
 #fkrb p{
@@ -211,126 +205,241 @@ p, h1, h2,h3{
 ██║     ██║  ██║╚██████╔╝╚█████╔╝███████╗╚██████╗   ██║   ███████║
 ╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚════╝ ╚══════╝ ╚═════╝   ╚═╝   ╚══════╝                                                                 
  */
-#project{
-  position             : relative;
-  height               : $size_project;
-  // width                : 100%;
-  z-index              : $z_section;
-  // opacity           : 0.2;
-  overflow             : hidden;
-  // background-color  : $background_color;
-  width: 100%;
-}
-#back_filter{
-  position             : absolute;
-  width                : 100%;
-  padding-top          : 300px;
-  height               : $size_project;
-  margin               : 0;
-  opacity              : 0.5;
-  background-color     : $background_color;
-  // background        : -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 8%, rgba(0,0,0,0.89) 20%, rgba(0,0,0,1) 36%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 63%, rgba(0,0,0,0.85) 80%, rgba(0,0,0,0.8) 85%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-  // background        : -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 8%,rgba(0,0,0,0.89) 20%,rgba(0,0,0,1) 36%,rgba(0,0,0,1) 50%,rgba(0,0,0,1) 63%,rgba(0,0,0,0.85) 80%,rgba(0,0,0,0.8) 85%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-  // background        : -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 8%,rgba(0,0,0,0.89) 20%,rgba(0,0,0,1) 36%,rgba(0,0,0,1) 50%,rgba(0,0,0,1) 63%,rgba(0,0,0,0.85) 80%,rgba(0,0,0,0.8) 85%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-  // background        : -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 8%,rgba(0,0,0,0.89) 20%,rgba(0,0,0,1) 36%,rgba(0,0,0,1) 50%,rgba(0,0,0,1) 63%,rgba(0,0,0,0.85) 80%,rgba(0,0,0,0.8) 85%,rgba(0,0,0,0) 100%); /* IE10+ */
-  // background        : linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 8%,rgba(0,0,0,0.89) 20%,rgba(0,0,0,1) 36%,rgba(0,0,0,1) 50%,rgba(0,0,0,1) 63%,rgba(0,0,0,0.85) 80%,rgba(0,0,0,0.8) 85%,rgba(0,0,0,0) 100%); /* W3C */
-  
-}
-
 .project{
-  // position             : relative;
-  // float                : left;
-  // top               : 0%;
-  background-color     : $background_bright;
-  border-top           : 10px solid #E9E9E9;
-  height: 1200px;
-  clear: both;
-  padding:30px;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 50px;
+  position           : relative;
+  height             : 850px;
+  // width           : 100%;
+  z-index            : $z_foreground;
+  // opacity         : 0.2;
+  overflow           : hidden;
+  // background-color: $background_color;
+  // width              : 100%;
+}
+
+.project-title{
+  width              : 100%;
+  font-size          : 60px;
+  text-align         : center;
+  // margin-bottom      : 90px;
+  margin-top         : 5px;
+  margin-left        : auto;
+  margin-right       : auto;
+  font-family        : 'Montserrat', sans-serif;
+  /* font-weight     : bold; */
+  color              : white;
+  /* background-color: black; */
+  box-sizing         : border-box;
+  // box-shadow:0 5px 25px -7px black;
+
+  background-color: $second_color;
+  margin: 0px 0 20px 0;
+}
+
+.back-theme{
+  width             : 100%;
+  height            : 110vh;
+  background        : url(../img/trianglify-background.svg) no-repeat top left;
+  // background-size: contain;
+  position          : fixed;
+  top               :0;
+  z-index: -1;
+}
+
+.back-opacity{
+  width           : 100%;
+  height          : 125vh;
+  background-color: black;
+  opacity         :0.5;
+  position        : absolute;
+}
+
+.projects{
+  // position         : relative;
+  // float            : left;
+  // top              : 0%;
+  // background-image : url('../img/mooning.png');
+  // background-repeat:repeat;
+  // border-top          : 2px solid #E9E9E9;
+  border-width        : 75%;
+  height              : 500px;
+  // clear            : both;
+  padding             :5px 30px 30px 30px;
+  // margin-left      : 5%;
+  // margin-right     : 5%;
+  margin-bottom       : 50px;
+  
   h2{
-    width              : 100%;
-    font-size          : 75px;
-    text-align         : center;
-    // margin-top         : 50px;
-    margin-bottom      : 50px;
-    margin-left        : auto;
-    margin-right       : auto;
+    // width        : auto;
+    font-size       : 50px;
+    text-align      : left;
+    // margin-top   : 50px;
+    // margin-bottom: 35px;
+    margin-left     : auto;
+    margin-right    : auto;
     @include font($second_font);
-    font-weight        : bold;
-    color              : $main_color;
+    font-weight     : normal;
+    color           : $second_color;
+  }
+  
+  .devicons{
+    font-size : 4em;
+    color     : black;
+    text-align: center;
+    padding   : 0;
+  }
 
+  p{
+    @include font($second_font);
+    color:white;
+  }
+  .button{
+    background-color: $second-color;
+    @include font($second_font);
 
+    &:hover{
+      background-color: $main-color;
+    }
   }
 }
-#project .devicons{
-  font-size            : 8em;
-  color                : $background_color;
-  text-align: center;
-  padding: 0;
+
+.project-content-wrapper{
+  margin-right: 10%;
+  margin-left :10%;
+}
+
+
+.slicker-nav{
+  width         : 100%;
+  position      : relative;
+  // margin-left: 15%;
+  position      : absolute;
+  bottom        : 0;
+  z-index       : $z_foreground;
+  height        : 90px;
+  box-shadow    :0 5px 20px 7px black;
+  
+  div{
+    width: 16.6%;
+    float: left;
+    text-align: center;
+    height: 100%;
+    border-right: $main_color 2px solid;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+
+    &:hover{
+      background-color: rgba(0,0,0,0.3);
+    }
+
+    .one-line{
+      padding-top: 20px;
+    }
+
+    &:last-child{
+      border-right: none;
+    }
   }
+}
 
-
-
-#project p{
-  // width                : 80%;
+.nav-title{
+  color: white;
+  height: 100%;
+  width: 95%;
+  margin-left: 2.5%;
   @include font($second_font);
-  // padding              :10%;
+  cursor: pointer;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+
+  &:hover{
+    color: $second_color;
+  }
 }
 
-#project_1{
-  // top               :0%;
-  // padding-top       : 300px;
-  
-  // height: 1200px;
-  
+.active-slide-tab{
+  background-color: rgba(0,0,0,0.3);
+}
+
+.active-slide-title{
+  color:$second-color;
+}
 
 
+.slicker-focus{
+  border-top: 1px solid black;
+  @include transition("border 0.3s ease-in-out")
+}
+
+
+.project .slicker {
+  height: 95vh;
+  width : 100%;
+}
+
+.project .slick-slider{
+  margin-bottom: 0;
+}
+
+.project .slicker .draggable{
+  cursor: -webkit-grab;
+  
+  &:active{
+    cursor: -webkit-grabbing;
+  }
+}
+
+.project .slick-prev, .project .slick-next{
+  width: 50px;
+  height: 70%;
+  top: 27%;
+}
+
+.project .slick-prev:before, .project .slick-next:before{
+  width: 50px;
+  font-size: 25px;
+  padding-top: 5px;
+}
+
+.project .slick-prev{
+  left:0px;
+}
+
+.project .slick-next{
+  right:0px;
 }
 
 .techno{
-  height: 135px;
+  height       : 50px;
   margin-bottom: 25px;
   img{
-    width: 128px;
-    height: auto;
-    padding:0;
-    margin-left: 15%;
+    width         : 75px;
+    height        : auto;
+    padding       :0;
+    float: left !important;
+    // margin-left: 15%;
   }
   i{
-    font-size: 7rem;
+    font-size  : 3rem;
     padding-top: 7px;
-    text-align: center;
+    text-align : center;
+    color      : black;
   }
-  span{
-    width: 20% !important;
-  }
-}
-
-#project_1_wrapper_p{
-  // width                : 50%;
-  // height               : 75vh;
-  // left              :-2%;
-  // background-color  : $main-color;
-  float                : left;
-  
-  p{
-    margin-top: 30px;
+  span:last-child{
+    // width: 20% ;
+    margin-top: -10px;
+    padding   : 0;
   }
 }
 
-#s5 .device{
-  height: 500px;
-  width: 260px;
+
+// #s5 .device{
+//   height: 500px;
+//   width : 260px;
+// }
+
+.projects img{
+  float: right;
 }
-
-#project_2{
-  // top               :17%;
-}
-
-
-
 
 /*
  █████╗ ██████╗  ██████╗ ██╗   ██╗████████╗
@@ -344,29 +453,100 @@ p, h1, h2,h3{
 
 
 #about{
-  position             : relative;
-  height               : 100vh;
-  width                : 90%;
-  z-index              : $z_section;
-  // opacity           : 0.2;
-  overflow             : hidden;
-  // background-color  : $background_color;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 50px;
+  position        : relative;
+  height          : 1000px;;
+  width           : 100%;
+  z-index         : $z_section;
+  // opacity      : 0.2;
+  overflow        : hidden;
+  background-color: $background_color;
+  // margin-left  : 5%;
+  // margin-right : 5%;
+  // margin-top   : 50px;
+  
+}
+
+.about-title{
+  @extend .project-title;
+
+}
+
+.about-p{
+  margin-bottom: 60px;
+  margin-top: 40px;
+  color: white;
+}
+
+.about-experience, .about-skills{
+  // background-color: rgba(0,0,0,0.3);
+  color:white;
+  
+  h2{
+    text-align: center;
+    color: $main_color;
+  }
+
+  h3{
+    color: $second_color;
+  }
+}
+
+.about-experience p, .about-experience h3{
+  padding-left: 30px;
+}
+
+.about-fixed{
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  // margin: 0 3% 0 3%;
+  background-color: rgba(248,148,6,0.3);
+  box-shadow:0 5px 25px -7px black;
+}
+
+.about-skills{
+  position: relative;
+  display: block;
+  height: 50%;
+  // width: 100%;
+  float: left;
+
+  h2{
+    text-align: center;
+  }
+  
+  span{
+    // background-color: white;
+    // border:black solid 5px;
+    // width: 100px;
+    // height: 100px;
+    font-size: 5rem;
+    float:left;
+  }
+}
+
+.front-end,.back-end,.tools,.misc,.later{
+  width: 90%;
+  height: 125px;
+  margin: auto;
+  clear: both;
 }
 
 
 #contact{
-  position             : relative;
-  height               : 100vh;
-  width                : 90%;
-  z-index              : $z_section;
-  // opacity           : 0.2;
-  overflow             : hidden;
-  // background-color  : $background_color;
-  margin-left: 5%;
-  margin-right: 5%;
+  position           : relative;
+  height             : 1000px;
+  width              : 100%;
+  z-index            : $z_foreground;
+  // opacity         : 0.2;
+  overflow           : hidden;
+  // background-color: $background_color;
+  // margin-left        : 5%;
+  // margin-right       : 5%;
+  // 
+  h2{
+    @extend .project-title;
+  }
 }
 
 
@@ -377,68 +557,69 @@ p, h1, h2,h3{
 }
 
 #text-feedback{
-  width: 80%;
-  padding-left: 10%;
-  padding-right: 10%;
+  width           : 80%;
+  padding-left    : 10%;
+  padding-right   : 10%;
   background-color:white;
-  text-align:center;
+  text-align      :center;
 }
 
 #form-main{
   // width:100%;
   // float:left;
   // padding-top:30px;
+  @include font($second_font);
 }
 
 #form-div {
-  background-color:white;
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-top: 35px;
-  padding-bottom: 50px;
-  /* width: 80%; */
-  /* float: left; */
-  /* left: 50%; */
-  /* position: absolute; */
-  /* margin-left: -260px; */
+  // background-color:white;
+  padding-left    : 35px;
+  padding-right   : 35px;
+  padding-top     : 35px;
+  padding-bottom  : 50px;
+  /* width        : 80%; */
+  /* float        : left; */
+  /* left         : 50%; */
+  /* position     : absolute; */
+  /* margin-left  : -260px; */
 }
 
 .feedback-input {
-  opacity:0.9;
-  color:$main_color;  
-  @include font($main_font);
-  font-weight:400;
-  font-size: 18px;
-  border-radius: 0;
-  line-height: 22px;
+  opacity         :0.9;
+  color           :$main_color;  
+  @include font($second_font);
+  font-weight     :400;
+  font-size       : 18px;
+  border-radius   : 0;
+  line-height     : 22px;
   background-color: $background_bright;
-  border: 2px solid #cccccc;
-  margin-bottom: 10px;
-  width:100%;
+  border          : 2px solid #cccccc;
+  margin-bottom   : 10px;
+  width           :100%;
   @include border-box;
-  max-width: 100%;
-  max-height: 400px;
+  max-width       : 100%;
+  max-height      : 400px;
 }
 
 .feedback-input:focus{
   background: #fff;
   box-shadow: 0;
-  border: 3px solid $second_color;
-  color: $second_color;
-  outline: none;
+  border    : 3px solid $second_color;
+  color     : $second_color;
+  outline   : none;
   // padding: 13px 13px 13px 54px;
 }
 
 #form1 input:focus{
   background: #fff;
   box-shadow: 0;
-  border: 3px solid $second_color;
-  color: $second_color;
-  outline: none;
+  border    : 3px solid $second_color;
+  color     : $second_color;
+  outline   : none;
 }
 
 .focused{
-  color:$main_color;  
+  color :$main_color;  
   border:$second_color solid 3px;
 }
 
@@ -480,8 +661,8 @@ p, h1, h2,h3{
 // }
 
 textarea {
-  width: 100%;
-  height: 150px;
+  width      : 100%;
+  height     : 150px;
   line-height: 150%;
 }
 
@@ -491,25 +672,25 @@ input:focus, textarea:focus {
 }
 
 #button-blue{
-  @include font($main_font);
-  float:left;
-  width: 100%;
-  border: $background_bright solid 4px;
-  cursor:pointer;
-  background-color: $second_color;
-  color:white;
-  font-size:24px;
-  padding-top:22px;
-  padding-bottom:22px;
+  @include font($second_font);
+  float                :left;
+  width                : 100%;
+  border               : $background_bright solid 4px;
+  cursor               :pointer;
+  background-color     : $second_color;
+  color                :white;
+  font-size            :24px;
+  padding-top          :22px;
+  padding-bottom       :22px;
   @include transition(all 0.3s);
   // -webkit-transition: all 0.3s;
-  // -moz-transition: all 0.3s;
-  // transition: all 0.3s;
+  // -moz-transition   : all 0.3s;
+  // transition        : all 0.3s;
 }
 
 #button-blue:hover{
   background-color: $main_color;
-  color: white;
+  color           : white;
 }
   
 .submit:hover {
@@ -517,47 +698,46 @@ input:focus, textarea:focus {
 }
   
 .ease {
-  border-top:3px $second_color solid;
-  width: 0px;
-  height: 76px;
-  background-color: $background_bright;
+  border-top           :3px $second_color solid;
+  width                : 0px;
+  height               : 76px;
+  background-color     : $background_bright;
   @include transition(0.3s ease);
   // -webkit-transition: .3s ease;
-  // -moz-transition: .3s ease;
-  // -o-transition: .3s ease;
-  // -ms-transition: .3s ease;
-  // transition: .3s ease;
+  // -moz-transition   : .3s ease;
+  // -o-transition     : .3s ease;
+  // -ms-transition    : .3s ease;
+  // transition        : .3s ease;
 }
 
 .submit:hover .ease{
-  width:100%;
+  width           :100%;
   background-color:white;
 }
 
 @media only screen and (max-width: 580px) {
   #form-div{
-    left: 3%;
-    margin-right: 3%;
-    width: 88%;
-    margin-left: 0;
-    padding-left: 3%;
+    left         : 3%;
+    margin-right : 3%;
+    width        : 88%;
+    margin-left  : 0;
+    padding-left : 3%;
     padding-right: 3%;
   }
 }
 
 .social{
- 
   overflow: hidden;
-  height: 150px;
+  height  : 150px;
 
   a{
-    background-image: url('../img/social_hex.png');
-    background-size: 400px 300px;
+    background-image : url('../img/social_hex.png');
+    background-size  : 400px 300px;
     background-repeat: no-repeat;
-    width: 125px;
-    height: 140px;
-    overflow: hidden;
-    display: inline-block;
+    width            : 125px;
+    height           : 140px;
+    overflow         : hidden;
+    display          : inline-block;
   }
 
   
@@ -583,4 +763,8 @@ input:focus, textarea:focus {
       background-position: -266px -152px;
     }
   }
+}
+
+.clear-fix{
+  clear:both;
 }
