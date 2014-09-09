@@ -23,7 +23,7 @@ body{
   margin               : 0;
   z-index              : $z_background;
   background           : url(../img/trianglify-background.svg) no-repeat top left;
-  // background-size   : contain;
+  background-size   : cover;
 }
 
 

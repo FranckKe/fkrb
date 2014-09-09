@@ -5299,7 +5299,8 @@ body {
   height: 100vh;
   margin: 0;
   z-index: 1;
-  background: url(../img/trianglify-background.svg) no-repeat top left; }
+  background: url(../img/trianglify-background.svg) no-repeat top left;
+  background-size: cover; }
 
 #fkrb {
   position: relative;
