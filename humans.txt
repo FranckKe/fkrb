@@ -2,7 +2,15 @@
 /* zurb.com */
 /* humanstxt.org */
 
+/* Team */
+	Web Developer: Franck Kerbiriou            
+	Site: franckkerbiriou.com, franckkerbiriou.me                            
+	Twitter: @FranckKrb
+	Location: Sydney, Australia
+	From: Bretagne, France
+
 /* SITE */
   Standards: HTML5, CSS3
-  Components: jQuery, Orbit, Reveal
-  Software: Coda, Textmate, Git
+  Components: Sass, Modernizr, jQuery, Orbit, Reveal, Slick
+  Framework: Foundation
+  IDE: Sublime Text, Notepad++, FileZilla, Putty, Git, Photoshop

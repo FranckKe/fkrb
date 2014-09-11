@@ -66,12 +66,13 @@ $second_color     : #f89406; //rgb(248,148,6)
 $third_color      : #416CAD;
 $background_color : #181716; //rgb(24,23,22)
 $background_bright: #fbfbfb;
-
+$skilled          : $third_color;
+$experienced      : $main_color;
 // Breakpoint
 
 $z_background    : 1;
 $z_section       : 5;
-$z_foreground    : 10;
+$z_foreground    : 20;
 // $hex_size_project: 250px;
 // $hex_size_project_i: 90%;
 $nb_project : 3;
@@ -115,23 +116,4 @@ $size_project : $nb_project*100vh;
   -ms-transform    : $transformation;
   -o-transform     : $transformation;
 }
-
-
-@mixin breakpoint($point) {
-  @if $point == phone {
-    @media (max-width: 480px) { @content; }
-  }
-  @else if $point == t_portrait {
-    @media (max-width: 767px) { @content; }
-  }
-  @else if $point == t_landscape {
-    @media (min-width: 768px) and (max-width: 979px)  { @content; }
-  }
-}
-
-// $phone: '(max-width: 480px)'
-// $tablet-portrait: '(max-width: 767px)'
-// $tablet-landscape-desktop: '(min-width: 768px) and (max-width: 979px)'
-// $large-desktop: '(min-width: 1200px)'
-
 

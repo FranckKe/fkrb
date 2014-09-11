@@ -4,7 +4,7 @@
 @import "_base.scss";
 
 body{
-  @include border-box;
+   box-sizing: border-box;
   width                : 100%;
   height               : 300vh;
   margin               : 0;
@@ -32,7 +32,7 @@ body{
   position             : relative;
   height               : 100vh;
   width                : 100%;
-  z-index              : $z_section;
+  z-index              : $z_background;
 }
 
 .back-fixed{
@@ -53,7 +53,7 @@ body{
 }
 
 #fkrb p{
-  @include border-box;
+   box-sizing: border-box;
   width                : 33%;
   height               : 25%;
   // position             : fixed;
@@ -93,7 +93,7 @@ body{
   width                : 200px;
   height               : 200px;
   z-index              : 6;
-  @include transform(rotateZ(90deg));
+  transform: rotateZ(90deg);
 }
 
 .hex_wrapper_F {
@@ -112,7 +112,7 @@ body{
    width               : inherit;
    content             : '';
    z-index             : 4;
-   @include transform(rotateZ(-60deg));
+   transform:rotateZ(-60deg);
    // border-radius    : 1em/.2em;
 
 }
@@ -126,7 +126,7 @@ body{
   font-size            : 15px;
   text-align           : center;
   z-index              : 5;
-  @include border-box;
+   box-sizing: border-box;
   // border-radius     : 1em/.2em;
 }
 
@@ -139,7 +139,7 @@ body{
   width           : inherit;
   content         : '';
   z-index         : 4;
-  @include transform(rotateZ(60deg));
+  transform:rotateZ(60deg);
   // border-radius: 1em/.2em;
 }
 
@@ -167,7 +167,7 @@ body{
 	left               : 43px;
 	font-weight        : bolder;
 	@include font($main_font);
-	@include transform(rotateZ(-90deg));
+	transform:rotateZ(-90deg);
 }
 
 #hex_K{
@@ -182,7 +182,7 @@ body{
 	display            : inline-block;
 	top                : 0px;
 	left               : -60px;
-	@include transform(rotateZ(90deg));
+	transform:rotateZ(90deg);
 }
 
 #logo_K{
@@ -195,7 +195,7 @@ body{
 	left               : 22px;
 	font-weight        : bolder;
 	@include font($main_font);
-	@include transform(rotateZ(-90deg) rotateY(-180deg));
+	transform:rotateZ(-90deg) rotateY(-180deg);
 }
 /*
 ██████╗ ██████╗  ██████╗      ██╗███████╗ ██████╗████████╗███████╗
@@ -209,7 +209,7 @@ body{
   position           : relative;
   height             : 850px;
   // width           : 100%;
-  z-index            : $z_foreground;
+  z-index            : $z_background;
   // opacity         : 0.2;
   overflow           : hidden;
   // background-color: $background_color;
@@ -242,13 +242,13 @@ body{
   // background-size: contain;
   position          : fixed;
   top               :0;
-  z-index: -1;
+  z-index: 0;
 }
 
 .back-opacity{
   width           : 100%;
   height          : 125vh;
-  background-color: black;
+  background-color: $background_color;
   opacity         :0.5;
   position        : absolute;
 }
@@ -288,6 +288,8 @@ body{
     padding   : 0;
   }
 
+
+
   p{
     @include font($second_font);
     color:white;
@@ -324,7 +326,6 @@ body{
     text-align: center;
     height: 100%;
     border-right: $main_color 2px solid;
-    -webkit-transition: background-color 0.3s;
     transition: background-color 0.3s;
 
     &:hover{
@@ -348,7 +349,6 @@ body{
   margin-left: 2.5%;
   @include font($second_font);
   cursor: pointer;
-  -webkit-transition: color 0.2s;
   transition: color 0.2s;
 
   &:hover{
@@ -367,7 +367,7 @@ body{
 
 .slicker-focus{
   border-top: 1px solid black;
-  @include transition("border 0.3s ease-in-out")
+  transition: border 0.3s ease-in-out;
 }
 
 
@@ -386,6 +386,55 @@ body{
   &:active{
     cursor: -webkit-grabbing;
   }
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  background-color:rgba(0,0,0,0);
+  z-index: $z_foreground;
+  width: 75px;
+  height: 75px;
+  padding-top:17px;
+  transition: all 300ms ease-in-out;
+
+  &:hover{
+    background-color: $background_color;
+    transition: all 300ms ease-in-out;
+  }
+
+  &:hover polyline{
+   stroke-width: 5;
+  }
+  &:focus polyline{
+   stroke-width: 5;
+  }
+  &:active polyline{
+  stroke-width: 7;
+  transition: all 100ms ease-in-out;
+  }
+}
+
+.arrow-left {
+  left:0%;
+  padding-left: 30px;
+  &:hover{
+    padding-left: 15px;
+  }
+}
+
+.arrow-right {
+  right:0%;
+  padding-left: 15px;
+  &:hover{
+    padding-left: 30px;
+  }
+}
+
+
+polyline {
+  transition: all 250ms ease-in-out;
 }
 
 .project .slick-prev, .project .slick-next{
@@ -456,7 +505,7 @@ body{
   position        : relative;
   height          : 1000px;;
   width           : 100%;
-  z-index         : $z_section;
+  z-index         : $z_foreground;
   // opacity      : 0.2;
   overflow        : hidden;
   background-color: $background_color;
@@ -484,10 +533,12 @@ body{
   h2{
     text-align: center;
     color: $main_color;
+    @include font($second_font);
   }
 
   h3{
     color: $second_color;
+    @include font($main_font);
   }
 }
 
@@ -497,11 +548,15 @@ body{
 
 .about-fixed{
   position: fixed;
-  z-index: 900;
+  // z-index: $z_section;
   top: 0;
   // margin: 0 3% 0 3%;
-  background-color: rgba(248,148,6,0.3);
+  // background-color: rgba(248,148,6,0.3);
+  background-color: rgba(0,0,0,0.5);
   box-shadow:0 5px 25px -7px black;
+  *{
+    z-index: 6
+  }
 }
 
 .about-skills{
@@ -511,10 +566,46 @@ body{
   // width: 100%;
   float: left;
 
-  h2{
-    text-align: center;
+  h3{
+    position: absolute;
+    color: $background_color;
+    // margin-left: 50px;
+    margin-top:-5px;
+    transition : all 0.4s ease;
   }
-  
+
+  .sublime-text{
+    margin-left: 25%;
+    width: 65px;
+    height: 65px;
+    background-color: #FAFAFA;
+    color: $background_color;
+    text-align: center;
+    font-size: 3.5rem;
+    padding-top: 18px;
+    margin-top: 9px;
+    -webkit-font-smoothing: antialiased;
+    border: solid 2px white;
+    border-radius: 5px;
+    transition: color 0.6s ease;
+  }
+
+  .photoshop svg{
+    // width: 62px;
+    // height: 62px;
+    // background : url(../img/icon_logo/photoshop.svg) no-repeat top left;
+    fill: white;
+  }
+
+  .c-prog{
+    line-height: 1;
+    width: 20%;
+  }
+
+  .mailchimp svg{
+    fill: white;
+  }
+
   span{
     // background-color: white;
     // border:black solid 5px;
@@ -523,21 +614,97 @@ body{
     font-size: 5rem;
     float:left;
   }
+
+  .tooltip{
+    @include font($second_font);
+  }
 }
 
-.front-end,.back-end,.tools,.misc,.later{
+
+.icon-list{
   width: 90%;
   height: 125px;
   margin: auto;
   clear: both;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  transition: background 0.4s ease;
+
+  // border-bottom: 1px solid white;
+  // border-radius: 5px;
+
+  margin-bottom: 30px;
+
+    &:hover{
+      background-color: $second_color;
+      transition : background 0.3s ease;
+      h3{
+        color: $second_color;
+        margin-top:-35px;
+        transition : all 0.3s ease;
+      }
+      .skilled{
+        color: $skilled;
+      }
+
+      .experienced{
+        // color: #316EA5;
+        color: $experienced;
+      }
+
+      .knowledge{
+        color:#5288B9;
+      }
+    }
+
+  .icon-list-child{
+    width: 20%;
+    height: auto;
+    text-align: center;
+  }
 }
+
+.back-end{
+  &:hover .mailchimp svg{
+    fill: $experienced;
+    transition: color 0.3s ease;
+  }
+}
+
+.tools{
+  &:hover .sublime-text{
+    background-color: $skilled;
+    border-color: $skilled;
+    color: $second_color;
+    transition: color 0.4s ease;
+  }
+}
+
+.misc{
+  &:hover .photoshop svg{
+    fill: $experienced;
+    transition: color 0.3s ease;
+  }
+}
+
+.soon{
+  &:hover span{
+    color: $background_color;
+    transition: color 0.3s ease;
+  }
+}
+
 
 
 #contact{
   position           : relative;
   height             : 1000px;
   width              : 100%;
-  z-index            : $z_foreground;
+  z-index            : 1;
   // opacity         : 0.2;
   overflow           : hidden;
   // background-color: $background_color;
@@ -596,7 +763,7 @@ body{
   border          : 2px solid #cccccc;
   margin-bottom   : 10px;
   width           :100%;
-  @include border-box;
+   box-sizing: border-box;
   max-width       : 100%;
   max-height      : 400px;
 }
@@ -673,19 +840,16 @@ input:focus, textarea:focus {
 
 #button-blue{
   @include font($second_font);
-  float                :left;
-  width                : 100%;
-  border               : $background_bright solid 4px;
-  cursor               :pointer;
-  background-color     : $second_color;
-  color                :white;
-  font-size            :24px;
-  padding-top          :22px;
-  padding-bottom       :22px;
-  @include transition(all 0.3s);
-  // -webkit-transition: all 0.3s;
-  // -moz-transition   : all 0.3s;
-  // transition        : all 0.3s;
+  float           :left;
+  width           : 100%;
+  border          : $background_bright solid 4px;
+  cursor          :pointer;
+  background-color: $second_color;
+  color           :white;
+  font-size       :24px;
+  padding-top     :22px;
+  padding-bottom  :22px;
+  transition      :all 0.3s;
 }
 
 #button-blue:hover{
@@ -698,16 +862,11 @@ input:focus, textarea:focus {
 }
   
 .ease {
-  border-top           :3px $second_color solid;
-  width                : 0px;
-  height               : 76px;
-  background-color     : $background_bright;
-  @include transition(0.3s ease);
-  // -webkit-transition: .3s ease;
-  // -moz-transition   : .3s ease;
-  // -o-transition     : .3s ease;
-  // -ms-transition    : .3s ease;
-  // transition        : .3s ease;
+  border-top      :3px $second_color solid;
+  width           : 0px;
+  height          : 76px;
+  background-color: $background_bright;
+  transition      :0.3s ease;
 }
 
 .submit:hover .ease{

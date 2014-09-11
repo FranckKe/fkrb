@@ -5,7 +5,7 @@ $( document ).ready(function() {
       // slidesToShow: 1,
       infinite: true,
       slidesToScroll: 1,
-      arrows: true,
+      arrows:false,
       fade: false,
       speed: 700,
       onBeforeChange: function(slider,currentIndex, targetIndex){
@@ -17,6 +17,16 @@ $( document ).ready(function() {
     var slickerIndex = $(this).attr("index");
     $(".slicker").slickGoTo(slickerIndex);
   });
+
+  $(".arrow-right").click(function() {
+    $(".slicker").slickNext();
+  });
+
+  $(".arrow-left").click(function() {
+    $(".slicker").slickPrev();
+  });
+
+
 
   function beforeChangeFunc(targetIndex){
     $(".nav-title").each(function(){
