@@ -5453,6 +5453,23 @@ body {
   -webkit-transform: rotateZ(-90deg) rotateY(-180deg);
           transform: rotateZ(-90deg) rotateY(-180deg); }
 
+.sub-nav {
+  padding-top: 1px; }
+
+[data-magellan-expedition], [data-magellan-expedition-clone] {
+  font-family: 'Montserrat', sans-serif;
+  height: 42px;
+  text-align: center;
+  box-shadow: 0 5px 25px -7px black; }
+  [data-magellan-expedition] dd, [data-magellan-expedition-clone] dd {
+    margin-left: 0; }
+    [data-magellan-expedition] dd a, [data-magellan-expedition-clone] dd a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem; }
+
+.magellan-active-custom a {
+  color: #f89406 !important; }
+
 /*
 ██████╗ ██████╗  ██████╗      ██╗███████╗ ██████╗████████╗███████╗
 ██╔══██╗██╔══██╗██╔═══██╗     ██║██╔════╝██╔════╝╚══██╔══╝██╔════╝
@@ -5700,6 +5717,8 @@ polyline {
     font-family: 'Montserrat', sans-serif; }
   .about-experience a, .about-skills a {
     color: #f89406; }
+    .about-experience a:hover, .about-skills a:hover {
+      text-decoration: underline; }
 
 .about-experience p, .about-experience h3 {
   padding-left: 30px; }
@@ -5876,6 +5895,8 @@ polyline {
   width: 100%;
   z-index: 1;
   overflow: hidden; }
+  #contact h2 {
+    margin-top: 42px; }
 
 /* EMAIL */
 #feedback-page {

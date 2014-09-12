@@ -1,5 +1,12 @@
-$(document).foundation();
-
+$(document).foundation({
+"magellan-expedition": {
+  active_class: 'magellan-active-custom', // specify the class used for active sections
+  threshold: 0, // how many pixels until the magellan bar sticks, 0 = auto
+  destination_threshold: 5, // pixels from the top of destination for it to be considered active
+  throttle_delay: 50, // calculation throttling to increase framerate
+  fixed_top: 0, // top distance in pixels assigned to the fixed element on scroll
+}
+});
 $( document ).ready(function() {
    $('.slicker').slick({
       // slidesToShow: 1,
@@ -14,10 +21,8 @@ $( document ).ready(function() {
   });
 
  skrollr.init({
-
     render: function(data) {
       // console.log(data.curTop);
-
     }
   });
 

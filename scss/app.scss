@@ -202,6 +202,32 @@ body{
 	@include font($main_font);
 	transform:rotateZ(-90deg) rotateY(-180deg);
 }
+
+.sub-nav{
+  padding-top: 1px;
+}
+
+[data-magellan-expedition], [data-magellan-expedition-clone]{
+  @include font($main_font);
+  // position: relative;
+  height: 42px;
+  text-align: center;
+  box-shadow:0 5px 25px -7px black;
+  dd{
+    margin-left: 0;
+    a{
+      @include font($main_font);
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.magellan-active-custom{
+  a{
+    color: $second_color !important;
+  }
+}
+
 /*
 ██████╗ ██████╗  ██████╗      ██╗███████╗ ██████╗████████╗███████╗
 ██╔══██╗██╔══██╗██╔═══██╗     ██║██╔════╝██╔════╝╚══██╔══╝██╔════╝
@@ -497,6 +523,10 @@ polyline {
   float: right;
 }
 
+.lemonstand{
+
+}
+
 #project_2 img{
   padding: 0;
 }
@@ -558,6 +588,9 @@ polyline {
 
   a{
     color: $second_color;
+    &:hover{
+      text-decoration: underline;
+    }
   }
 }
 
@@ -807,6 +840,7 @@ polyline {
   // margin-left        : 5%;
   // margin-right       : 5%;
   h2{
+    margin-top: 42px;//size of the menu
     @extend .project-title;
   }
 }
