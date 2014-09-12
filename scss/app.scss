@@ -24,6 +24,7 @@ body{
   z-index              : $z_background;
   background           : url(../img/trianglify-background.svg) no-repeat top left;
   background-size   : cover;
+  top:0px;
 }
 
 
@@ -33,11 +34,14 @@ body{
   height               : 100vh;
   width                : 100%;
   z-index              : $z_background;
+  top: 0px;
+  
 }
 
 .back-fixed{
   position: fixed;
   width   : 100%;
+  // transition: all 0s ease;
 }
 
 #fkrb h3{
@@ -50,6 +54,7 @@ body{
   font-size            : 7em;
   font-weight          : bold;
   opacity              : 0.9;
+  z-index: 10;
 }
 
 #fkrb p{
@@ -212,7 +217,7 @@ body{
   z-index            : $z_section;
   // opacity         : 0.2;
   overflow           : hidden;
-  // background-color: $background_color;
+  background-color: $background_bright;
   // width              : 100%;
 }
 
@@ -248,7 +253,7 @@ body{
 .back-opacity{
   width           : 100%;
   height          : 125vh;
-  background-color: $background_color;
+  background-color: $background_dark;
   opacity         :0.5;
   position        : absolute;
 }
@@ -292,7 +297,7 @@ body{
 
   p{
     @include font($second_font);
-    color:white;
+    color:black;
   }
   .button{
     background-color: $second-color;
@@ -318,18 +323,19 @@ body{
   bottom        : 0;
   z-index       : $z_foreground;
   height        : 90px;
-  box-shadow    :0 5px 20px 7px black;
+  box-shadow    :0 8px 10px 5px black;
   
   div{
     width: 16.6%;
     float: left;
     text-align: center;
     height: 100%;
-    border-right: $main_color 2px solid;
+    border-right: $second_color 2px solid;
     transition: background-color 0.3s;
 
     &:hover{
-      background-color: rgba(0,0,0,0.3);
+      // background-color: rgba(0,0,0,0.3);
+      background-color: $background_dark;
     }
 
     .one-line{
@@ -343,7 +349,7 @@ body{
 }
 
 .nav-title{
-  color: white;
+  color: $main_color;
   height: 100%;
   width: 95%;
   margin-left: 2.5%;
@@ -352,16 +358,17 @@ body{
   transition: color 0.2s;
 
   &:hover{
-    color: $second_color;
+    // color: $background_dark;
   }
 }
 
 .active-slide-tab{
-  background-color: rgba(0,0,0,0.3);
+  // background-color: rgba(0,0,0,0.3);
+  background-color: $background_dark;
 }
 
 .active-slide-title{
-  color:$second-color;
+  color:$main_color;
 }
 
 
@@ -400,7 +407,7 @@ body{
   transition: all 300ms ease-in-out;
 
   &:hover{
-    background-color: $background_color;
+    background-color: $second_color;
     transition: all 300ms ease-in-out;
   }
 
@@ -490,6 +497,14 @@ polyline {
   float: right;
 }
 
+#project_2 img{
+  padding: 0;
+}
+
+#project_2 img,#project_3 img,#project_4 img,#project_5 img,#project_6 img,{
+  box-shadow: 0px 10px 20px -5px black;
+}
+
 /*
  █████╗ ██████╗  ██████╗ ██╗   ██╗████████╗
 ██╔══██╗██╔══██╗██╔═══██╗██║   ██║╚══██╔══╝
@@ -508,7 +523,7 @@ polyline {
   z-index         : $z_foreground;
   // opacity      : 0.2;
   overflow        : hidden;
-  background-color: $background_color;
+  background-color: $background_dark;
   // margin-left  : 5%;
   // margin-right : 5%;
   // margin-top   : 50px;
@@ -540,6 +555,10 @@ polyline {
     color: $second_color;
     @include font($main_font);
   }
+
+  a{
+    color: $second_color;
+  }
 }
 
 .about-experience p, .about-experience h3{
@@ -552,11 +571,12 @@ polyline {
   top: 0;
   // margin: 0 3% 0 3%;
   // background-color: rgba(248,148,6,0.3);
-  background-color: rgba(0,0,0,0.5);
-  box-shadow:0 5px 25px -7px black;
-  *{
-    z-index: 6
-  }
+  // background-color: rgba(0,0,0,0.5);
+  // box-shadow:0 5px 25px -7px black;
+  // *{
+  //   z-index: 6
+  // }
+
 }
 
 .about-skills{
@@ -566,20 +586,13 @@ polyline {
   // width: 100%;
   float: left;
 
-  h3{
-    position: absolute;
-    color: $background_color;
-    // margin-left: 50px;
-    margin-top:-5px;
-    transition : all 0.4s ease;
-  }
 
   .sublime-text{
     margin-left: 25%;
     width: 65px;
     height: 65px;
     background-color: #FAFAFA;
-    color: $background_color;
+    color: $background_dark;
     text-align: center;
     font-size: 3.5rem;
     padding-top: 18px;
@@ -615,17 +628,26 @@ polyline {
     float:left;
   }
 
-  .tooltip{
-    @include font($second_font);
-  }
-}
 
+
+} 
+ .tooltip{
+    @include font($second_font);
+    width: 100px !important;
+    text-align: center;
+
+  }
+  .tooltip > .nub{
+    left: 60px; 
+    right: 5px !important;
+  }
 
 .icon-list{
   width: 90%;
   height: 125px;
   margin: auto;
   clear: both;
+  overflow: visible;
 
   display: flex;
   flex-direction: row;
@@ -638,7 +660,13 @@ polyline {
   // border-radius: 5px;
 
   margin-bottom: 30px;
-
+  h3{
+    position: absolute;
+    color: $background_dark;
+    // margin-left: 50px;
+    margin-top:-5px;
+    transition : all 0.4s ease;
+  }
     &:hover{
       background-color: $second_color;
       transition : background 0.3s ease;
@@ -647,6 +675,7 @@ polyline {
         margin-top:-35px;
         transition : all 0.3s ease;
       }
+      
       .skilled{
         color: $skilled;
       }
@@ -665,10 +694,59 @@ polyline {
     width: 20%;
     height: auto;
     text-align: center;
+    transition: all 0.3s ease;
+  }
+
+
+}
+  .skills-legend-skilled{
+    @include font($second_font);
+    position        : absolute;
+    // width           : 150px;
+    // height          : 30px;
+    right:0;
+    top:30px;
+    margin-right: 7%;
+    visibility: hidden;
+    // transition      : visibility 0.1s 0.5s ease;
+    // background-color: $second-color;
+    color:$skilled;
+  }
+
+  .skills-legend-experienced{
+    @include font($second_font);
+    position        : absolute;
+    right:0;
+    top:30px;
+    margin-right: 7%;
+    visibility         : hidden;
+    // transition      : visibility 0.1s 0.5s ease;
+    // background-color: $second-color;
+    color: $experienced;
+  }
+
+.front-end{
+  &:hover .foundation .foundation-body{
+    fill: $skilled;
+    transition: color 0.3s ease;
+  }  
+  &:hover .foundation .foundation-accessories{
+    fill: $second-color;
+    transition: color 0.3s ease;
+    stroke: none;
   }
 }
 
 .back-end{
+  .skills-legend-skilled{
+    right:0;
+    top:185px;
+  }
+
+  .skills-legend-experienced{
+    right:0;
+    top:185px;
+  }
   &:hover .mailchimp svg{
     fill: $experienced;
     transition: color 0.3s ease;
@@ -676,6 +754,15 @@ polyline {
 }
 
 .tools{
+  .skills-legend-skilled{
+    right:0;
+    top:340px;
+  }
+
+  .skills-legend-experienced{
+    right:0;
+    top:340px;
+  }
   &:hover .sublime-text{
     background-color: $skilled;
     border-color: $skilled;
@@ -685,15 +772,25 @@ polyline {
 }
 
 .misc{
+  .skills-legend-skilled{
+    right:0;
+    top:475px;
+  }
+
+  .skills-legend-experienced{
+    right:0;
+    top:495px;
+  }
   &:hover .photoshop svg{
     fill: $experienced;
     transition: color 0.3s ease;
   }
 }
 
+
 .soon{
   &:hover span{
-    color: $background_color;
+    color: $background_dark;
     transition: color 0.3s ease;
   }
 }
@@ -707,10 +804,8 @@ polyline {
   z-index            : 1;
   // opacity         : 0.2;
   overflow           : hidden;
-  // background-color: $background_color;
   // margin-left        : 5%;
   // margin-right       : 5%;
-  // 
   h2{
     @extend .project-title;
   }

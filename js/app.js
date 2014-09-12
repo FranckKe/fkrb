@@ -13,6 +13,16 @@ $( document ).ready(function() {
     }
   });
 
+ skrollr.init({
+
+    render: function(data) {
+      // console.log(data.curTop);
+
+    }
+  });
+
+ new WOW().init();
+
   $(".nav-title").click(function() {
     var slickerIndex = $(this).attr("index");
     $(".slicker").slickGoTo(slickerIndex);
@@ -41,5 +51,19 @@ $( document ).ready(function() {
       }
     });
   }
+
+  $(".skilled").hover(function(){
+    $(this).parent().find(".skills-legend-skilled").css("visibility","visible");
+  },
+  function(){
+    $(this).parent().find(".skills-legend-skilled").css("visibility","hidden");
+  });
+
+  $(".experienced").hover(function(){
+    $(this).parent().find(".skills-legend-experienced").css("visibility","visible");
+  },
+  function(){
+    $(this).parent().find(".skills-legend-experienced").css("visibility","hidden");
+  });
 
 });

@@ -5298,13 +5298,15 @@ body {
   margin: 0;
   z-index: 1;
   background: url(../img/trianglify-background.svg) no-repeat top left;
-  background-size: cover; }
+  background-size: cover;
+  top: 0px; }
 
 #fkrb {
   position: relative;
   height: 100vh;
   width: 100%;
-  z-index: 1; }
+  z-index: 1;
+  top: 0px; }
 
 .back-fixed {
   position: fixed;
@@ -5316,7 +5318,8 @@ body {
   text-align: center;
   font-size: 7em;
   font-weight: bold;
-  opacity: 0.9; }
+  opacity: 0.9;
+  z-index: 10; }
 
 #fkrb p {
   -moz-box-sizing: border-box;
@@ -5462,7 +5465,8 @@ body {
   position: relative;
   height: 850px;
   z-index: 5;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #fbfbfb; }
 
 .project-title, .about-title, #contact h2 {
   width: 100%;
@@ -5515,7 +5519,7 @@ body {
     padding: 0; }
   .projects p {
     font-family: 'Raleway', sans-serif;
-    color: white; }
+    color: black; }
   .projects .button {
     background-color: #f89406;
     font-family: 'Raleway', sans-serif; }
@@ -5533,24 +5537,24 @@ body {
   bottom: 0;
   z-index: 20;
   height: 90px;
-  box-shadow: 0 5px 20px 7px black; }
+  box-shadow: 0 8px 10px 5px black; }
   .slicker-nav div {
     width: 16.6%;
     float: left;
     text-align: center;
     height: 100%;
-    border-right: #d35400 2px solid;
+    border-right: #f89406 2px solid;
     -webkit-transition: background-color 0.3s;
             transition: background-color 0.3s; }
     .slicker-nav div:hover {
-      background-color: rgba(0, 0, 0, 0.3); }
+      background-color: #181716; }
     .slicker-nav div .one-line {
       padding-top: 20px; }
     .slicker-nav div:last-child {
       border-right: none; }
 
 .nav-title {
-  color: white;
+  color: #d35400;
   height: 100%;
   width: 95%;
   margin-left: 2.5%;
@@ -5558,14 +5562,12 @@ body {
   cursor: pointer;
   -webkit-transition: color 0.2s;
           transition: color 0.2s; }
-  .nav-title:hover {
-    color: #f89406; }
 
 .active-slide-tab {
-  background-color: rgba(0, 0, 0, 0.3); }
+  background-color: #181716; }
 
 .active-slide-title {
-  color: #f89406; }
+  color: #d35400; }
 
 .slicker-focus {
   border-top: 1px solid black;
@@ -5596,7 +5598,7 @@ body {
   -webkit-transition: all 300ms ease-in-out;
           transition: all 300ms ease-in-out; }
   .arrow:hover {
-    background-color: #181716;
+    background-color: #f89406;
     -webkit-transition: all 300ms ease-in-out;
             transition: all 300ms ease-in-out; }
   .arrow:hover polyline {
@@ -5660,6 +5662,12 @@ polyline {
 .projects img {
   float: right; }
 
+#project_2 img {
+  padding: 0; }
+
+#project_2 img, #project_3 img, #project_4 img, #project_5 img, #project_6 img {
+  box-shadow: 0px 10px 20px -5px black; }
+
 /*
  █████╗ ██████╗  ██████╗ ██╗   ██╗████████╗
 ██╔══██╗██╔══██╗██╔═══██╗██║   ██║╚══██╔══╝
@@ -5690,29 +5698,21 @@ polyline {
   .about-experience h3, .about-skills h3 {
     color: #f89406;
     font-family: 'Montserrat', sans-serif; }
+  .about-experience a, .about-skills a {
+    color: #f89406; }
 
 .about-experience p, .about-experience h3 {
   padding-left: 30px; }
 
 .about-fixed {
   position: fixed;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 5px 25px -7px black; }
-  .about-fixed * {
-    z-index: 6; }
+  top: 0; }
 
 .about-skills {
   position: relative;
   display: block;
   height: 50%;
   float: left; }
-  .about-skills h3 {
-    position: absolute;
-    color: #181716;
-    margin-top: -5px;
-    -webkit-transition: all 0.4s ease;
-            transition: all 0.4s ease; }
   .about-skills .sublime-text {
     margin-left: 25%;
     width: 65px;
@@ -5738,14 +5738,22 @@ polyline {
   .about-skills span {
     font-size: 5rem;
     float: left; }
-  .about-skills .tooltip {
-    font-family: 'Raleway', sans-serif; }
+
+.tooltip {
+  font-family: 'Raleway', sans-serif;
+  width: 100px !important;
+  text-align: center; }
+
+.tooltip > .nub {
+  left: 60px;
+  right: 5px !important; }
 
 .icon-list {
   width: 90%;
   height: 125px;
   margin: auto;
   clear: both;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5766,6 +5774,12 @@ polyline {
   -webkit-transition: background 0.4s ease;
           transition: background 0.4s ease;
   margin-bottom: 30px; }
+  .icon-list h3 {
+    position: absolute;
+    color: #181716;
+    margin-top: -5px;
+    -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease; }
   .icon-list:hover {
     background-color: #f89406;
     -webkit-transition: background 0.3s ease;
@@ -5784,13 +5798,55 @@ polyline {
   .icon-list .icon-list-child {
     width: 20%;
     height: auto;
-    text-align: center; }
+    text-align: center;
+    -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease; }
 
+.skills-legend-skilled {
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  margin-right: 7%;
+  visibility: hidden;
+  color: #416CAD; }
+
+.skills-legend-experienced {
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  margin-right: 7%;
+  visibility: hidden;
+  color: #d35400; }
+
+.front-end:hover .foundation .foundation-body {
+  fill: #416CAD;
+  -webkit-transition: color 0.3s ease;
+          transition: color 0.3s ease; }
+.front-end:hover .foundation .foundation-accessories {
+  fill: #f89406;
+  -webkit-transition: color 0.3s ease;
+          transition: color 0.3s ease;
+  stroke: none; }
+
+.back-end .skills-legend-skilled {
+  right: 0;
+  top: 185px; }
+.back-end .skills-legend-experienced {
+  right: 0;
+  top: 185px; }
 .back-end:hover .mailchimp svg {
   fill: #d35400;
   -webkit-transition: color 0.3s ease;
           transition: color 0.3s ease; }
 
+.tools .skills-legend-skilled {
+  right: 0;
+  top: 340px; }
+.tools .skills-legend-experienced {
+  right: 0;
+  top: 340px; }
 .tools:hover .sublime-text {
   background-color: #416CAD;
   border-color: #416CAD;
@@ -5798,6 +5854,12 @@ polyline {
   -webkit-transition: color 0.4s ease;
           transition: color 0.4s ease; }
 
+.misc .skills-legend-skilled {
+  right: 0;
+  top: 475px; }
+.misc .skills-legend-experienced {
+  right: 0;
+  top: 495px; }
 .misc:hover .photoshop svg {
   fill: #d35400;
   -webkit-transition: color 0.3s ease;
