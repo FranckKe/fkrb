@@ -27,10 +27,10 @@
 
     <!-- <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">      -->
     <link rel="stylesheet" href="stylesheets/app.css"/>
-    <link rel="stylesheet" type="stylesheets/css" href="stylesheets/animate.css">
+    <!-- <link rel="stylesheet" type="stylesheets" href="stylesheets/animate.css"> -->
+    <link rel="stylesheet" href="stylesheets/animate.min.css">
     <link rel="stylesheet" href="stylesheets/devicons.css">
     <link rel="stylesheet" href="stylesheets/font-awesome.min.css" >
-    <!-- <link rel="stylesheet" href="dist/all.min.css" >  -->
 
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <script src="modernizr/modernizr.js"></script>
@@ -40,7 +40,7 @@
   </div>
 
   <section id="fkrb" data-magellan-destination="top">
-  <div class="back-fixed">
+  <div class="back-fixed" data-start="display:inline-block;" data-1000-start="display:none;" >
     <div class="row">
       <div id="logo" class="large-centered small-centered columns">
         <div id="hex_F1" class="hex_wrapper_F" data-0-start="top:0px" data-end="top:-300px">
@@ -68,10 +68,49 @@
     </div>
   </div>
   </section>
-  <div data-magellan-expedition="fixed">
+  <div class="magellan" data-magellan-expedition="fixed">
     <dl class="sub-nav collasped-row">
-      <dd class="small-4 medium-4 large-2 large-offset-2 columns" data-magellan-arrival="top"><a href="#fkrb">Top</a></dd>
+      <dd class="small-4 medium-4 large-2 large-offset-1 columns" data-magellan-arrival="top"><a href="#fkrb">Top</a></dd>
       <dd class="small-4 medium-4 large-2 columns" data-magellan-arrival="project"><a href="#project">Recent Work</a></dd>
+      <dd class="small-4 medium-4 large-2 columns"><svg class="logo-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px"
+   height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+<g id="F_2_">
+  <g id="Hex">
+    <g>
+      <polygon fill="#D35400" points="17.62,2.747 2.672,11.377 2.672,28.637 17.62,37.267 32.567,28.637 32.567,11.377      "/>
+    </g>
+  </g>
+  <g id="Hex_x5F_inner">
+    <g>
+      <polygon fill="#F89406" points="17.619,5.763 5.283,12.886 5.283,27.13 17.619,34.253 29.955,27.13 29.955,12.886      "/>
+    </g>
+  </g>
+  <g id="F_xA0_Image_1_">
+    
+      <image overflow="visible" width="13" height="18" id="F_xA0_Image" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAASCAYAAACAa1QyAAAACXBIWXMAAAsSAAALEgHS3X78AAAA
+GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFdJREFUeNpivBzCIMjAwGDMQDy4
+xwLVsJsETRVMDGQAsjSxYLNeZ/X/TqrbRDXnKV0JZXTBpQHo9D3YNKVBMS7AOLB+mgXEq0nVdA/k
+2cERT4NcE0CAAQCPjxBazB0ySwAAAABJRU5ErkJggg==" transform="matrix(1 0 0 1 11 11)">
+    </image>
+  </g>
+</g>
+<g id="K_2_">
+  <g id="Hex_x5F_K">
+    <g>
+      <polygon fill="#D35400" points="31.143,19.854 23.613,24.201 23.613,32.896 31.143,37.242 38.672,32.896 38.672,24.201       "/>
+    </g>
+  </g>
+  <g id="K_xA0_Image_1_">
+    
+      <image overflow="visible" width="9" height="10" id="K_xA0_Image" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAACXBIWXMAAAsSAAALEgHS3X78AAAA
+GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJtJREFUeNpi/DGFrZyBgSEUiN8D
+cRh79k8QzfBzKvsZEA3kmzD+//8fJDATyE8D4rNA7MoAAe+gtBATVHU6kFoNxMZAPJMBDbAgsUEK
+laBWowAmGAPqlj1QbihWRUB3gSTKoR44i6wI5nBBIPsM1LoKqKLdKA6HOhakYBbQ2k50k5iApsDC
+6R7UFEwAsg4YoIIgGhmDxGDiAAEGAL45Q6iwjVv9AAAAAElFTkSuQmCC" transform="matrix(1 0 0 1 27 24)">
+    </image>
+  </g>
+</g>
+</svg></dd>
       <dd class="small-2 medium-2 large-2 columns" data-magellan-arrival="about"><a href="#about">About Me</a></dd>
       <dd class="small-2 medium-2 large-2 end columns" data-magellan-arrival="contact"><a href="#contact">Contact</a></dd>
     </dl>
@@ -380,16 +419,16 @@
       <div class="about-experience small-12 medium-6 large-6 columns">
         <div>
         <h2> Experience </h2>
-          <p class="about-p">I am a front-end developer, currently on an Australian Working Holiday Visa, looking for a job in web development! 
-          I enjoy working on websites and constantly discovering awesome new way to do it! I am now looking forward to work as part of a team to keep learning and gain experience.<br>
+          <p class="about-p">I am a front-end developer, currently on an Australian Working Holiday Visa, looking for a job in web development.
+          I enjoy working on websites and constantly discovering awesome new way to do so. I am now looking forward to work as part of a team to keep learning and gain experience.<br>
           IDM, Chillout, Ambient, Trip-hop, Synthwave and electronic music in general are my way to go when working. I like traveling and move around, seeing various enviromnent and be part of different cultures. Here is a short summary of my recent history.
           </p> 
           
           <h3> Internship </h3>
-          <p> In order to valid my diploma, I decided to make the trip from France to Australia and do my 6 months internship in what always interested me: Web design. I have worked with an experienced and talented guy named <a href="http://seblecocq.com" target="_blank"> Seb Lecocq </a>. This web developer experience taught me most of what I know now and made me want to keep work in the field. 
+          <p> In order to valid my diploma, I decided to make the trip from France to Australia and do my 6 months internship in what always interested me: Web development. I have worked with an experienced and talented guy named <a href="http://seblecocq.com" target="_blank"> Seb Lecocq </a>. This web developer experience taught me most of what I know now and I am ready to take the next step in my carerr. 
           </p>
           <h3> Working Holiday Visa - Australia </h3>
-          <p> This internship gave me the opportunity to obtain a Working Holiday Visa Australia. I enjoy a lot my staying so far, and I want to keep working here in the next months.
+          <p> This internship gave me the opportunity to obtain a Working Holiday Visa Australia. I fully enjoy my staying so far, and I would like to stay working here.
           </p>
           <h3> Diploma </h3>
           <p> I have a diploma in Networking and Telecom, which contain a decent amount of programming and more particulary web programming. This 2 years course is composed of half labs and projects and half teaching.
@@ -557,12 +596,12 @@
     
     
   </section>
-  <section data-magellan-destination="contact" id="contact">
+  <section data-magellan-destination="contact" id="contact" data-500-start="z-index:1;" data-1000-start="z-index:3;">
   <!-- <div class="back-theme"> </div> -->
   <div class="about-fixed">
     <h2> Get in touch ! </h2>
-    <div> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt tenetur cumque officiis quidem, ratione sed facere quo hic neque iusto soluta natus beatae amet error quos? Voluptates, reiciendis dicta numquam! </p>
+    <div class="collapse-row"> 
+      <p class="large-6 large-centered columns"> For more information about me, about my work, for fun or just because, you can either shoot me an email or get in touch on social medias.</p>
     </div>
     <!-- <div id="form-main" class="small-12 small-offset-2 medium-4 medium-offset-2 large-4 columns large-offset-2"> -->
     <div id="form-main" class="small-12  medium-8  large-4 columns">

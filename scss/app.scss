@@ -6,7 +6,7 @@
 body{
    box-sizing: border-box;
   width                : 100%;
-  height               : 300vh;
+  height               : 100%;
   margin               : 0;
   z-index              : 0;
   @include font($main_font);
@@ -21,7 +21,7 @@ body{
   width                : 100%;
   height               : 100vh;
   margin               : 0;
-  z-index              : $z_background;
+  z-index              : 2;
   background           : url(../img/trianglify-background.svg) no-repeat top left;
   background-size   : cover;
   top:0px;
@@ -33,7 +33,7 @@ body{
   position             : relative;
   height               : 100vh;
   width                : 100%;
-  z-index              : $z_background;
+  z-index              : $z_section;
   top: 0px;
   
 }
@@ -41,6 +41,7 @@ body{
 .back-fixed{
   position: fixed;
   width   : 100%;
+  display:inline-block;
   // transition: all 0s ease;
 }
 
@@ -207,18 +208,40 @@ body{
   padding-top: 1px;
 }
 
-[data-magellan-expedition], [data-magellan-expedition-clone]{
+.magellan[style="position: fixed; top: 0px;"]{
+  box-shadow:0 5px 25px -7px black;
+  background-color: rgba(153,153,153,0.8);
+  margin-top: 0px;
+  .logo-svg{
+    visibility:visible;
+  }
+}
+
+.magellan{
   @include font($main_font);
-  // position: relative;
   height: 42px;
   text-align: center;
-  box-shadow:0 5px 25px -7px black;
+  position: relative;
+  margin-top: -42px;
+  background-color: $transparent;
+  transition: all 0.5s ease;
+  .logo-svg{
+    visibility:hidden;
+  }
   dd{
     margin-left: 0;
     a{
       @include font($main_font);
       font-size: 1.5rem;
+      // color:$background_dark;
+       color: white;
+       &:hover{
+        color: $background_dark;
+       }
     }
+  }
+  svg{
+    margin-top: 3px;
   }
 }
 
@@ -598,8 +621,9 @@ polyline {
   padding-left: 30px;
 }
 
-.about-fixed{
+.contact-fixed{
   position: fixed;
+  width: 100%;
   // z-index: $z_section;
   top: 0;
   // margin: 0 3% 0 3%;
@@ -832,7 +856,7 @@ polyline {
 
 #contact{
   position           : relative;
-  height             : 1000px;
+  height             : 700px;
   width              : 100%;
   z-index            : 1;
   // opacity         : 0.2;
@@ -840,7 +864,7 @@ polyline {
   // margin-left        : 5%;
   // margin-right       : 5%;
   h2{
-    margin-top: 42px;//size of the menu
+    // margin-top: 42px;
     @extend .project-title;
   }
 }
