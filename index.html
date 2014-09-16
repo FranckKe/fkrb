@@ -34,6 +34,16 @@
 
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <script src="modernizr/modernizr.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-54805856-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
   </head>
   <body>
   <div id="back_picture" data-0-start="top:0px" data-1000-end="top:-400px" data-999-end="top:0px">
@@ -61,15 +71,15 @@
     </div>
 <!--    <h1 data-0-start="opacity:1" data-500-start="opacity:0"> Franck Kerbiriou </h1> -->
     <div class="row">
-      <h3 class="large-centered small-centered columns wow fadeInUp" data-wow-delay="1s" data-0-start="top:60px" data-end="top:-600px"> Franck Kerbiriou </h3>
+      <h3 class="large-centered small-centered columns wow fadeInUp" data-wow-delay="0.5s" data-0-start="top:60px" data-end="top:-600px"> Franck Kerbiriou </h3>
     </div>
     <div class=" row collapse">
-     <p class="small-6 small-centered medium-6 medium-centered large-6 large-centered columns wow fadeInUp" data-wow-delay="2s" data-0-start="top:60px" data-end="top:-1000px"> Web Developer </p>
+     <p class="small-6 small-centered medium-6 medium-centered large-6 large-centered columns wow fadeInUp" data-wow-delay="1.5s" data-0-start="top:60px" data-end="top:-1000px"> Web Developer </p>
     </div>
   </div>
   </section>
   <div class="magellan" data-magellan-expedition="fixed">
-    <dl class="sub-nav collasped-row">
+    <dl class="sub-nav collasped-row wow fadeIn" data-wow-delay="2s">
       <dd class="small-4 medium-4 large-2 large-offset-1 columns" data-magellan-arrival="top"><a href="#fkrb">Top</a></dd>
       <dd class="small-4 medium-4 large-2 columns" data-magellan-arrival="project"><a href="#project">Recent Work</a></dd>
       <dd class="small-4 medium-4 large-2 columns"><svg class="logo-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px"
@@ -163,7 +173,7 @@ laBWowAmGAPqlj1QbihWRUB3gSTKoR44i6wI5nBBIPsM1LoKqKLdKA6HOhakYBbQ2k50k5iApsDC
             </p>
             <a class="button wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s" href="" target="_blank"> Take a look </a>
           </div>
-            <img class="screen wow fadeInRight" data-wow-duration="1s" data-wow-delay="1s" src="img/projects/easy_jogging_device.png" height="482" width="295">
+            <img class="screen wow fadeInRight" data-wow-duration="1s" data-wow-delay="1s" src="img/projects/easy_jogging_device.png" alt="Easy Joggin preview" height="482" width="295">
         </div>
       </div>
       <div id="project_2" class="projects collapse-row">
@@ -389,25 +399,23 @@ laBWowAmGAPqlj1QbihWRUB3gSTKoR44i6wI5nBBIPsM1LoKqKLdKA6HOhakYBbQ2k50k5iApsDC
               <span class="devicons devicons-terminal small-2 medium-2 large-2 columns"></span>
             </div>
             <p>This own website! I have learned a lot doing it. I wanted to get up-to-date with common technology used in web development and I needed a portfolio so here it is.
+            <br><br>I discovered how awesome is Sass, played with Foundation, learned Gulp and now comfortable with Git.
+            <br><br>The website is hosted on DigitalOcean using Debian with a LAMP setup and configured with a handy Git deployment.
+            <br><br>My portfolio is hosted on Github.
             </p>
-            <p>I discovered how awesome is Sass, played with Foundation, learned Gulp and now comfortable with Git.
-            </p>
-            <p>The website is hosted on DigitalOcean using Debian with a LAMP setup and configured with a handy Git deployment.
-            </p>
-            <p>My portfolio is hosted on Github.
-            </p>
+            <a class="button" href="" target="_blank"> View the source </a>
           </div>
           <img src="img/projects/portfolio_landpage.png" alt="Portfolio Website" class="small-12 medium-12 large-5">
         </div>
       </div>
     </div>
     <div class="slicker-nav">
-      <div class="active-slide-tab"><h3 class="nav-title one-line active-slide-title" index="0">Easy Jogging</h3></div>
-      <div><h3 class="nav-title" index="1">Interactive Web Media</h3></div>
-      <div><h3 class="nav-title" index="2">Continuum Wealth Planning</h3></div>
-      <div><h3 class="nav-title" index="3">Creative Spaces Australia</h3></div>
-      <div><h3 class="nav-title" index="4">Land and Property Reports</h3></div>
-      <div><h3 class="nav-title one-line" index="5">Portfolio</h3></div>
+      <div class="active-slide-tab wow fadeInUp" data-wow-delay="0.5s"><h3 class="nav-title one-line active-slide-title" index="0">Easy Jogging</h3></div>
+      <div class="wow fadeInUp" data-wow-delay="0.6s"><h3 class="nav-title" index="1">Interactive Web Media</h3></div>
+      <div class="wow fadeInUp" data-wow-delay="0.7s"><h3 class="nav-title" index="2">Continuum Wealth Planning</h3></div>
+      <div class="wow fadeInUp" data-wow-delay="0.8s"><h3 class="nav-title" index="3">Creative Spaces Australia</h3></div>
+      <div class="wow fadeInUp" data-wow-delay="0.9s"><h3 class="nav-title" index="4">Land and Property Reports</h3></div>
+      <div class="wow fadeInUp" data-wow-delay="1s"><h3 class="nav-title one-line" index="5">Portfolio</h3></div>
     </div>
   </section>
   <section id="about">
@@ -421,7 +429,8 @@ laBWowAmGAPqlj1QbihWRUB3gSTKoR44i6wI5nBBIPsM1LoKqKLdKA6HOhakYBbQ2k50k5iApsDC
         <h2> Experience </h2>
           <p class="about-p">I am a front-end developer, currently on an Australian Working Holiday Visa, looking for a job in web development.
           I enjoy working on websites and constantly discovering awesome new way to do so. I am now looking forward to work as part of a team to keep learning and gain experience.<br>
-          IDM, Chillout, Ambient, Trip-hop, Synthwave and electronic music in general are my way to go when working. I like traveling and move around, seeing various enviromnent and be part of different cultures. Here is a short summary of my recent history.
+          IDM, Chillout, Ambient, Trip-hop, Synthwave and electronic music in general are my way to go when working.<br>
+          I like traveling and move around, seeing various enviromnent and be part of different cultures. Here is a short summary of my recent history.
           </p> 
           
           <h3> Internship </h3>
@@ -436,7 +445,6 @@ laBWowAmGAPqlj1QbihWRUB3gSTKoR44i6wI5nBBIPsM1LoKqKLdKA6HOhakYBbQ2k50k5iApsDC
         </div>
     </div>
     <div class="about-skills small-12 medium-6 large-6 columns">
-      </h4>
       <h2> Skills </h2>
       <div class="front-end icon-list">
         <h4 class="skills-legend-skilled"> Skilled </h4>
@@ -445,7 +453,7 @@ laBWowAmGAPqlj1QbihWRUB3gSTKoR44i6wI5nBBIPsM1LoKqKLdKA6HOhakYBbQ2k50k5iApsDC
         <span data-tooltip aria-haspopup="true" title="Foundation" class="icon-list-child skilled foundation wow fadeInRight" data-wow-delay="0.5s"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" width="75" height="75" viewBox="0 0 600 600" enable-background="new 0 0 600 600" xml:space="preserve"><defs><rect width="600" height="600"/></defs><clipPath><use xlink:href="#SVGID_1_" overflow="visible"/></clipPath><path class="foundation-body" clip-path="url(#SVGID_2_)" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M481.93 398.18c-5.92 0-12.3-2.73-16.86-23.69 -4.56-20.96-11.39-42.37-11.39-42.37 7.29 0 11.39-3.19 11.39-3.19 -5.01-2.28-15.94-10.02-23.23-19.59 -7.29-9.57-25.97-25.06-25.97-25.06v-30.98c0-20.96 13.44-37.36 13.44-37.36 -9.11 0-13.44 8.2-13.44 8.2v-44.19c0-43.73 22.1-63.32 22.1-63.32 -6.83-0.45-11.39 2.73-11.39 2.73 3.19-32.35 13.1-41.91 13.1-41.91 -36.44-9.57-56.78 11.85-56.78 11.85 -4.1-19.59 11.93-30.98 11.93-30.98 -18.68-4.1-34.13 1.37-34.13 1.37 0-28.7 11.41-38.27 11.41-38.27 -56.95 0-89.28 42.82-89.28 42.82 -2.28-18.22 2.74-34.18 2.74-34.18 -55.12 23.23-69.7 74.69-69.7 74.69 -3.64-8.66-4.1-28.3-4.1-28.3s-22.78 38.16-26.88 64.58c-4.1 26.42 3.64 102.28 3.64 102.28s-3.64-4.55-11.39-5.47c0 0 8.2 9.11 8.2 29.61 0 0-3.19-2.73-8.66-1.37 0 0 8.65 7.74 9.57 20.96 0 0-10.02 6.83-15.49 13.67 0 0-8.66 0.46-13.21 1.82 0 0 7.29 4.1 8.66 7.75 0 0-21.41 21.87-32.35 39.64 0 0 9.57-5.92 16.4-4.1 0 0-15.03 18.22-20.05 48.29 0 0 7.29-3.64 10.48-1.82 0 0-9.11 19.13-9.57 39.18l-10.02 5.92 7.75 5.47c0 0-5.92 24.6-7.29 38.73 0 0 4.56-4.56 8.2-5.92 0 0 5.01 11.84 11.85 20.96 6.83 9.11 22.33 16.86 31.44 16.86l17.13-0.67c-2.12 9.17-6.31 16.94-15.15 17.35l-0.98 1.57c-0.19-0.01-0.37-0.02-0.55-0.02 -0.17 2.68-5.57 3.16-7.06 5.01 -4.51 5.63-7.96 13.37-10.25 20.27 -1.68 5.06-0.89 5.06-2.05 10.25 -0.38 1.7-2.14 3.52-2.73 5.24 4.92-1.65 18.55-2.76 25.73-3.28l0.12 6.36c0 0 1.18 1.1 3.14 1.9 0.07-0.01 0.13-0.03 0.22-0.02 0.67 0.06 1.31 0.15 1.94 0.31 10.78-0.96 18.28 0.86 30.77-0.18 2.43-0.29 4.71-0.63 6.84-1.84 0.6-1.81 0.69-1.92 0.97-4.25 0.06-0.42 0.06-0.84 0.16-1.35 0.2-0.03 0.39-0.06 0.58-0.09 0.07-0.03 0.19-0.05 0.45-0.06 0.05-0.02 0.1-0.04 0.16-0.05 0.2-0.02 0.4-0.03 0.59-0.05 0.14-0.05 0.27-0.06 0.38-0.03 2.26-0.2 5.89-0.39 8.15-0.51 7.35-0.01 17.01 0.83 17.01 0.83 0.6-8.23 1.2-21.01 14.52-58.26l3.3-2.05c0 0 40.93 14.42 78.91-0.58 3.01 7.4 12.73 32.26 14.26 47.93 1.31 1.84 1.16 4.17 1.21 6.64 0.04 2.09 0.21 4.18 0.27 6.27 1.37-0.19 6.3-0.79 12.52-0.78 2.26 0.12 5.89 0.31 8.15 0.52 0.12-0.03 0.25-0.02 0.38 0.03 0.2 0.02 0.4 0.03 0.59 0.05 0.06 0.01 0.11 0.03 0.16 0.05 0.26 0.01 0.37 0.03 0.45 0.06 0.19 0.03 0.38 0.06 0.58 0.09 0.1 0.51 0.1 0.94 0.16 1.35 0.28 2.34 0.37 2.44 0.97 4.25 0.2 0.11 0.39 0.21 0.59 0.3 6.8-0.86 13.69-1.02 20.53-0.7 5.38 0.26 10.67 1.27 15.97 2.23 0 0.05 0.01 0.1 0.01 0.15 0.53 0.06 1.06 0.1 1.58 0.13 2.84 0.51 5.69 0.98 8.56 1.29 0.06-3.59 0.03-6.72-0.04-9.48 5.71 0.27 13.97 1.41 17.43 1.91 1.37 0.33 2.49 0.53 3.66 0.79 0.16 0.05 0.33 0.1 0.47 0.14 -0.01-0.01-0.01-0.03-0.02-0.04 1.18 0.27 2.44 0.6 4.12 1.18 -0.25-3.08-0.23-3.02-0.64-6.88 -0.31-2.99-2.46-12.07-6.47-15.81 0 0 4.37 1.89 5.7 2.64 -4.31-5.83-6.4-14.17-19.93-19.93 0 0 2.47-1.16 4.73-1.46 -2.36-1.45-4.16-2.03-6.56-1.85 0.81-2.31 4.39-8.12 7.38-8.87 0 0-1.84-1.28-4.85-0.29 -1.12 0.59-2.2 1.22-3.26 1.96 -0.4 0.28-0.98-0.01-1.1-0.45 -0.95-3.5-1.56-7.05-2.12-10.62 27.26-0.99 31.09-14.97 31.09-14.97 2.28 1.82 2.28 5.92 2.28 5.92 11.85-15.49 10.48-30.98 10.48-30.98 2.73 0.46 5.01 2.28 5.01 2.28 1.37-23.69-5.92-64.24-5.92-64.24 3.65 1.82 5.92-0.46 5.92-0.46 -4.1-1.82-4.56-6.38-4.56-6.38C481.02 403.65 481.93 398.18 481.93 398.18"/><path class="foundation-body" clip-path="url(#SVGID_2_)" fill="white" d="M206.61 154.32c-1.29 0.09-5.44 0.2-5.44 0.2 -37.56 2.62-65.17-26.49-65.17-26.49s-2.47 22.72 13.85 42.63c16.32 19.91 49.4 23.32 49.4 23.32 1.08 4.66-1.25 15.04-1.25 15.04s9.67-10.7 12.13-30.97C211.84 163.84 207.41 154.26 206.61 154.32"/><path class="foundation-body" fill="white" clip-path="url(#SVGID_2_)" d="M394.15 154.32c1.3 0.09 5.44 0.2 5.44 0.2 37.56 2.62 65.17-26.49 65.17-26.49s2.47 22.72-13.85 42.63c-16.32 19.91-49.4 23.32-49.4 23.32 -1.07 4.66 1.25 15.04 1.25 15.04s-9.67-10.7-12.13-30.97C388.92 163.84 393.34 154.26 394.15 154.32"/><path class="foundation-accessories" clip-path="url(#SVGID_2_)" fill="black" d="M394.43 265.65c-6.6-0.96-18.13-2.06-31.96-1.35 -18 0.93-33.42 3.43-42.64 4.92 -2.75 0.45-4.91 0.8-6.56 1.02l-1.8 0.24c-2.02 0.28-3.35 0.45-4.47 0.51 -1.13-0.06-2.45-0.23-4.48-0.51l-1.8-0.24c-1.65-0.22-3.81-0.57-6.56-1.02 -9.21-1.49-24.64-3.99-42.64-4.92 -13.83-0.71-25.36 0.39-31.96 1.35 0 0-7.05 0.9-13.07 3.45l1.15 7.66c0 0 6.37-1.52 12.59-2.35 1.16 10.8 3.41 24.68 3.41 24.68l0.04 0.43c0.17 0.7 0.33 1.38 0.5 2.12 1.28 5.46 2.55 8.66 7.67 10.59 5.03 1.9 16.92 3.65 28.91 4.27 4.46 0.23 9.52-0.04 14.64-0.79 7.59-1.11 14.46-3.15 17.08-5.09 3.82-2.82 5.86-9.92 7.21-14.62l0.41-1.39c0.48-1.6 0.89-3.28 1.29-4.92 0.58-2.34 1.17-4.76 1.68-5.6 0.09-0.14 0.52-0.65 2.19-0.89 0.52-0.07 1.1-0.11 1.74-0.12 0.64 0.01 1.22 0.05 1.74 0.12 1.67 0.24 2.1 0.75 2.19 0.9 0.51 0.84 1.1 3.26 1.68 5.6 0.4 1.63 0.82 3.31 1.3 4.92l0.4 1.39c1.35 4.7 3.4 11.8 7.21 14.62 2.62 1.94 9.49 3.98 17.08 5.09 5.12 0.74 10.18 1.02 14.64 0.79 12-0.62 23.89-2.38 28.91-4.27 5.12-1.92 6.39-5.13 7.67-10.59 0.17-0.74 0.33-1.42 0.5-2.12l0.04-0.43c0 0 2.25-13.88 3.4-24.68 6.22 0.83 12.59 2.35 12.59 2.35l1.15-7.66C401.47 266.54 394.43 265.65 394.43 265.65M295.11 282.28l-0.02 0.13c-0.3 2.48-1.93 15.07-4.59 19.36 -2.57 4.14-3.48 5.18-11.47 6.53 -0.34 0.06-0.7 0.11-1.07 0.17 -8.62 1.26-24.37 1.48-33.18-0.21l-0.61-0.12c-8.99-1.74-12.14-2.48-13.07-5.28 -1.26-3.78-3.67-21.25-3.84-24.99 -0.14-2.84 2.54-4.14 3.26-4.33 0.45-0.12 1.19-0.25 2.17-0.4 6.31-0.92 20.11-1.83 26.62-1.54 8.25 0.37 28.37 3.21 32.9 5.24C295.59 278.34 295.43 279.65 295.11 282.28M382.88 302.85c-0.93 2.8-4.08 3.54-13.07 5.28l-0.61 0.12c-8.81 1.69-24.55 1.47-33.18 0.21 -0.37-0.05-0.73-0.11-1.07-0.17 -7.99-1.35-8.9-2.39-11.47-6.53 -2.65-4.29-4.29-16.88-4.59-19.36l-0.02-0.13c-0.32-2.62-0.48-3.94 2.9-5.45 4.53-2.03 24.66-4.87 32.9-5.24 6.51-0.29 20.31 0.62 26.62 1.54 0.99 0.14 1.72 0.28 2.17 0.4 0.73 0.19 3.4 1.49 3.26 4.34C386.55 281.61 384.14 299.07 382.88 302.85"/></svg></span>
         <span class="devicons devicons-css3 icon-list-child skilled wow fadeInRight" data-wow-delay="0.6s" data-tooltip aria-haspopup="true" title="CSS3" ></span>
         <span class="devicons devicons-sass icon-list-child skilled wow fadeInRight" data-wow-delay="0.7s" data-tooltip aria-haspopup="true" title="Sass" ></span>
-        <span class="devicons devicons-javascript_shield icon-list-child experienced wow fadeInRight" data-wow-delay="0.8s"data-tooltip aria-haspopup="true" title="Javascript" ></span>
+        <span class="devicons devicons-javascript_shield icon-list-child experienced wow fadeInRight" data-wow-delay="0.8s" data-tooltip aria-haspopup="true" title="Javascript" ></span>
         <span class="devicons devicons-jquery icon-list-child experienced wow fadeInRight" data-wow-delay="0.9s" data-tooltip aria-haspopup="true" title="JQuery" ></span>
       </div> 
       <div class="back-end icon-list">
@@ -593,58 +601,62 @@ laBWowAmGAPqlj1QbihWRUB3gSTKoR44i6wI5nBBIPsM1LoKqKLdKA6HOhakYBbQ2k50k5iApsDC
         <span class="devicons devicons-ruby_on_rails icon-list-child wow fadeInRight" data-wow-delay="0.9s" data-tooltip aria-haspopup="true" title="Ruby on Rails"></span>
       </div>      
     </div>
-    
-    
-  </section>
-  <section data-magellan-destination="contact" id="contact" data-500-start="z-index:1;" data-1000-start="z-index:3;">
-  <!-- <div class="back-theme"> </div> -->
-  <div class="about-fixed">
-    <h2> Get in touch ! </h2>
-    <div class="collapse-row"> 
-      <p class="large-6 large-centered columns"> For more information about me, about my work, for fun or just because, you can either shoot me an email or get in touch on social medias.</p>
     </div>
-    <!-- <div id="form-main" class="small-12 small-offset-2 medium-4 medium-offset-2 large-4 columns large-offset-2"> -->
-    <div id="form-main" class="small-12  medium-8  large-4 columns">
-      <div id="form-div">
-        <form class="form" id="form1">
-          <p class="name">
-            <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
-          </p>
-          
-          <p class="email">
-            <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
-          </p>
-          
-          <p class="text">
-            <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
-          </p>
-          
-          <div class="submit">
-            <input type="submit" value="SEND" id="button-blue"/>
-            <div class="ease"></div>
+  </section>
+
+  <section data-magellan-destination="contact" id="contact" data-500-start="z-index:1;" data-1000-start="z-index:3;">
+    <div class="contact-fixed">
+      <h2> Get in touch ! </h2>
+      <div class="collapse-row"> 
+        <p class="large-6 large-centered columns"> I'd love to hear from you. For more information about me, about my work, for fun or just because, you can either shoot me an email or get in touch on social medias.</p>
+      </div>
+
+      <div class="collapse-row">
+        <div class="small-6 medium-6 large-6 columns">
+          <div id="contactForm" class="collapse-row">
+            <form id="myForm" method="post" data-abide>
+              <div class="formName small-6 medium-6 large-6 columns">
+                <label>Name
+                  <input class="formInput" type="text" placeholder="Awesome name" required>
+                  <small class="error animated shake">What's your name?</small>
+                </label>
+              </div>
+              <div class="formEmail small-6 medium-6 large-6 columns">
+                <label>Email
+                  <input class="formInput" type="email" placeholder="awesomemail@mail.com" required>
+                  <small class="error animated shake">I need your email to send the message</small>
+                </label>
+              </div>
+              <div class="formMessage small-12 medium-12 large-12 columns">
+              <label>Your Message
+                <small class="error animated shake">You don't want to send me anything? :(</small>
+                <textarea placeholder="Your message" class="formTextarea formInput" required>Bonjour Franck,
+              
+      </textarea>
+              </label>
+              </div>
+              <div class="formButton small-12 medium-12 large-12 columns">
+                <input type="submit" class="button small-12 medium-12 large-12 columns" value="Send Message">
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
+    
+        <div class="social small-6 medium-6 large-6 columns">
+          <div class="collapse-row">
+            <h3 class="small-12 medium-12 large-12 small-centered medium-centered large-centered columns">info@franckkerbiriou.com</h3>
+            <div class="social-line collapse-row">
+              <span class="small-3 medium-3 large-3 small-offset-3 medium-offset-3 large-offset-3 columns">Linkedin</span>
+              <span class="small-3 medium-3 large-3 columns">Github</span>
+            </div>
+            <div class="social-line collapse-row">
+              <span class="small-3 medium-3 large-3 offset-3 medium-offset-3 large-offset-3 columns">Codepen</span>
+              <span class="small-3 medium-3 large-3  columns">Google Plus</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-<!--     <div class="social collapse-row">
-      <div class="small-3 medium-3 large-3 columns">
-        <p> CV </p>
-        <p> CV </p>
-      </div> 
-      <span class="small-3 medium-3 large-3 columns">
-        <a href="" class="social_github"> </a>
-      </span>
-      <span class="small-3 medium-3 large-3 columns">
-        <a href="" class="social_lindekin "> </a> 
-      </span>
-      <span class="small-3 medium-3 large-3 columns">
-        <a href="" class="social_googleplus "> </a>
-      </span>
-    </div>  --> 
-    <!-- </div> -->
-
-  </div>
-
   </section>
 
 <!-- <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script> -->
@@ -659,5 +671,6 @@ laBWowAmGAPqlj1QbihWRUB3gSTKoR44i6wI5nBBIPsM1LoKqKLdKA6HOhakYBbQ2k50k5iApsDC
 
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <!-- <script type="text/javascript" src="js/script.js"></script> -->
+
   </body>
 </html>

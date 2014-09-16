@@ -15,7 +15,6 @@ body{
 *::selection{background-color: rgba(0,0,0,0.3); color:$main_color;}
 
 
-
 #back_picture{
   position             : fixed;
   width                : 100%;
@@ -571,7 +570,7 @@ polyline {
 
 #about{
   position        : relative;
-  height          : 1000px;;
+  height          : 1000px;
   width           : 100%;
   z-index         : $z_foreground;
   // opacity      : 0.2;
@@ -624,6 +623,7 @@ polyline {
 .contact-fixed{
   position: fixed;
   width: 100%;
+  margin-top: 42px; 
   // z-index: $z_section;
   top: 0;
   // margin: 0 3% 0 3%;
@@ -856,9 +856,10 @@ polyline {
 
 #contact{
   position           : relative;
-  height             : 700px;
+  height             : 800px;
   width              : 100%;
   z-index            : 1;
+
   // opacity         : 0.2;
   overflow           : hidden;
   // margin-left        : 5%;
@@ -867,216 +868,97 @@ polyline {
     // margin-top: 42px;
     @extend .project-title;
   }
+    h3{
+    text-align: center;
+    @include font($main_font);
+    font-size: 2rem;
+
+  }
 }
 
 
-/* EMAIL */
 
-#feedback-page{
-  text-align:center;
-}
+#contactForm{
 
-#text-feedback{
-  width           : 80%;
-  padding-left    : 10%;
-  padding-right   : 10%;
-  background-color:white;
-  text-align      :center;
-}
+  .button{
+    background-color: $second_color;
+    border-color:$second_color;
+    &:hover{
+      background-color: $main_color;
+    }
+    &:focus{
+      border-color:$second_color;
+      outline: $second_color auto 5px;
+    }
+  }
 
-#form-main{
-  // width:100%;
-  // float:left;
-  // padding-top:30px;
-  @include font($second_font);
-}
+  label{
+    @include font($main_font);
+  }
+  ::-webkit-input-placeholder {
+     color: rgba(0,0,0,0.6);
+  }
 
-#form-div {
-  // background-color:white;
-  padding-left    : 35px;
-  padding-right   : 35px;
-  padding-top     : 35px;
-  padding-bottom  : 50px;
-  /* width        : 80%; */
-  /* float        : left; */
-  /* left         : 50%; */
-  /* position     : absolute; */
-  /* margin-left  : -260px; */
-}
+  ::-moz-placeholder {  /* Firefox 19+ */
+     color: white;  
+  }
 
-.feedback-input {
-  opacity         :0.9;
-  color           :$main_color;  
-  @include font($second_font);
-  font-weight     :400;
-  font-size       : 18px;
-  border-radius   : 0;
-  line-height     : 22px;
-  background-color: $background_bright;
-  border          : 2px solid #cccccc;
-  margin-bottom   : 10px;
-  width           :100%;
-   box-sizing: border-box;
-  max-width       : 100%;
-  max-height      : 400px;
-}
+  :-ms-input-placeholder {  
+     color: white;  
+  }
 
-.feedback-input:focus{
-  background: #fff;
-  box-shadow: 0;
-  border    : 3px solid $second_color;
-  color     : $second_color;
-  outline   : none;
-  // padding: 13px 13px 13px 54px;
-}
+  .formInput{
+    color:white;
+    @include font($second_font);
+    background-color: rgba(0,0,0,0.3);
+    &:focus{
+      background-color: rgba(0,0,0,0.6);
+    }
+  }
 
-#form1 input:focus{
-  background: #fff;
-  box-shadow: 0;
-  border    : 3px solid $second_color;
-  color     : $second_color;
-  outline   : none;
-}
+  .formTextarea{
+    min-height: 200px;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
 
-.focused{
-  color :$main_color;  
-  border:$second_color solid 3px;
-}
+  .formButton input{
+    @include font($main_font);
+    color:white;
+  }
 
-// /* Icons ---------------------------------- */
-// #name{
-//   // background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
-//   background-size: 30px 30px;
-//   background-position: 11px 8px;
-//   background-repeat: no-repeat;
-// }
-
-// #name:focus{
-//   // background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
-//   background-size: 30px 30px;
-//   background-position: 8px 5px;
-//   background-position: 11px 8px;
-//   background-repeat: no-repeat;
-// }
-
-// #email{
-//   // background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
-//   background-size: 30px 30px;
-//   background-position: 11px 8px;
-//   background-repeat: no-repeat;
-// }
-
-// #email:focus{
-//   // background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
-//   background-size: 30px 30px;
-//   background-position: 11px 8px;
-//   background-repeat: no-repeat;
-// }
-
-// #comment{
-//   // background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
-//   background-size: 30px 30px;
-//   background-position: 11px 8px;
-//   background-repeat: no-repeat;
-// }
-
-textarea {
-  width      : 100%;
-  height     : 150px;
-  line-height: 150%;
-}
-
-input:hover, textarea:hover,
-input:focus, textarea:focus {
-  background-color:white;
-}
-
-#button-blue{
-  @include font($second_font);
-  float           :left;
-  width           : 100%;
-  border          : $background_bright solid 4px;
-  cursor          :pointer;
-  background-color: $second_color;
-  color           :white;
-  font-size       :24px;
-  padding-top     :22px;
-  padding-bottom  :22px;
-  transition      :all 0.3s;
-}
-
-#button-blue:hover{
-  background-color: $main_color;
-  color           : white;
-}
-  
-.submit:hover {
-  color: $main_color;
-}
-  
-.ease {
-  border-top      :3px $second_color solid;
-  width           : 0px;
-  height          : 76px;
-  background-color: $background_bright;
-  transition      :0.3s ease;
-}
-
-.submit:hover .ease{
-  width           :100%;
-  background-color:white;
-}
-
-@media only screen and (max-width: 580px) {
-  #form-div{
-    left         : 3%;
-    margin-right : 3%;
-    width        : 88%;
-    margin-left  : 0;
-    padding-left : 3%;
-    padding-right: 3%;
+  small{
+    margin-top:5px;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
   }
 }
 
 .social{
-  overflow: hidden;
-  height  : 150px;
-
-  a{
-    background-image : url('../img/social_hex.png');
-    background-size  : 400px 300px;
-    background-repeat: no-repeat;
-    width            : 125px;
-    height           : 140px;
-    overflow         : hidden;
-    display          : inline-block;
-  }
-
-  
-  .social_github{
-    background-position: -7px -8px;
-
-    &:hover{
-      background-position: -7px -152px;
-    }
-  }
-  .social_lindekin{
-    
-    background-position: -133px -8px;
-    
-    &:hover{
-      background-position: -133px -152px;
-    }
-  }    
-  .social_googleplus{
-    background-position: -266px -8px;
-
-    &:hover{
-      background-position: -266px -152px;
-    }
+  h3{
+    height: 125px;
+    display: inline-block;
   }
 }
 
-.clear-fix{
-  clear:both;
+.social-line{
+  height: 125px;
+  /* float: left; */
+  display: inline-block;
+  width: 100%;
+}
+
+
+@media screen and (max-height: 699px){
+  .contact-fixed{
+    position: relative;
+    margin-top: 0px;
+  }
+}
+
+@media screen and (min-height: 700px){
+  .contact-fixed{
+    position: fixed;
+    margin-top: 42px;
+  }
 }

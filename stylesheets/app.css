@@ -5745,6 +5745,7 @@ polyline {
 .contact-fixed {
   position: fixed;
   width: 100%;
+  margin-top: 42px;
   top: 0; }
 
 .about-skills {
@@ -5911,144 +5912,68 @@ polyline {
 
 #contact {
   position: relative;
-  height: 700px;
+  height: 800px;
   width: 100%;
   z-index: 1;
   overflow: hidden; }
+  #contact h3 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem; }
 
-/* EMAIL */
-#feedback-page {
-  text-align: center; }
-
-#text-feedback {
-  width: 80%;
-  padding-left: 10%;
-  padding-right: 10%;
-  background-color: white;
-  text-align: center; }
-
-#form-main {
-  font-family: 'Raleway', sans-serif; }
-
-#form-div {
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-top: 35px;
-  padding-bottom: 50px;
-  /* width        : 80%; */
-  /* float        : left; */
-  /* left         : 50%; */
-  /* position     : absolute; */
-  /* margin-left  : -260px; */ }
-
-.feedback-input {
-  opacity: 0.9;
-  color: #d35400;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  border-radius: 0;
-  line-height: 22px;
-  background-color: #fbfbfb;
-  border: 2px solid #cccccc;
-  margin-bottom: 10px;
-  width: 100%;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
-  max-width: 100%;
-  max-height: 400px; }
-
-.feedback-input:focus {
-  background: #fff;
-  box-shadow: 0;
-  border: 3px solid #f89406;
-  color: #f89406;
-  outline: none; }
-
-#form1 input:focus {
-  background: #fff;
-  box-shadow: 0;
-  border: 3px solid #f89406;
-  color: #f89406;
-  outline: none; }
-
-.focused {
-  color: #d35400;
-  border: #f89406 solid 3px; }
-
-textarea {
-  width: 100%;
-  height: 150px;
-  line-height: 150%; }
-
-input:hover, textarea:hover, input:focus, textarea:focus {
-  background-color: white; }
-
-#button-blue {
-  font-family: 'Raleway', sans-serif;
-  float: left;
-  width: 100%;
-  border: #fbfbfb solid 4px;
-  cursor: pointer;
+#contactForm .button {
   background-color: #f89406;
-  color: white;
-  font-size: 24px;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  -webkit-transition: all 0.3s;
-          transition: all 0.3s; }
-
-#button-blue:hover {
-  background-color: #d35400;
+  border-color: #f89406; }
+  #contactForm .button:hover {
+    background-color: #d35400; }
+  #contactForm .button:focus {
+    border-color: #f89406;
+    outline: #f89406 auto 5px; }
+#contactForm label {
+  font-family: 'Montserrat', sans-serif; }
+#contactForm ::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6); }
+#contactForm ::-moz-placeholder {
+  /* Firefox 19+ */
   color: white; }
+#contactForm :-ms-input-placeholder {
+  color: white; }
+#contactForm .formInput {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  background-color: rgba(0, 0, 0, 0.3); }
+  #contactForm .formInput:focus {
+    background-color: rgba(0, 0, 0, 0.6); }
+#contactForm .formTextarea {
+  min-height: 200px;
+  max-width: 100%;
+  margin-bottom: 10px; }
+#contactForm .formButton input {
+  font-family: 'Montserrat', sans-serif;
+  color: white; }
+#contactForm small {
+  margin-top: 5px;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; }
 
-.submit:hover {
-  color: #d35400; }
+.social h3 {
+  height: 125px;
+  display: inline-block; }
 
-.ease {
-  border-top: 3px #f89406 solid;
-  width: 0px;
-  height: 76px;
-  background-color: #fbfbfb;
-  -webkit-transition: 0.3s ease;
-          transition: 0.3s ease; }
+.social-line {
+  height: 125px;
+  /* float: left; */
+  display: inline-block;
+  width: 100%; }
 
-.submit:hover .ease {
-  width: 100%;
-  background-color: white; }
+@media screen and (max-height: 699px) {
+  .contact-fixed {
+    position: relative;
+    margin-top: 0px; } }
 
-@media only screen and (max-width: 580px) {
-  #form-div {
-    left: 3%;
-    margin-right: 3%;
-    width: 88%;
-    margin-left: 0;
-    padding-left: 3%;
-    padding-right: 3%; } }
-
-.social {
-  overflow: hidden;
-  height: 150px; }
-  .social a {
-    background-image: url('../img/social_hex.png');
-    background-size: 400px 300px;
-    background-repeat: no-repeat;
-    width: 125px;
-    height: 140px;
-    overflow: hidden;
-    display: inline-block; }
-  .social .social_github {
-    background-position: -7px -8px; }
-    .social .social_github:hover {
-      background-position: -7px -152px; }
-  .social .social_lindekin {
-    background-position: -133px -8px; }
-    .social .social_lindekin:hover {
-      background-position: -133px -152px; }
-  .social .social_googleplus {
-    background-position: -266px -8px; }
-    .social .social_googleplus:hover {
-      background-position: -266px -152px; }
-
-.clear-fix {
-  clear: both; }
+@media screen and (min-height: 700px) {
+  .contact-fixed {
+    position: fixed;
+    margin-top: 42px; } }

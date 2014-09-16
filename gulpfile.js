@@ -1,5 +1,4 @@
-var gulp = require('gulp'); 
-
+var gulp = require('gulp');
 
 var htmlmin = require('gulp-htmlmin');
 
@@ -16,6 +15,11 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 
+function errorLog(err) {
+  console.log(err.toString());
+  console.log('\007 \007 \007');
+  this.emit('end');
+}
 
 // Lint Task
 gulp.task('lint', function() {
@@ -30,8 +34,9 @@ gulp.task('lint', function() {
 gulp.task('sass', function() {
     return gulp.src('scss/*.scss')
         .pipe(sass())
+        .on('error', errorLog)
         .pipe(autoprefix())
-        .pipe(gulp.dest('stylesheets')); 
+        .pipe(gulp.dest('stylesheets'));
 });
 
 
@@ -46,6 +51,7 @@ gulp.task('css', function() {
         .pipe(rename('all.min.css'))
         .pipe(minifycss())
         .pipe(gulp.dest('dist'));
+        
 });
 
 //TODO minify html
@@ -57,7 +63,8 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('dist'))
         .pipe(rename('all.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist'))
+        .pipe(livereload(server));
 });
 
 
