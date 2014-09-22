@@ -3,8 +3,9 @@
 @import "_settings";
 @import "_base.scss";
 
+
 body{
-   box-sizing: border-box;
+  box-sizing: border-box;
   width                : 100%;
   height               : 100%;
   margin               : 0;
@@ -13,6 +14,77 @@ body{
 }
 
 *::selection{background-color: rgba(0,0,0,0.3); color:$main_color;}
+
+//stroke outline
+.hamburger,.cross-close{
+  visibility: hidden;
+  display:inline-block;
+  position: fixed;
+  top:0;
+  right:0;
+  z-index: $z_overlay;
+  background-color: rgba(0,0,0,0.2);
+  &:hover, &:focus{
+    background-color: transparent;
+    outline: -webkit-focus-ring-color none;
+  }
+  svg{
+    fill:white;
+  }
+}
+
+.cross-close{
+  background-color: transparent;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(24,23,22,0.8);
+
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+  
+  z-index: $z_overlay;
+  nav{
+    text-align: center;
+    position: relative;
+    top: 50%;
+    height: 80%;
+    transform: translateY(-50%);
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    height: 100%;
+    position: relative;
+    li{
+      display: block;
+      height: 20%;
+      height: calc(100% / 4);
+      min-height: 54px;
+      color:white;
+      font-size: 5rem;
+    }
+  }
+  a{
+    color: $second_color;
+  }
+
+}
+
+.overlay-slidedown {
+  visibility: visible;
+  transform: translateY(0%);
+  transition: transform 0.4s ease-in-out;
+}
+
 
 
 #back_picture{
@@ -59,11 +131,11 @@ body{
 
 #fkrb p{
    box-sizing: border-box;
-  width                : 33%;
+  width                : 100%;
   height               : 25%;
   // position             : fixed;
   display              : inline-block;
-  left                 : 33%;
+  // left                 : 33%;
   top                  : 75%;
   margin               : 0;
   color                : white;
@@ -341,11 +413,10 @@ body{
     padding   : 0;
   }
 
-
-
   p{
     @include font($second_font);
     color:black;
+    
   }
   .button{
     background-color: $second-color;
@@ -355,6 +426,23 @@ body{
       background-color: $main-color;
     }
   }
+
+  .mailchimp, .lemonstand{
+    padding: 0;
+    width: 75px;
+    // height: 75px;
+    
+  }
+  .lemonstand{
+    width: 60px;
+    fill:black;
+    padding-top: 8px;
+    padding-left: 8px;
+  }
+}
+
+#project_4 .devicons{
+  margin-right: 4%;
 }
 
 .project-content-wrapper{
@@ -404,6 +492,10 @@ body{
   @include font($second_font);
   cursor: pointer;
   transition: color 0.2s;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 88%;
 
   &:hover{
     // color: $background_dark;
@@ -473,17 +565,17 @@ body{
 
 .arrow-left {
   left:0%;
-  padding-left: 30px;
+  padding-left: 10px;
   &:hover{
-    padding-left: 15px;
+    padding-left: 20px;
   }
 }
 
 .arrow-right {
   right:0%;
-  padding-left: 15px;
+  padding-left: 10px;
   &:hover{
-    padding-left: 30px;
+    padding-left: 20px;
   }
 }
 
@@ -528,7 +620,7 @@ polyline {
     text-align : center;
     color      : black;
   }
-  span:last-child{
+  .xdk{
     // width: 20% ;
     margin-top: -10px;
     padding   : 0;
@@ -645,15 +737,19 @@ polyline {
 
 
   .sublime-text{
-    margin-left: 25%;
-    width: 65px;
-    height: 65px;
+
+    margin-left: 30px;
+    width: 62px;
+    height: 62px;
+    padding-top: 17px;
+    margin-top: 3%;
+
     background-color: #FAFAFA;
     color: $background_dark;
     text-align: center;
     font-size: 3.5rem;
     padding-top: 18px;
-    margin-top: 9px;
+    margin-top: 4px;
     -webkit-font-smoothing: antialiased;
     border: solid 2px white;
     border-radius: 5px;
@@ -868,15 +964,37 @@ polyline {
     // margin-top: 42px;
     @extend .project-title;
   }
-    h3{
+  .fa{
+    font-size: 10rem;
+    color:$background_dark;
+    margin-top: 150px;
+    &:hover{
+      color:black;
+    }
+  }
+  h3{
     text-align: center;
     @include font($main_font);
-    font-size: 2rem;
+    font-size: 3rem;
+    display: inline-block;
+    color: white;
 
   }
 }
 
+.email{
+  display: inline-block;
+  width: 100%;
+  padding-left: 20%;
+}
 
+.form-wrapper{
+  float:left;
+}
+
+.social-github, .social-linkedin{
+  padding-left: 4%;
+}
 
 #contactForm{
 
@@ -896,28 +1014,30 @@ polyline {
     @include font($main_font);
   }
   ::-webkit-input-placeholder {
-     color: rgba(0,0,0,0.6);
+     color: rgba(0,0,0,0.8);
   }
 
   ::-moz-placeholder {  /* Firefox 19+ */
-     color: white;  
+     color:  rgba(0,0,0,0.8);  
   }
 
   :-ms-input-placeholder {  
-     color: white;  
+     color:  rgba(0,0,0,0.8);  
   }
 
   .formInput{
     color:white;
     @include font($second_font);
     background-color: rgba(0,0,0,0.3);
+    height: 50px;
+    font-size: 1.5rem;
     &:focus{
       background-color: rgba(0,0,0,0.6);
     }
   }
 
   .formTextarea{
-    min-height: 200px;
+    min-height: 250px;
     max-width: 100%;
     margin-bottom: 10px;
   }
@@ -925,6 +1045,7 @@ polyline {
   .formButton input{
     @include font($main_font);
     color:white;
+    // font-size: 1.5rem;
   }
 
   small{
@@ -938,27 +1059,12 @@ polyline {
   h3{
     height: 125px;
     display: inline-block;
+    color: white;
   }
+
 }
 
-.social-line{
-  height: 125px;
-  /* float: left; */
-  display: inline-block;
-  width: 100%;
-}
-
-
-@media screen and (max-height: 699px){
-  .contact-fixed{
-    position: relative;
-    margin-top: 0px;
-  }
-}
-
-@media screen and (min-height: 700px){
-  .contact-fixed{
-    position: fixed;
-    margin-top: 42px;
-  }
-}
+@import "small.scss";
+@import "medium.scss";
+@import "large.scss";
+@import "xlarge.scss";

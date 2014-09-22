@@ -1,0 +1,211 @@
+@media #{$small-only} { 
+	 body {background: red;}
+	
+	.hamburger,.cross-close{
+	  visibility: visible;
+	}
+
+	#back_picture{
+		background-position: 50% 50%;
+	}
+
+	#fkrb{
+		h3{
+			font-size: 5rem;
+			padding-top: 40px;
+		}
+
+		p{
+			font-size: 1.4rem;
+		}
+	}
+
+	#logo{
+		top: 30px
+	}
+	
+	.magellan{
+		display: none;
+	} 
+
+	.project-content-wrapper{
+		margin: 0;
+	}
+
+	.project{
+		height: 1500px;
+
+		.slicker{
+			height: 1500px;
+		}
+		.slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img{
+			height: 100%;
+		}
+		.slicker-nav{
+			display: none;
+		}
+	}
+
+	.projects{
+		padding: 0;		
+		img{
+			float: none;
+			margin: auto;
+		}
+		h2{
+			font-size: 2.5rem;
+		}
+		.button{
+			// bottom: -750px;
+			padding-right: 0;
+			padding-left: 0;
+			width: 100%;
+			font-size: 1.5rem;
+		}
+	}
+
+	.project-title{
+		font-size: 3rem;
+	}
+	
+	.icon-list{
+		background-color: $second_color;
+		transition : background 0.3s ease;
+		h3{
+			color: $second_color;
+			margin-top:-30px;
+			transition : all 0.3s ease;
+		
+      }
+      	&:hover{
+      		h3{
+				margin-top:-30px !important;
+      		}
+			}
+      .skilled{
+        color: $skilled;
+      }
+
+      .experienced{
+        // color: #316EA5;
+        color: $experienced;
+      }
+
+      .knowledge{
+        color:#5288B9;
+      }
+	}
+
+	.front-end{
+	  .foundation .foundation-body{
+	    fill: $skilled;
+	    transition: color 0.3s ease;
+	  }  
+	  .foundation .foundation-accessories{
+	    fill: $second-color;
+	    transition: color 0.3s ease;
+	    stroke: none;
+	  }
+	}
+
+	.back-end{
+		.mailchimp svg{
+	   		fill: $experienced;
+	    	transition: color 0.3s ease;
+	  	}
+	}
+
+	.tools{
+		.sublime-text{
+			background-color: $skilled;
+			border-color: $skilled;
+			color: $second_color;
+			transition: color 0.4s ease;
+		}
+	}
+
+	.misc{
+	 .photoshop svg{
+	    fill: $experienced;
+	    transition: color 0.3s ease;
+	  }
+	}
+
+
+	.soon{
+	  span{
+	    color: $background_dark;
+	    transition: color 0.3s ease;
+	  }
+	}
+
+	#about{
+		height: 1950px;
+		p{
+			margin:0;
+		}
+	}
+
+	.about-skills{
+		h2{
+			margin-bottom: 30px;
+		}
+
+	.sublime-text{
+		margin-left:15%;
+		margin-left: 15%;
+		width: 64px;
+		height: 64px;
+		padding-top: 18px;
+		margin-top: 3px;
+	}
+	.mailchimp svg{
+		width: 100px;
+	}
+}
+
+
+	#contact{
+		height: 1100px;
+
+		.fa{
+			padding-top: 30px;
+			margin-top:0;
+		}
+		.email{
+			width: 100%;
+			padding-left: 7%;
+
+			h3{
+				font-size: 1.75rem;
+			}
+		}
+	}
+
+	.contact-fixed{
+		position: relative;
+		margin-top: 0px;
+	}
+
+	#contactForm .formInput {
+    	font-size: 1rem; 
+	}
+	
+	.social-linkedin{
+		// padding-left: 60%;
+		padding-left: 15%;
+		height: 30px;
+		left: 0;
+		bottom: -730px;
+		position: absolute;
+	}
+
+	.social-github{
+		padding-left: 15%;
+		height: 30px;
+		left:40%;
+		bottom: -730px;
+		position: absolute;
+
+	}
+} 

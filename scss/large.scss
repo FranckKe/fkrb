@@ -1,0 +1,105 @@
+
+@media #{$large-only} { 
+  body {background: yellow;} 
+
+  .hamburger,.cross-close{
+  	  visibility: visible;
+  	}
+
+  	#back_picture{
+  		background-position: 50% 50%;
+  	}
+
+  	.magellan{
+  		display: none;
+  	}
+  	.project-content-wrapper{
+  		margin: 0;
+  	}
+
+  	.nav-title{
+  		font-size: 1.3rem;
+  	}
+
+	#about{
+		height: 1000px;
+		p{
+			margin:0;
+		}
+	}
+
+	.back-end{
+		.mailchimp svg{
+	    	width:100px;
+	  	}
+	}
+	
+	.tools{
+		.sublime-text {
+			margin-left: 30px;
+			width: 62px;
+			height: 62px;
+			padding-top: 17px;
+			margin-top: 4px;
+		}
+	}
+
+	.contact-fixed{
+		margin-top: 0;
+	}
+
+	.social-linkedin{
+		padding-left:1%;
+	}
+	
+	.email{
+		padding-left: 7%;
+	}
+
+	#contactForm .formButton input{
+		font-size: 2rem;
+	}
+  	// #contact{
+  	// 	height: 1100px;
+
+  	// 	.fa{
+  	// 		padding-top: 30px;
+  	// 		margin-top:0;
+  	// 	}
+  	// 	.email{
+  	// 		width: 100%;
+  	// 		padding-left: 7%;
+
+  	// 		h3{
+  	// 			font-size: 1.75rem;
+  	// 		}
+  	// 	}
+  	// }
+
+  	// .contact-fixed{
+  	// 	position: relative;
+  	// 	margin-top: 0px;
+  	// }
+
+  	// #contactForm .formInput {
+   //    	font-size: 1rem; 
+  	// }
+  	
+  	// .social-linkedin{
+  	// 	// padding-left: 60%;
+  	// 	padding-left: 15%;
+  	// 	height: 30px;
+  	// 	left: 0;
+  	// 	bottom: -730px;
+  	// 	position: absolute;
+  	// }
+
+  	// .social-github{
+  	// 	padding-left: 15%;
+  	// 	height: 30px;
+  	// 	left:40%;
+  	// 	bottom: -730px;
+  	// 	position: absolute;
+
+  	// }
+}
