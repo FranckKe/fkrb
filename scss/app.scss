@@ -24,12 +24,15 @@ body{
   right:0;
   z-index: $z_overlay;
   background-color: rgba(0,0,0,0.2);
+  padding: 0.5rem 0.5rem 0.5rem;
+  svg{
+    height: 25px;
+    width: 60px;
+    fill:white;
+  }
   &:hover, &:focus{
     background-color: transparent;
     outline: -webkit-focus-ring-color none;
-  }
-  svg{
-    fill:white;
   }
 }
 
@@ -70,7 +73,7 @@ body{
       height: calc(100% / 4);
       min-height: 54px;
       color:white;
-      font-size: 5rem;
+      font-size: 4rem;
     }
   }
   a{
@@ -1064,6 +1067,7 @@ polyline {
 
 }
 
+@import "xsmall.scss";
 @import "small.scss";
 @import "medium.scss";
 @import "large.scss";

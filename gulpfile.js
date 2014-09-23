@@ -61,8 +61,8 @@ gulp.task('css', function() {
 gulp.task('scripts', function() {
     return gulp.src([
         'js/jquery-2.1.1.min.js',
-        'js/jquery-ui-1.10.4.min.js',
-        'js/modernizr.js',
+        // 'js/jquery-ui-1.10.4.min.js',
+        'js/modernizr.min.js',
         'js/foundation.min.js',
         'js/skrollr.min.js',
         'js/wow.min.js',

@@ -1,0 +1,595 @@
+@media only screen and (max-width: 20em){ 
+	 body {background: blue;}
+	
+	.hamburger,.cross-close{
+	  visibility: visible;
+	}
+
+	.overlay nav {
+		height: 100%;
+		a {
+			font-size: 3rem;
+		}
+	}
+
+	#back_picture{
+		background-position: 50% 50%;
+	}
+
+	#fkrb{
+		h3{
+			font-size: 3.5rem;
+			padding-top: 100px;
+		}
+
+		p{
+			font-size: 1.4rem;
+		}
+	}
+
+	#logo{
+		top: 15px;
+		padding-left: 12%;
+	}
+	
+	.magellan{
+		display: none;
+	} 
+
+	.project-content-wrapper{
+		margin: 0;
+	}
+
+	.project{
+		height: 1500px;
+
+		.slicker{
+			height: 1500px;
+		}
+		.slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img{
+			height: 100%;
+		}
+		.slicker-nav{
+			display: none;
+		}
+	}
+
+	.projects{
+		padding: 0;		
+		img{
+			float: none;
+			margin: auto;
+		}
+		h2{
+			font-size: 1.5rem;
+		}
+		.button{
+			// bottom: -750px;
+			padding-right: 0;
+			padding-left: 0;
+			width: 100%;
+			font-size: 1.5rem;
+		}
+		.devicons{
+			font-size: 3em;
+		}
+	}
+	.techno {
+		margin-bottom: -15px;
+		i{
+			font-size: 2.5rem;
+			padding: 0;
+			padding-top: 4px;
+		}
+		.xdk{
+			margin-top: 0;
+		}
+		.photoshop svg{
+			width: 50px;
+			height: 50px;
+		}
+		.mailchimp{
+			display: none;
+		}
+		.lemonstand{
+			width: 25px;
+			padding-top: 4px;
+			padding-left: 2px;
+			svg{
+				width: 25px;
+				height: 25px;
+			}
+		}
+		.foundation {
+			padding:0;
+			svg{
+				height: 48px;
+				width:50px;
+			}
+		}
+	}
+	#project_4{
+		.techno{
+			margin-bottom: 0;
+		}
+		.devicons{
+			font-size: 2em;
+		}
+	}
+	
+	.project-title{
+		font-size: 2rem;
+	}
+
+
+
+
+	.about-experience {
+		p,h3{
+			padding-left: 0;
+		}
+	}
+
+
+	.icon-list{
+		background-color: $second_color;
+		transition : background 0.3s ease;
+		width: 100%;
+		height: 100px;
+		h3{
+			color: $second_color;
+			margin-top:-30px;
+			transition : all 0.3s ease;
+		
+      	}
+      	&:hover{
+      		h3{
+				margin-top:-30px !important;
+      		}
+		}
+
+		.devicons{
+			font-size: 3rem;
+		}
+
+
+      .skilled{
+        color: $skilled;
+      }
+
+      .experienced{
+        // color: #316EA5;
+        color: $experienced;
+      }
+
+      .knowledge{
+        color:#5288B9;
+      }
+      .foundation svg{
+      	width: 50px
+      }
+	}
+
+
+	.front-end{
+		.foundation {
+			svg{
+				width: 50px;
+			}
+			.foundation-body{
+			fill: $skilled;
+			transition: color 0.3s ease;
+			}  
+
+			.foundation-accessories{
+			fill: $second-color;
+			transition: color 0.3s ease;
+			stroke: none;
+			}
+		}
+	}
+
+	.back-end{
+		.mailchimp svg{
+			width: 50px;
+	   		fill: $experienced;
+	    	transition: color 0.3s ease;
+	  	}
+	}
+
+	.tools{
+		.sublime-text{
+			background-color: $skilled;
+			border-color: $skilled;
+			color: $second_color;
+			transition: color 0.4s ease;
+			margin-left: 6px;
+			width: 40px;
+			height: 40px;
+			padding-top: 6px;
+			margin-top: 3px;
+			font-size: 2rem;
+		}
+	}
+
+	.misc{
+	 .photoshop svg{
+	 	width: 50px;
+	    fill: $experienced;
+	    transition: color 0.3s ease;
+	  }
+	  .c-prog{
+	  	font-size: 3rem;
+	  }
+	}
+
+
+	.soon{
+	  span{
+	    color: $background_dark;
+	    transition: color 0.3s ease;
+	  }
+	}
+
+	#about{
+		height: 2230px;
+		p{
+			margin:0;
+		}
+	}
+
+	.about-skills{
+		font-size: 3rem;
+		h2{
+			margin-bottom: 30px;
+		}
+
+	}
+
+
+	#contact{
+		height: 1100px;
+		background-image: url("../img/trianglify-background.svg");
+		background-size: cover;
+		z-index: $z_foreground;
+
+		.fa{
+			padding-top: 30px;
+			margin-top:0;
+			font-size: 6rem;
+		}
+		.email{
+			width: 100%;
+			padding-left: 5%;
+
+			h3{
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.contact-fixed{
+		position: relative;
+		margin-top: 0px;
+	}
+
+	#contactForm .formInput {
+    	font-size: 1rem; 
+	}
+	
+	.social-linkedin{
+		// padding-left: 60%;
+		padding-left: 15%;
+		height: 30px;
+		left: 0;
+		bottom: -730px;
+		position: absolute;
+	}
+
+	.social-github{
+		padding-left: 15%;
+		height: 30px;
+		left:40%;
+		bottom: -730px;
+		position: absolute;
+
+	}
+} 
+@media only screen and (max-width: 30em) and (min-width:20em){ 
+
+	.hamburger,.cross-close{
+	  visibility: visible;
+	}
+
+	.overlay nav {
+		height: 100%;
+		a {
+			font-size: 3rem;
+		}
+	}
+
+	#back_picture{
+		background-position: 50% 50%;
+	}
+
+	#fkrb{
+		h3{
+			font-size: 3.5rem;
+			padding-top: 100px;
+		}
+
+		p{
+			font-size: 1.4rem;
+		}
+	}
+
+	#logo{
+		top: 15px;
+		padding-left: 17%;
+	}
+	
+	.magellan{
+		display: none;
+	} 
+
+	.project-content-wrapper{
+		margin: 0;
+	}
+
+	.project{
+		height: 1500px;
+
+		.slicker{
+			height: 1500px;
+		}
+		.slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img{
+			height: 100%;
+		}
+		.slicker-nav{
+			display: none;
+		}
+	}
+
+	.projects{
+		padding: 0;		
+		img{
+			float: none;
+			margin: auto;
+		}
+		h2{
+			font-size: 1.5rem;
+		}
+		.button{
+			// bottom: -750px;
+			padding-right: 0;
+			padding-left: 0;
+			width: 100%;
+			font-size: 1.5rem;
+		}
+		.devicons{
+			font-size: 3em;
+		}
+	}
+	.techno {
+		margin-bottom: -15px;
+		i{
+			font-size: 2.5rem;
+			padding: 0;
+			padding-top: 4px;
+		}
+		.xdk{
+			margin-top: 0;
+		}
+		.photoshop svg{
+			width: 50px;
+			height: 50px;
+		}
+		.mailchimp{
+			display: none;
+		}
+		.lemonstand{
+			width: 25px;
+			padding-top: 4px;
+			padding-left: 2px;
+			svg{
+				width: 25px;
+				height: 25px;
+			}
+		}
+		.foundation {
+			padding:0;
+			svg{
+				height: 48px;
+				width:50px;
+			}
+		}
+	}
+	#project_4{
+		.techno{
+			margin-bottom: 0;
+		}
+		.devicons{
+			font-size: 2em;
+		}
+	}
+	
+	.project-title{
+		font-size: 2rem;
+	}
+
+
+
+
+	.about-experience {
+		p,h3{
+			padding-left: 0;
+		}
+	}
+
+
+	.icon-list{
+		background-color: $second_color;
+		transition : background 0.3s ease;
+		width: 100%;
+		height: 100px;
+		h3{
+			color: $second_color;
+			margin-top:-30px;
+			transition : all 0.3s ease;
+		
+      	}
+      	&:hover{
+      		h3{
+				margin-top:-30px !important;
+      		}
+		}
+
+		.devicons{
+			font-size: 3rem;
+		}
+
+
+      .skilled{
+        color: $skilled;
+      }
+
+      .experienced{
+        // color: #316EA5;
+        color: $experienced;
+      }
+
+      .knowledge{
+        color:#5288B9;
+      }
+      .foundation svg{
+      	width: 50px
+      }
+	}
+
+
+	.front-end{
+		.foundation {
+			svg{
+				width: 50px;
+			}
+			.foundation-body{
+			fill: $skilled;
+			transition: color 0.3s ease;
+			}  
+
+			.foundation-accessories{
+			fill: $second-color;
+			transition: color 0.3s ease;
+			stroke: none;
+			}
+		}
+	}
+
+	.back-end{
+		.mailchimp svg{
+			width: 50px;
+	   		fill: $experienced;
+	    	transition: color 0.3s ease;
+	  	}
+	}
+
+	.tools{
+		.sublime-text{
+			background-color: $skilled;
+			border-color: $skilled;
+			color: $second_color;
+			transition: color 0.4s ease;
+			margin-left: 6px;
+			width: 40px;
+			height: 40px;
+			padding-top: 6px;
+			margin-top: 3px;
+			font-size: 2rem;
+		}
+	}
+
+	.misc{
+	 .photoshop svg{
+	 	width: 50px;
+	    fill: $experienced;
+	    transition: color 0.3s ease;
+	  }
+	  .c-prog{
+	  	font-size: 3rem;
+	  }
+	}
+
+
+	.soon{
+	  span{
+	    color: $background_dark;
+	    transition: color 0.3s ease;
+	  }
+	}
+
+	#about{
+		height: 2045px;
+		p{
+			margin: auto;
+			max-width: 325px;
+		}
+	}
+
+	.about-skills{
+		font-size: 3rem;
+		h2{
+			margin-bottom: 30px;
+		}
+
+	}
+
+
+	#contact{
+		height: 1100px;
+		background-image: url("../img/trianglify-background.svg");
+		background-size: cover;
+		z-index: $z_foreground;
+
+		.fa{
+			padding-top: 30px;
+			margin-top:0;
+			font-size: 6rem;
+		}
+		.email{
+			width: 100%;
+			padding-left: 5%;
+
+			h3{
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.contact-fixed{
+		position: relative;
+		margin-top: 0px;
+	}
+
+	#contactForm .formInput {
+    	font-size: 1rem; 
+	}
+	
+	.social-linkedin{
+		// padding-left: 60%;
+		padding-left: 15%;
+		height: 30px;
+		left: 0;
+		bottom: -730px;
+		position: absolute;
+	}
+
+	.social-github{
+		padding-left: 15%;
+		height: 30px;
+		left:40%;
+		bottom: -730px;
+		position: absolute;
+
+	}
+
+}

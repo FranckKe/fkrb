@@ -1,4 +1,4 @@
-@media #{$small-only} { 
+@media only screen and (max-width: 40em) and (min-width:30em){ 
 	 body {background: red;}
 	
 	.hamburger,.cross-close{
@@ -21,7 +21,7 @@
 	}
 
 	#logo{
-		top: 30px
+		top: 30px;
 	}
 	
 	.magellan{
@@ -145,6 +145,9 @@
 			margin:0;
 		}
 	}
+	.about-experience h3, .about-experience p{
+		padding-left: 10px;
+	}
 
 	.about-skills{
 		h2{
@@ -167,6 +170,9 @@
 
 	#contact{
 		height: 1100px;
+		background-image: url("../img/trianglify-background.svg");
+		background-size: cover;
+		z-index: $z_foreground;
 
 		.fa{
 			padding-top: 30px;

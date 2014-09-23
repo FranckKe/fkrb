@@ -7,6 +7,8 @@ $(document).foundation({
   fixed_top: 0, // top distance in pixels assigned to the fixed element on scroll
 }
 });
+
+
 $( document ).ready(function() {
 
   var slicker_s = $(".slicker");
@@ -16,10 +18,6 @@ $( document ).ready(function() {
   var legend_s = ".skills-legend-skilled";
   var navTitlte_s = $(".nav-title");
   var $root = $('html, body');
-
-  new WOW().init();
-
-  skrollr.init();
 
   slicker_s.slick({
     infinite: true,
@@ -33,6 +31,20 @@ $( document ).ready(function() {
       }
   });
 
+   if ($(window).width() > 700){
+    new WOW().init();
+    skrollr.init();
+
+  }
+  if ($(window).height() < 710){
+     $(".contact-fixed").css("position","relative");
+     $(".contact-fixed").css("margin-top","0px");
+  }else{
+     $(".contact-fixed").css("position","fixed");
+     // $(".contact-fixed").css("margin-top","42px");
+  }
+
+  
 
   $(".hamburger").click(function(){
     overlay_s.toggleClass("overlay-slidedown");
@@ -106,6 +118,43 @@ $( document ).ready(function() {
     });
   }
 
+  var form = $('#myForm');
+  var formMessages = $('.formButton');
 
+  $(form).submit(function(event) {
+      event.preventDefault();
+      var formData = $(form).serialize();
+      
+      $.ajax({
+          type: 'POST',
+          url: $(form).attr('action'),
+          data: formData
+      })
+        .done(function(response) {
+            // Make sure that the formMessages div has the 'success' class.
+            
+            $(formMessages).prop('value', 'Yay');
+
+            // Set the message text.
+            $(formMessages).text(response);
+
+            // Clear the form.
+            $('#name').val('');
+            $('#email').val('');
+            $('#message').val('');
+        })
+
+        .fail(function(data) {
+            // Make sure that the formMessages div has the 'error' class.
+            $(formMessages).prop('value', 'Nay');
+
+            // Set the message text.
+            if (data.responseText !== '') {
+                $(formMessages).text(data.responseText);
+            } else {
+                $(formMessages).text('Oops! An error occured and your message could not be sent.');
+            }
+          });
+  });
   
 });
