@@ -1,6 +1,6 @@
 
 @media #{$large-only} { 
-  body {background: yellow;} 
+  body {background: blue;} 
 
   .hamburger,.cross-close{
   	  visibility: visible;
@@ -53,7 +53,7 @@
 	}
 	
 	.email{
-		padding-left: 7%;
+		// padding-left: 7%;
 	}
 
 	#contactForm .formButton input{

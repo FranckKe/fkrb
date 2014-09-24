@@ -5310,6 +5310,9 @@ body {
 
 .cross-close {
   background-color: transparent; }
+  .cross-close svg {
+    width: 60px;
+    height: 60px; }
 
 .overlay {
   position: fixed;
@@ -5374,43 +5377,36 @@ body {
   width: 100%;
   z-index: 5;
   top: 0px; }
+  #fkrb h3 {
+    padding-top: 20%;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    font-size: 7em;
+    font-weight: bold;
+    opacity: 0.9;
+    z-index: 10; }
+  #fkrb p {
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    width: 100%;
+    height: 25%;
+    display: inline-block;
+    display: inline-block;
+    top: 75%;
+    margin: 0;
+    color: white;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+    font-size: 2em; }
 
 .back-fixed {
   position: fixed;
   width: 100%;
-  display: inline-block; }
-
-#fkrb h3 {
-  padding-top: 20%;
-  color: white;
-  text-align: center;
-  font-size: 7em;
-  font-weight: bold;
-  opacity: 0.9;
-  z-index: 10; }
-
-#fkrb p {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
-  width: 100%;
-  height: 25%;
   display: inline-block;
-  top: 75%;
-  margin: 0;
-  color: white;
-  text-align: center;
-  float: left;
-  overflow: hidden;
-  font-size: 2em; }
+  z-index: 2; }
 
-/*
-██╗      ██████╗  ██████╗  ██████╗ 
-██║     ██╔═══██╗██╔════╝ ██╔═══██╗
-██║     ██║   ██║██║  ███╗██║   ██║
-██║     ██║   ██║██║   ██║██║   ██║
-███████╗╚██████╔╝╚██████╔╝╚██████╔╝
-╚══════╝ ╚═════╝  ╚═════╝  ╚═════╝                                  
- */
 #logo {
   width: 400px;
   height: 175px;
@@ -5481,7 +5477,6 @@ body {
 
 #logo_F {
   color: #d35400;
-  /* background-color: white; */
   z-index: 50;
   font-size: 146px;
   margin: 0;
@@ -5527,8 +5522,6 @@ body {
   box-shadow: 0 5px 25px -7px black;
   background-color: rgba(153, 153, 153, 0.8);
   margin-top: 0px; }
-  .magellan[style="position: fixed; top: 0px;"] .logo-svg {
-    visibility: visible; }
 
 .magellan {
   font-family: 'Montserrat', sans-serif;
@@ -5539,8 +5532,6 @@ body {
   background-color: rgba(0, 0, 0, 0);
   -webkit-transition: all 0.5s ease;
           transition: all 0.5s ease; }
-  .magellan .logo-svg {
-    visibility: hidden; }
   .magellan dd {
     margin-left: 0; }
     .magellan dd a {
@@ -5555,14 +5546,6 @@ body {
 .magellan-active-custom a {
   color: #f89406 !important; }
 
-/*
-██████╗ ██████╗  ██████╗      ██╗███████╗ ██████╗████████╗███████╗
-██╔══██╗██╔══██╗██╔═══██╗     ██║██╔════╝██╔════╝╚══██╔══╝██╔════╝
-██████╔╝██████╔╝██║   ██║     ██║█████╗  ██║        ██║   ███████╗
-██╔═══╝ ██╔══██╗██║   ██║██   ██║██╔══╝  ██║        ██║   ╚════██║
-██║     ██║  ██║╚██████╔╝╚█████╔╝███████╗╚██████╗   ██║   ███████║
-╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚════╝ ╚══════╝ ╚═════╝   ╚═╝   ╚══════╝                                                                 
- */
 .project {
   position: relative;
   height: 850px;
@@ -5578,28 +5561,11 @@ body {
   margin-left: auto;
   margin-right: auto;
   font-family: 'Montserrat', sans-serif;
-  /* font-weight     : bold; */
   color: white;
-  /* background-color: black; */
   -moz-box-sizing: border-box;
        box-sizing: border-box;
   background-color: #f89406;
   margin: 0px 0 20px 0; }
-
-.back-theme {
-  width: 100%;
-  height: 110vh;
-  background: url(../img/trianglify-background.svg) no-repeat top left;
-  position: fixed;
-  top: 0;
-  z-index: 0; }
-
-.back-opacity {
-  width: 100%;
-  height: 125vh;
-  background-color: #181716;
-  opacity: 0.5;
-  position: absolute; }
 
 .projects {
   border-width: 75%;
@@ -5635,6 +5601,8 @@ body {
     fill: black;
     padding-top: 8px;
     padding-left: 8px; }
+  .projects img {
+    float: right; }
 
 #project_4 .devicons {
   margin-right: 4%; }
@@ -5753,21 +5721,24 @@ polyline {
   -webkit-transition: all 250ms ease-in-out;
           transition: all 250ms ease-in-out; }
 
-.project .slick-prev, .project .slick-next {
+.project .slick-prev {
   width: 50px;
   height: 70%;
-  top: 27%; }
-
-.project .slick-prev:before, .project .slick-next:before {
-  width: 50px;
-  font-size: 25px;
-  padding-top: 5px; }
-
-.project .slick-prev {
+  top: 27%;
   left: 0px; }
-
+  .project .slick-prev:before {
+    width: 50px;
+    height: 70%;
+    top: 27%; }
 .project .slick-next {
+  width: 50px;
+  height: 70%;
+  top: 27%;
   right: 0px; }
+  .project .slick-next:before {
+    width: 50px;
+    height: 70%;
+    top: 27%; }
 
 .techno {
   height: 50px;
@@ -5786,23 +5757,12 @@ polyline {
     margin-top: -10px;
     padding: 0; }
 
-.projects img {
-  float: right; }
-
 #project_2 img {
   padding: 0; }
 
 #project_2 img, #project_3 img, #project_4 img, #project_5 img, #project_6 img {
   box-shadow: 0px 10px 20px -5px black; }
 
-/*
- █████╗ ██████╗  ██████╗ ██╗   ██╗████████╗
-██╔══██╗██╔══██╗██╔═══██╗██║   ██║╚══██╔══╝
-███████║██████╔╝██║   ██║██║   ██║   ██║   
-██╔══██║██╔══██╗██║   ██║██║   ██║   ██║   
-██║  ██║██████╔╝╚██████╔╝╚██████╔╝   ██║   
-╚═╝  ╚═╝╚═════╝  ╚═════╝  ╚═════╝    ╚═╝                                             
- */
 #about {
   position: relative;
   height: 1000px;
@@ -5885,6 +5845,7 @@ polyline {
   width: 90%;
   height: 125px;
   margin: auto;
+  margin-bottom: 30px;
   clear: both;
   overflow: visible;
   display: -webkit-box;
@@ -5905,8 +5866,7 @@ polyline {
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: background 0.4s ease;
-          transition: background 0.4s ease;
-  margin-bottom: 30px; }
+          transition: background 0.4s ease; }
   .icon-list h3 {
     position: absolute;
     color: #181716;
@@ -6007,7 +5967,8 @@ polyline {
   position: relative;
   height: 800px;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
+  opacity: 1;
   overflow: hidden; }
   #contact .fa {
     font-size: 10rem;
@@ -6023,9 +5984,9 @@ polyline {
     color: white; }
 
 .email {
-  display: inline-block;
-  width: 100%;
-  padding-left: 20%; }
+  width: auto;
+  margin: auto;
+  display: table; }
 
 .form-wrapper {
   float: left; }
@@ -6046,7 +6007,6 @@ polyline {
 #contactForm ::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.8); }
 #contactForm ::-moz-placeholder {
-  /* Firefox 19+ */
   color: rgba(0, 0, 0, 0.8); }
 #contactForm :-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.8); }
@@ -6064,7 +6024,10 @@ polyline {
   margin-bottom: 10px; }
 #contactForm .formButton input {
   font-family: 'Montserrat', sans-serif;
-  color: white; }
+  color: white;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease; }
 #contactForm small {
   margin-top: 5px;
   -webkit-animation-duration: 1s;
@@ -6226,7 +6189,7 @@ polyline {
     .about-skills h2 {
       margin-bottom: 30px; }
   #contact {
-    height: 1100px;
+    height: 900px;
     background-image: url("../img/trianglify-background.svg");
     background-size: cover;
     z-index: 20; }
@@ -6234,11 +6197,8 @@ polyline {
       padding-top: 30px;
       margin-top: 0;
       font-size: 6rem; }
-    #contact .email {
-      width: 100%;
-      padding-left: 5%; }
-      #contact .email h3 {
-        font-size: 1rem; }
+    #contact .email h3 {
+      font-size: 1rem; }
   .contact-fixed {
     position: relative;
     margin-top: 0px; }
@@ -6248,13 +6208,13 @@ polyline {
     padding-left: 15%;
     height: 30px;
     left: 0;
-    bottom: -730px;
+    bottom: -760px;
     position: absolute; }
   .social-github {
     padding-left: 15%;
     height: 30px;
     left: 40%;
-    bottom: -730px;
+    bottom: -760px;
     position: absolute; } }
 
 @media only screen and (max-width: 30em) and (min-width: 20em) {
@@ -6405,7 +6365,7 @@ polyline {
     .about-skills h2 {
       margin-bottom: 30px; }
   #contact {
-    height: 1100px;
+    height: 885px;
     background-image: url("../img/trianglify-background.svg");
     background-size: cover;
     z-index: 20; }
@@ -6413,11 +6373,8 @@ polyline {
       padding-top: 30px;
       margin-top: 0;
       font-size: 6rem; }
-    #contact .email {
-      width: 100%;
-      padding-left: 5%; }
-      #contact .email h3 {
-        font-size: 1rem; }
+    #contact .email h3 {
+      font-size: 1rem; }
   .contact-fixed {
     position: relative;
     margin-top: 0px; }
@@ -6445,7 +6402,7 @@ polyline {
     background-position: 50% 50%; }
   #fkrb h3 {
     font-size: 5rem;
-    padding-top: 40px; }
+    padding-top: 100px; }
   #fkrb p {
     font-size: 1.4rem; }
   #logo {
@@ -6538,7 +6495,7 @@ polyline {
   .about-skills .mailchimp svg {
     width: 100px; }
   #contact {
-    height: 1100px;
+    height: 1000px;
     background-image: url("../img/trianglify-background.svg");
     background-size: cover;
     z-index: 20; }
@@ -6651,7 +6608,7 @@ polyline {
     -webkit-transition: color 0.3s ease;
             transition: color 0.3s ease; }
   #about {
-    height: 1950px; }
+    height: 1700px; }
     #about p {
       margin: 0; }
   .about-skills h2 {
@@ -6664,15 +6621,15 @@ polyline {
     padding-top: 18px;
     margin-top: 3px; }
   #contact {
-    height: 1100px; }
+    height: 1100px;
+    background-size: cover;
+    z-index: 20;
+    background-image: url("../img/trianglify-background.svg"); }
     #contact .fa {
       padding-top: 30px;
       margin-top: 0; }
-    #contact .email {
-      width: 100%;
-      padding-left: 7%; }
-      #contact .email h3 {
-        font-size: 1.75rem; }
+    #contact .email h3 {
+      font-size: 1.75rem; }
   .contact-fixed {
     position: relative;
     margin-top: 0px; }
@@ -6693,7 +6650,7 @@ polyline {
 
 @media only screen and (min-width:64.063em) and (max-width:90em) {
   body {
-    background: yellow; }
+    background: blue; }
   .hamburger, .cross-close {
     visibility: visible; }
   #back_picture {
@@ -6720,8 +6677,6 @@ polyline {
     margin-top: 0; }
   .social-linkedin {
     padding-left: 1%; }
-  .email {
-    padding-left: 7%; }
   #contactForm .formButton input {
     font-size: 2rem; } }
 

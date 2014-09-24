@@ -248,7 +248,7 @@
 
 
 	#contact{
-		height: 1100px;
+		height: 900px;
 		background-image: url("../img/trianglify-background.svg");
 		background-size: cover;
 		z-index: $z_foreground;
@@ -259,8 +259,8 @@
 			font-size: 6rem;
 		}
 		.email{
-			width: 100%;
-			padding-left: 5%;
+			// width: 100%;
+			// padding-left: 5%;
 
 			h3{
 				font-size: 1rem;
@@ -282,7 +282,7 @@
 		padding-left: 15%;
 		height: 30px;
 		left: 0;
-		bottom: -730px;
+		bottom: -760px;
 		position: absolute;
 	}
 
@@ -290,11 +290,13 @@
 		padding-left: 15%;
 		height: 30px;
 		left:40%;
-		bottom: -730px;
+		bottom: -760px;
 		position: absolute;
 
 	}
 } 
+
+
 @media only screen and (max-width: 30em) and (min-width:20em){ 
 
 	.hamburger,.cross-close{
@@ -545,7 +547,7 @@
 
 
 	#contact{
-		height: 1100px;
+		height: 885px;
 		background-image: url("../img/trianglify-background.svg");
 		background-size: cover;
 		z-index: $z_foreground;
@@ -556,8 +558,8 @@
 			font-size: 6rem;
 		}
 		.email{
-			width: 100%;
-			padding-left: 5%;
+			// width: 100%;
+			// padding-left: 5%;
 
 			h3{
 				font-size: 1rem;

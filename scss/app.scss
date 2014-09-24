@@ -6,74 +6,78 @@
 
 body{
   box-sizing: border-box;
-  width                : 100%;
-  height               : 100%;
-  margin               : 0;
-  z-index              : 0;
+  width     : 100%;
+  height    : 100%;
+  margin    : 0;
+  z-index   : 0;
   @include font($main_font);
 }
 
 *::selection{background-color: rgba(0,0,0,0.3); color:$main_color;}
 
-//stroke outline
+
+
 .hamburger,.cross-close{
-  visibility: hidden;
-  display:inline-block;
-  position: fixed;
-  top:0;
-  right:0;
-  z-index: $z_overlay;
+  visibility      : hidden;
+  display         : inline-block;
+  position        : fixed;
+  top             : 0;
+  right           : 0;
+  z-index         : $z_overlay;
   background-color: rgba(0,0,0,0.2);
-  padding: 0.5rem 0.5rem 0.5rem;
+  padding         : 0.5rem 0.5rem 0.5rem;
   svg{
     height: 25px;
-    width: 60px;
-    fill:white;
+    width : 60px;
+    fill  : white;
   }
   &:hover, &:focus{
     background-color: transparent;
-    outline: -webkit-focus-ring-color none;
+    outline         : -webkit-focus-ring-color none;
   }
 }
+
 
 .cross-close{
   background-color: transparent;
+  svg{
+    width : 60px;
+    height: 60px;
+  }
 }
 
 .overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  position  : fixed;
+  width     : 100%;
+  height    : 100%;
+  top       : 0;
+  left      : 0;
   background: rgba(24,23,22,0.8);
-
   visibility: hidden;
-  transform: translateY(-100%);
+  transform : translateY(-100%);
   transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
-  
-  z-index: $z_overlay;
+  z-index   : $z_overlay;
   nav{
     text-align: center;
-    position: relative;
-    top: 50%;
-    height: 80%;
-    transform: translateY(-50%);
+    position  : relative;
+    top       : 50%;
+    height    : 80%;
+    transform : translateY(-50%);
   }
   ul{
     list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: inline-block;
-    height: 100%;
-    position: relative;
+    padding   : 0;
+    margin    : 0 auto;
+    display   : inline-block;
+    height    : 100%;
+    position  : relative;
     li{
-      display: block;
-      height: 20%;
-      height: calc(100% / 4);
+      display   : block;
+      height    : 20%;
+      height    : calc(100% / 4);
       min-height: 54px;
-      color:white;
-      font-size: 4rem;
+      color     : white;
+      font-size : 4rem;
     }
   }
   a{
@@ -84,130 +88,112 @@ body{
 
 .overlay-slidedown {
   visibility: visible;
-  transform: translateY(0%);
+  transform : translateY(0%);
   transition: transform 0.4s ease-in-out;
 }
 
 
 
+
 #back_picture{
-  position             : fixed;
-  width                : 100%;
-  height               : 100vh;
-  margin               : 0;
-  z-index              : 2;
-  background           : url(../img/trianglify-background.svg) no-repeat top left;
-  background-size   : cover;
-  top:0px;
+  position       : fixed;
+  width          : 100%;
+  height         : 100vh;
+  margin         : 0;
+  z-index        : 2;
+  background     : url(../img/trianglify-background.svg) no-repeat top left;
+  background-size: cover;
+  top            : 0px;
 }
 
 
-
 #fkrb{
-  position             : relative;
-  height               : 100vh;
-  width                : 100%;
-  z-index              : $z_section;
-  top: 0px;
-  
+  position: relative;
+  height  : 100vh;
+  width   : 100%;
+  z-index : $z_section;
+  top     : 0px;
+  h3{
+    padding-top: 20%;
+    display    : inline-block;
+    color      : white;
+    text-align : center;
+    font-size  : 7em;
+    font-weight: bold;
+    opacity    : 0.9;
+    z-index    : 10;
+  } 
+  p{
+    box-sizing: border-box;
+    width     : 100%;
+    height    : 25%;
+    display   : inline-block;
+    display   : inline-block;
+    top       : 75%;
+    margin    : 0;
+    color     : white;
+    text-align: center;
+    float     : left;
+    overflow  : hidden;
+    font-size : 2em;
+  }
 }
 
 .back-fixed{
   position: fixed;
   width   : 100%;
-  display:inline-block;
-  // transition: all 0s ease;
+  display : inline-block;
+  z-index : 2;
 }
 
-#fkrb h3{
-  // margin            : 0;
-  // position          : fixed;
-  padding-top          :20%;
-  // display           : inline-block;
-  color                : white;
-  text-align           : center;
-  font-size            : 7em;
-  font-weight          : bold;
-  opacity              : 0.9;
-  z-index: 10;
-}
 
-#fkrb p{
-   box-sizing: border-box;
-  width                : 100%;
-  height               : 25%;
-  // position             : fixed;
-  display              : inline-block;
-  // left                 : 33%;
-  top                  : 75%;
-  margin               : 0;
-  color                : white;
-  text-align           : center;
-  float                : left;
-  overflow             : hidden;
-  font-size            : 2em;
-}
 
-/*
-██╗      ██████╗  ██████╗  ██████╗ 
-██║     ██╔═══██╗██╔════╝ ██╔═══██╗
-██║     ██║   ██║██║  ███╗██║   ██║
-██║     ██║   ██║██║   ██║██║   ██║
-███████╗╚██████╔╝╚██████╔╝╚██████╔╝
-╚══════╝ ╚═════╝  ╚═════╝  ╚═════╝                                  
- */
 
 #logo {
-  width                : 400px;
-  height               : 175px;
-  // margin-left       : 39.5%;
-  margin               : auto;
-  display              : block;
-  // padding-left      : 65px;
-  padding-left         : 80px;
-  top                  : 60px;
-  position             : relative;
+  width       : 400px;
+  height      : 175px;
+  margin      : auto;
+  display     : block;
+  padding-left: 80px;
+  top         : 60px;
+  position    : relative;
 }
 
 #hex_F1{
-  width                : 200px;
-  height               : 200px;
-  z-index              : 6;
+  width    : 200px;
+  height   : 200px;
+  z-index  : 6;
   transform: rotateZ(90deg);
 }
 
 .hex_wrapper_F {
-  text-align           : center;
-  // margin            : 50px;
-  position             : relative;
-  display              : inline-block;
+  text-align: center;
+  position  : relative;
+  display   : inline-block;
 }
 
 .logo_hex:before {
-   position            : absolute;
-   top                 : 0;
-   right               : calc((100% / 2) - ((100% * 0.57735) / 2));
-   background-color    : inherit;
-   height              : inherit;
-   width               : inherit;
-   content             : '';
-   z-index             : 4;
-   transform:rotateZ(-60deg);
-   // border-radius    : 1em/.2em;
-
+   position        : absolute;
+   top             : 0;
+   right           : calc((100% / 2) - ((100% * 0.57735) / 2));
+   background-color: inherit;
+   height          : inherit;
+   width           : inherit;
+   content         : '';
+   z-index         : 4;
+   transform       : rotateZ(-60deg);
 }
 
 .logo_hex {
   @include font($second_font);
-  height               : 100%;
-  width                : calc(100% * 0.57735);
-  display              : inline-block;
-  background-color     : $main_color;
-  font-size            : 15px;
-  text-align           : center;
-  z-index              : 5;
-   box-sizing: border-box;
-  // border-radius     : 1em/.2em;
+  height          : 100%;
+  width           : calc(100% * 0.57735);
+  display         : inline-block;
+  background-color: $main_color;
+  font-size       : 15px;
+  text-align      : center;
+  z-index         : 5;
+   box-sizing     : border-box;
 }
 
 .logo_hex:after {
@@ -219,96 +205,92 @@ body{
   width           : inherit;
   content         : '';
   z-index         : 4;
-  transform:rotateZ(60deg);
-  // border-radius: 1em/.2em;
-}
+  transform       : rotateZ(60deg);
+} 
 
 #hex_F2{
-  width                : 175px;
-  height               : 175px;
-  z-index              : 7;
-  position             : absolute;
-  left                 : 13px;
-  top                  : 12px;
+  width   : 175px;
+  height  : 175px;
+  z-index : 7;
+  position: absolute;
+  left    : 13px;
+  top     : 12px;
 }
 
 #hex_F2 .logo_hex{
-	background-color   : $second_color;
+	background-color: $second_color;
 }
 
 #logo_F{
-	color              : $main_color;
-	/* background-color: white; */
-	z-index            : 50;
-	font-size          : 146px;
-	margin             : 0;
-	position           : absolute;
-	top                : -15px;
-	left               : 43px;
-	font-weight        : bolder;
+	color      : $main_color;
+	z-index    : 50;
+	font-size  : 146px;
+	margin     : 0;
+	position   : absolute;
+	top        : -15px;
+	left       : 43px;
+	font-weight: bolder;
 	@include font($main_font);
-	transform:rotateZ(-90deg);
+	transform  :rotateZ(-90deg);
 }
 
 #hex_K{
-  width                : 100px;
-  height               : 100px;
-  z-index              : 6;
+  width  : 100px;
+  height : 100px;
+  z-index: 6;
 }
 
 .logo_wrapper_K {
-	text-align         : center;
-	position           : relative;
-	display            : inline-block;
-	top                : 0px;
-	left               : -60px;
-	transform:rotateZ(90deg);
+	text-align: center;
+	position  : relative;
+	display   : inline-block;
+	top       : 0px;
+	left      : -60px;
+	transform :rotateZ(90deg);
 }
 
 #logo_K{
-	color              : $second_color;
-	z-index            : 500;
-	font-size          : 76px;
-	margin             : 0;
-	position           : absolute;
-	top                : -2px;
-	left               : 22px;
-	font-weight        : bolder;
+	color      : $second_color;
+	z-index    : 500;
+	font-size  : 76px;
+	margin     : 0;
+	position   : absolute;
+	top        : -2px;
+	left       : 22px;
+	font-weight: bolder;
 	@include font($main_font);
-	transform:rotateZ(-90deg) rotateY(-180deg);
+	transform  :rotateZ(-90deg) rotateY(-180deg);
 }
+
+
+
 
 .sub-nav{
   padding-top: 1px;
 }
 
 .magellan[style="position: fixed; top: 0px;"]{
-  box-shadow:0 5px 25px -7px black;
+  box-shadow      :0 5px 25px -7px black;
   background-color: rgba(153,153,153,0.8);
-  margin-top: 0px;
-  .logo-svg{
-    visibility:visible;
-  }
+  margin-top      : 0px;
+
 }
 
 .magellan{
   @include font($main_font);
-  height: 42px;
-  text-align: center;
-  position: relative;
-  margin-top: -42px;
+  height          : 42px;
+  text-align      : center;
+  position        : relative;
+  margin-top      : -42px;
   background-color: $transparent;
-  transition: all 0.5s ease;
-  .logo-svg{
-    visibility:hidden;
-  }
+  transition      : all 0.5s ease;
+
   dd{
     margin-left: 0;
     a{
       @include font($main_font);
       font-size: 1.5rem;
-      // color:$background_dark;
-       color: white;
+      color    : white;
        &:hover{
         color: $background_dark;
        }
@@ -325,83 +307,38 @@ body{
   }
 }
 
-/*
-██████╗ ██████╗  ██████╗      ██╗███████╗ ██████╗████████╗███████╗
-██╔══██╗██╔══██╗██╔═══██╗     ██║██╔════╝██╔════╝╚══██╔══╝██╔════╝
-██████╔╝██████╔╝██║   ██║     ██║█████╗  ██║        ██║   ███████╗
-██╔═══╝ ██╔══██╗██║   ██║██   ██║██╔══╝  ██║        ██║   ╚════██║
-██║     ██║  ██║╚██████╔╝╚█████╔╝███████╗╚██████╗   ██║   ███████║
-╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚════╝ ╚══════╝ ╚═════╝   ╚═╝   ╚══════╝                                                                 
- */
+
 .project{
-  position           : relative;
-  height             : 850px;
-  // width           : 100%;
-  z-index            : $z_section;
-  // opacity         : 0.2;
-  overflow           : hidden;
+  position        : relative;
+  height          : 850px;
+  z-index         : $z_section;
+  overflow        : hidden;
   background-color: $background_bright;
-  // width              : 100%;
 }
 
 .project-title{
-  width              : 100%;
-  font-size          : 60px;
-  text-align         : center;
-  // margin-bottom      : 90px;
-  margin-top         : 5px;
-  margin-left        : auto;
-  margin-right       : auto;
-  font-family        : 'Montserrat', sans-serif;
-  /* font-weight     : bold; */
-  color              : white;
-  /* background-color: black; */
-  box-sizing         : border-box;
-  // box-shadow:0 5px 25px -7px black;
-
-  background-color: $second_color;
-  margin: 0px 0 20px 0;
-}
-
-.back-theme{
-  width             : 100%;
-  height            : 110vh;
-  background        : url(../img/trianglify-background.svg) no-repeat top left;
-  // background-size: contain;
-  position          : fixed;
-  top               :0;
-  z-index: 0;
-}
-
-.back-opacity{
   width           : 100%;
-  height          : 125vh;
-  background-color: $background_dark;
-  opacity         :0.5;
-  position        : absolute;
+  font-size       : 60px;
+  text-align      : center;
+  margin-top      : 5px;
+  margin-left     : auto;
+  margin-right    : auto;
+  font-family     : 'Montserrat', sans-serif;
+  color           : white;
+  box-sizing      : border-box;
+  background-color: $second_color;
+  margin          : 0px 0 20px 0;
 }
 
 .projects{
-  // position         : relative;
-  // float            : left;
-  // top              : 0%;
-  // background-image : url('../img/mooning.png');
-  // background-repeat:repeat;
-  // border-top          : 2px solid #E9E9E9;
   border-width        : 75%;
   height              : 500px;
-  // clear            : both;
-  padding             :5px 30px 30px 30px;
-  // margin-left      : 5%;
-  // margin-right     : 5%;
+  padding             : 5px 30px 30px 30px;
   margin-bottom       : 50px;
   
   h2{
-    // width        : auto;
     font-size       : 50px;
     text-align      : left;
-    // margin-top   : 50px;
-    // margin-bottom: 35px;
     margin-left     : auto;
     margin-right    : auto;
     @include font($second_font);
@@ -432,15 +369,17 @@ body{
 
   .mailchimp, .lemonstand{
     padding: 0;
-    width: 75px;
-    // height: 75px;
-    
+    width  : 75px;
   }
   .lemonstand{
-    width: 60px;
-    fill:black;
-    padding-top: 8px;
+    width       : 60px;
+    fill        : black;
+    padding-top : 8px;
     padding-left: 8px;
+  }
+
+  img{
+    float: right;
   }
 }
 
@@ -450,30 +389,28 @@ body{
 
 .project-content-wrapper{
   margin-right: 10%;
-  margin-left :10%;
+  margin-left : 10%;
 }
 
 
 .slicker-nav{
   width         : 100%;
   position      : relative;
-  // margin-left: 15%;
   position      : absolute;
   bottom        : 0;
   z-index       : $z_foreground;
   height        : 90px;
-  box-shadow    :0 8px 10px 5px black;
+  box-shadow    : 0 8px 10px 5px black;
   
   div{
-    width: 16.6%;
-    float: left;
-    text-align: center;
-    height: 100%;
+    width       : 16.6%;
+    float       : left;
+    text-align  : center;
+    height      : 100%;
     border-right: $second_color 2px solid;
-    transition: background-color 0.3s;
+    transition  : background-color 0.3s;
 
     &:hover{
-      // background-color: rgba(0,0,0,0.3);
       background-color: $background_dark;
     }
 
@@ -488,25 +425,20 @@ body{
 }
 
 .nav-title{
-  color: $main_color;
-  height: 100%;
-  width: 95%;
-  margin-left: 2.5%;
+  color          : $main_color;
+  height         : 100%;
+  width          : 95%;
+  margin-left    : 2.5%;
   @include font($second_font);
-  cursor: pointer;
-  transition: color 0.2s;
-  display: flex;
+  cursor         : pointer;
+  transition     : color 0.2s;
+  display        : flex;
   justify-content: center;
-  flex-direction: column;
-  height: 88%;
-
-  &:hover{
-    // color: $background_dark;
-  }
+  flex-direction : column;
+  height         : 88%;
 }
 
 .active-slide-tab{
-  // background-color: rgba(0,0,0,0.3);
   background-color: $background_dark;
 }
 
@@ -514,12 +446,10 @@ body{
   color:$main_color;
 }
 
-
 .slicker-focus{
   border-top: 1px solid black;
   transition: border 0.3s ease-in-out;
 }
-
 
 .project .slicker {
   height: 95vh;
@@ -539,19 +469,19 @@ body{
 }
 
 .arrow {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  background-color:rgba(0,0,0,0);
-  z-index: $z_foreground;
-  width: 75px;
-  height: 75px;
-  padding-top:17px;
-  transition: all 300ms ease-in-out;
+  cursor          : pointer;
+  position        : absolute;
+  top             : 50%;
+  background-color: rgba(0,0,0,0);
+  z-index         : $z_foreground;
+  width           : 75px;
+  height          : 75px;
+  padding-top     : 17px;
+  transition      : all 300ms ease-in-out;
 
   &:hover{
     background-color: $second_color;
-    transition: all 300ms ease-in-out;
+    transition      : all 300ms ease-in-out;
   }
 
   &:hover polyline{
@@ -567,7 +497,7 @@ body{
 }
 
 .arrow-left {
-  left:0%;
+  left        : 0%;
   padding-left: 10px;
   &:hover{
     padding-left: 20px;
@@ -575,7 +505,7 @@ body{
 }
 
 .arrow-right {
-  right:0%;
+  right       : 0%;
   padding-left: 10px;
   &:hover{
     padding-left: 20px;
@@ -587,35 +517,42 @@ polyline {
   transition: all 250ms ease-in-out;
 }
 
-.project .slick-prev, .project .slick-next{
-  width: 50px;
-  height: 70%;
-  top: 27%;
+.project{
+  .slick-prev{
+    width : 50px;
+    height: 70%;
+    top   : 27%;
+    left  : 0px;
+    &:before{
+      width : 50px;
+      height: 70%;
+      top   : 27%;
+    }
+  }
+  .slick-next{
+    width : 50px;
+    height: 70%;
+    top   : 27%;
+    right : 0px;
+    &:before{
+      width : 50px;
+      height: 70%;
+      top   : 27%;
+    }
+  }
 }
 
-.project .slick-prev:before, .project .slick-next:before{
-  width: 50px;
-  font-size: 25px;
-  padding-top: 5px;
-}
 
-.project .slick-prev{
-  left:0px;
-}
 
-.project .slick-next{
-  right:0px;
-}
 
 .techno{
   height       : 50px;
   margin-bottom: 25px;
   img{
-    width         : 75px;
-    height        : auto;
-    padding       :0;
-    float: left !important;
-    // margin-left: 15%;
+    width  : 75px;
+    height : auto;
+    padding: 0;
+    float  : left !important;
   }
   i{
     font-size  : 3rem;
@@ -624,24 +561,9 @@ polyline {
     color      : black;
   }
   .xdk{
-    // width: 20% ;
     margin-top: -10px;
     padding   : 0;
   }
-}
-
-
-// #s5 .device{
-//   height: 500px;
-//   width : 260px;
-// }
-
-.projects img{
-  float: right;
-}
-
-.lemonstand{
-
 }
 
 #project_2 img{
@@ -652,49 +574,33 @@ polyline {
   box-shadow: 0px 10px 20px -5px black;
 }
 
-/*
- █████╗ ██████╗  ██████╗ ██╗   ██╗████████╗
-██╔══██╗██╔══██╗██╔═══██╗██║   ██║╚══██╔══╝
-███████║██████╔╝██║   ██║██║   ██║   ██║   
-██╔══██║██╔══██╗██║   ██║██║   ██║   ██║   
-██║  ██║██████╔╝╚██████╔╝╚██████╔╝   ██║   
-╚═╝  ╚═╝╚═════╝  ╚═════╝  ╚═════╝    ╚═╝                                             
- */
-
-
 
 #about{
   position        : relative;
   height          : 1000px;
   width           : 100%;
   z-index         : $z_foreground;
-  // opacity      : 0.2;
   overflow        : hidden;
   background-color: $background_dark;
-  // margin-left  : 5%;
-  // margin-right : 5%;
-  // margin-top   : 50px;
   
 }
 
 .about-title{
   @extend .project-title;
-
 }
 
 .about-p{
   margin-bottom: 60px;
-  margin-top: 40px;
-  color: white;
+  margin-top   : 40px;
+  color        : white;
 }
 
 .about-experience, .about-skills{
-  // background-color: rgba(0,0,0,0.3);
   color:white;
   
   h2{
     text-align: center;
-    color: $main_color;
+    color     : $main_color;
     @include font($second_font);
   }
 
@@ -716,59 +622,43 @@ polyline {
 }
 
 .contact-fixed{
-  position: fixed;
-  width: 100%;
+  position  : fixed;
+  width     : 100%;
   margin-top: 42px; 
-  // z-index: $z_section;
-  top: 0;
-  // margin: 0 3% 0 3%;
-  // background-color: rgba(248,148,6,0.3);
-  // background-color: rgba(0,0,0,0.5);
-  // box-shadow:0 5px 25px -7px black;
-  // *{
-  //   z-index: 6
-  // }
-
+  top       : 0;
 }
 
 .about-skills{
   position: relative;
-  display: block;
-  height: 50%;
-  // width: 100%;
-  float: left;
-
+  display : block;
+  height  : 50%;
+  float   : left;
 
   .sublime-text{
-
-    margin-left: 30px;
-    width: 62px;
-    height: 62px;
-    padding-top: 17px;
-    margin-top: 3%;
-
-    background-color: #FAFAFA;
-    color: $background_dark;
-    text-align: center;
-    font-size: 3.5rem;
-    padding-top: 18px;
-    margin-top: 4px;
+    margin-left           : 30px;
+    width                 : 62px;
+    height                : 62px;
+    padding-top           : 17px;
+    margin-top            : 3%;
+    background-color      : #FAFAFA;
+    color                 : $background_dark;
+    text-align            : center;
+    font-size             : 3.5rem;
+    padding-top           : 18px;
+    margin-top            : 4px;
     -webkit-font-smoothing: antialiased;
-    border: solid 2px white;
-    border-radius: 5px;
-    transition: color 0.6s ease;
+    border                : solid 2px white;
+    border-radius         : 5px;
+    transition            : color 0.6s ease;
   }
 
   .photoshop svg{
-    // width: 62px;
-    // height: 62px;
-    // background : url(../img/icon_logo/photoshop.svg) no-repeat top left;
     fill: white;
   }
 
   .c-prog{
     line-height: 1;
-    width: 20%;
+    width      : 20%;
   }
 
   .mailchimp svg{
@@ -776,60 +666,49 @@ polyline {
   }
 
   span{
-    // background-color: white;
-    // border:black solid 5px;
-    // width: 100px;
-    // height: 100px;
     font-size: 5rem;
-    float:left;
+    float    : left;
   }
-
-
-
 } 
- .tooltip{
-    @include font($second_font);
-    width: 100px !important;
-    text-align: center;
 
-  }
-  .tooltip > .nub{
-    left: 60px; 
-    right: 5px !important;
-  }
+.tooltip{
+  @include font($second_font);
+  width     : 100px !important;
+  text-align: center;
+}
+
+.tooltip > .nub{
+  left : 60px; 
+  right: 5px !important;
+}
 
 .icon-list{
-  width: 90%;
-  height: 125px;
-  margin: auto;
-  clear: both;
-  overflow: visible;
+  width          : 90%;
+  height         : 125px;
+  margin         : auto;
+  margin-bottom  : 30px;
+  clear          : both;
+  overflow       : visible;
 
-  display: flex;
-  flex-direction: row;
+  display        : flex;
+  flex-direction : row;
   justify-content: center;
-  align-items: center;
+  align-items    : center;
 
-  transition: background 0.4s ease;
-
-  // border-bottom: 1px solid white;
-  // border-radius: 5px;
-
-  margin-bottom: 30px;
+  transition     : background 0.4s ease;
   h3{
-    position: absolute;
-    color: $background_dark;
-    // margin-left: 50px;
-    margin-top:-5px;
-    transition : all 0.4s ease;
+    position  : absolute;
+    color     : $background_dark;
+    margin-top: -5px;
+    transition: all 0.4s ease;
   }
     &:hover{
       background-color: $second_color;
-      transition : background 0.3s ease;
+      transition      : background 0.3s ease;
       h3{
-        color: $second_color;
-        margin-top:-35px;
-        transition : all 0.3s ease;
+        color     : $second_color;
+        margin-top: -35px;
+        transition: all 0.3s ease;
       }
       
       .skilled{
@@ -837,7 +716,6 @@ polyline {
       }
 
       .experienced{
-        // color: #316EA5;
         color: $experienced;
       }
 
@@ -847,8 +725,8 @@ polyline {
     }
 
   .icon-list-child{
-    width: 20%;
-    height: auto;
+    width     : 20%;
+    height    : auto;
     text-align: center;
     transition: all 0.3s ease;
   }
@@ -857,54 +735,48 @@ polyline {
 }
   .skills-legend-skilled{
     @include font($second_font);
-    position        : absolute;
-    // width           : 150px;
-    // height          : 30px;
-    right:0;
-    top:30px;
+    position    : absolute;
+    right       : 0;
+    top         : 30px;
     margin-right: 7%;
-    visibility: hidden;
-    // transition      : visibility 0.1s 0.5s ease;
-    // background-color: $second-color;
-    color:$skilled;
+    visibility  : hidden;
+    color       : $skilled;
   }
 
   .skills-legend-experienced{
     @include font($second_font);
-    position        : absolute;
-    right:0;
-    top:30px;
+    position    : absolute;
+    right       : 0;
+    top         : 30px;
     margin-right: 7%;
-    visibility         : hidden;
-    // transition      : visibility 0.1s 0.5s ease;
-    // background-color: $second-color;
-    color: $experienced;
+    visibility  : hidden;
+    color       : $experienced;
   }
 
 .front-end{
   &:hover .foundation .foundation-body{
-    fill: $skilled;
+    fill      : $skilled;
     transition: color 0.3s ease;
   }  
   &:hover .foundation .foundation-accessories{
-    fill: $second-color;
+    fill      : $second-color;
     transition: color 0.3s ease;
-    stroke: none;
+    stroke    : none;
   }
 }
 
 .back-end{
   .skills-legend-skilled{
     right:0;
-    top:185px;
+    top  :185px;
   }
 
   .skills-legend-experienced{
     right:0;
-    top:185px;
+    top  :185px;
   }
   &:hover .mailchimp svg{
-    fill: $experienced;
+    fill      : $experienced;
     transition: color 0.3s ease;
   }
 }
@@ -912,33 +784,33 @@ polyline {
 .tools{
   .skills-legend-skilled{
     right:0;
-    top:340px;
+    top  :340px;
   }
 
   .skills-legend-experienced{
     right:0;
-    top:340px;
+    top  :340px;
   }
   &:hover .sublime-text{
     background-color: $skilled;
-    border-color: $skilled;
-    color: $second_color;
-    transition: color 0.4s ease;
+    border-color    : $skilled;
+    color           : $second_color;
+    transition      : color 0.4s ease;
   }
 }
 
 .misc{
   .skills-legend-skilled{
     right:0;
-    top:475px;
+    top  :475px;
   }
 
   .skills-legend-experienced{
     right:0;
-    top:495px;
+    top  :495px;
   }
   &:hover .photoshop svg{
-    fill: $experienced;
+    fill      : $experienced;
     transition: color 0.3s ease;
   }
 }
@@ -946,7 +818,7 @@ polyline {
 
 .soon{
   &:hover span{
-    color: $background_dark;
+    color     : $background_dark;
     transition: color 0.3s ease;
   }
 }
@@ -954,22 +826,19 @@ polyline {
 
 
 #contact{
-  position           : relative;
-  height             : 800px;
-  width              : 100%;
-  z-index            : 1;
-
-  // opacity         : 0.2;
-  overflow           : hidden;
-  // margin-left        : 5%;
-  // margin-right       : 5%;
+  position: relative;
+  height  : 800px;
+  width   : 100%;
+  z-index : 3;
+  opacity : 1;
+  overflow: hidden;
   h2{
-    // margin-top: 42px;
+
     @extend .project-title;
   }
   .fa{
-    font-size: 10rem;
-    color:$background_dark;
+    font-size : 10rem;
+    color     :$background_dark;
     margin-top: 150px;
     &:hover{
       color:black;
@@ -978,17 +847,17 @@ polyline {
   h3{
     text-align: center;
     @include font($main_font);
-    font-size: 3rem;
-    display: inline-block;
-    color: white;
+    font-size : 3rem;
+    display   : inline-block;
+    color     : white;
 
   }
 }
 
 .email{
-  display: inline-block;
-  width: 100%;
-  padding-left: 20%;
+  width  : auto;
+  margin : auto;
+  display: table;
 }
 
 .form-wrapper{
@@ -1000,16 +869,15 @@ polyline {
 }
 
 #contactForm{
-
   .button{
     background-color: $second_color;
-    border-color:$second_color;
+    border-color    :$second_color;
     &:hover{
       background-color: $main_color;
     }
     &:focus{
       border-color:$second_color;
-      outline: $second_color auto 5px;
+      outline     : $second_color auto 5px;
     }
   }
 
@@ -1020,51 +888,51 @@ polyline {
      color: rgba(0,0,0,0.8);
   }
 
-  ::-moz-placeholder {  /* Firefox 19+ */
-     color:  rgba(0,0,0,0.8);  
+  ::-moz-placeholder {
+     color: rgba(0,0,0,0.8);  
   }
 
   :-ms-input-placeholder {  
-     color:  rgba(0,0,0,0.8);  
+     color: rgba(0,0,0,0.8);  
   }
 
   .formInput{
-    color:white;
+    color           :white;
     @include font($second_font);
     background-color: rgba(0,0,0,0.3);
-    height: 50px;
-    font-size: 1.5rem;
+    height          : 50px;
+    font-size       : 1.5rem;
     &:focus{
       background-color: rgba(0,0,0,0.6);
     }
   }
 
   .formTextarea{
-    min-height: 250px;
-    max-width: 100%;
+    min-height   : 250px;
+    max-width    : 100%;
     margin-bottom: 10px;
   }
 
   .formButton input{
     @include font($main_font);
-    color:white;
-    // font-size: 1.5rem;
+    color    :white;
+    font-size: 1.5rem;
+    transition: all 0.5s ease; 
   }
 
   small{
-    margin-top:5px;
-    animation-duration: 1s;
+    margin-top               :5px;
+    animation-duration       : 1s;
     animation-iteration-count: 1;
   }
 }
 
 .social{
   h3{
-    height: 125px;
+    height : 125px;
     display: inline-block;
-    color: white;
+    color  : white;
   }
-
 }
 
 @import "xsmall.scss";

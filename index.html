@@ -29,7 +29,11 @@
     <link rel="stylesheet" href="dist/all.min.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 
- <!--    <script>
+    <style type="text/css">
+      .no-fouc {display: none;}
+    </style>
+
+    <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -38,7 +42,7 @@
       ga('create', 'UA-54805856-1', 'auto');
       ga('send', 'pageview');
 
-    </script> -->
+    </script>
   </head>
   <body>
   <button class="hamburger"><svg height="33px" version="1.1" viewBox="0 0 22 11" width="66px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><defs><path d="M0.577138391,0 C0.258393659,0 0,0.221932411 0,0.5 C0,0.776142375 0.262396485,1 0.577138391,1 L21.4228616,1 C21.7416064,1 22,0.77806759 22,0.5 C22,0.223857625 21.7376035,0 21.4228616,0 L0.577138391,0 L0.577138391,0 Z M0.577138391,5 C0.258393659,5 0,5.2219324 0,5.5 C0,5.77614235 0.262396485,6 0.577138391,6 L21.4228616,6 C21.7416064,6 22,5.7780676 22,5.5 C22,5.22385765 21.7376035,5 21.4228616,5 L0.577138391,5 L0.577138391,5 Z M0.577138391,10 C0.258393659,10 0,10.2219324 0,10.5 C0,10.7761424 0.262396485,11 0.577138391,11 L21.4228616,11 C21.7416064,11 22,10.7780676 22,10.5 C22,10.2238576 21.7376035,10 21.4228616,10 L0.577138391,10 L0.577138391,10 Z" id="path-1"/></defs><g fill="none" fill-rule="evenodd" id="miu" stroke="none" stroke-width="1"><g id="editor_list_view_hambuger_menu_outline_stroke"><use fill="white" fill-rule="evenodd" xlink:href="#path-1"/><use fill="none" xlink:href="#path-1"/></g></g></svg></button>
@@ -54,7 +58,7 @@
       </ul>
     </nav>
   </div>
-  <div id="back_picture" data-0-start="top:0px" data-1000-end="top:-400px" data-999-end="top:0px">
+  <div id="back_picture">
   </div>
 
   <section id="fkrb" data-magellan-destination="top">
@@ -78,16 +82,16 @@
       </div>
     </div>
     <div class="row">
-      <h3 class="large-centered small-centered columns wow fadeInUp" data-wow-delay="0.5s" data-0-start="top:60px" data-end="top:-600px"> Franck Kerbiriou </h3>
+      <h3 class="no-fouc large-centered small-centered columns wow fadeInUp" data-wow-delay="0.5s" data-0-start="top:60px" data-end="top:-600px"> Franck Kerbiriou </h3>
     </div>
     <div class=" row collapse">
-     <p class="small-6 small-centered medium-6 medium-centered large-6 large-centered columns wow fadeInUp" data-wow-delay="1.5s" data-0-start="top:60px" data-end="top:-1000px"> Web Developer </p>
+     <p class="no-fouc small-6 small-centered medium-6 medium-centered large-6 large-centered columns wow fadeInUp" data-wow-delay="1.5s" data-0-start="top:60px" data-end="top:-1000px"> Web Developer </p>
     </div>
   </div>
   </section>
-  <div class="magellan" data-magellan-expedition="fixed">
+  <div class="no-fouc magellan" data-magellan-expedition="fixed">
     <dl class="sub-nav collasped-row wow fadeIn" data-wow-delay="2s">
-      <dd class="small-2 medium-2 large-2 large-offset-1 columns" data-magellan-arrival="top"><a href="#fkrb">Top</a></dd>
+      <dd class="small-2 medium-2 large-2 large-offset-1 columns" ><a href="#fkrb">Top</a></dd>
       <dd class="small-2 medium-2 large-2 columns" data-magellan-arrival="project"><a href="#project">Recent Work</a></dd>
       <dd class="small-2 medium-2 large-2 columns"><svg class="logo-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px"
    height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
@@ -134,11 +138,6 @@ laBWowAmGAPqlj1QbihWRUB3gSTKoR44i6wI5nBBIPsM1LoKqKLdKA6HOhakYBbQ2k50k5iApsDC
   </div>
 
   <section id="project" data-magellan-destination="project" class="project">
-    <!-- <div class="back-theme"> -->
-    <!-- </div> -->
-<!--     <div class="back-opacity">
-    </div> -->
-    
      <div class="slicker">
      <a class="arrow arrow-left">
        <svg width="30px" height="40px" viewBox="0 0 50 80" xml:space="preserve">
@@ -207,9 +206,7 @@ laBWowAmGAPqlj1QbihWRUB3gSTKoR44i6wI5nBBIPsM1LoKqKLdKA6HOhakYBbQ2k50k5iApsDC
     c-0.526,0-0.825,0.214-0.825,0.571c0,0.3,0.301,0.5,1.1,0.8c1.328,0.5,1.9,1.101,1.9,2.153C19.559,16.3,18.5,17.2,16.5,17.218
     L16.533,17.2z"/>
 </g>
-</svg></span> <!--            <span class=" small-2 medium-2 large-2 columns">
-                <img  src="img/projects/xdk_logo.png" alt="xdk_logo">
-                </span> -->
+</svg></span>
             </div><br>
             <p>Interactive Web Media is a playground website that I got the opportunity to work on. It was supposed to be a company website re-design but the project was unfortunately cancelled.
             <br><br>
@@ -428,8 +425,8 @@ laBWowAmGAPqlj1QbihWRUB3gSTKoR44i6wI5nBBIPsM1LoKqKLdKA6HOhakYBbQ2k50k5iApsDC
       <div class="wow fadeInUp" data-wow-delay="1s"><h3 class="nav-title" index="5">Portfolio</h3></div>
     </div>
   </section>
-  <section id="about">
-    <h2 class="about-title" data-magellan-destination="about"> About Me </h2>
+  <section data-magellan-destination="about" id="about">
+    <h2 class="about-title"> About Me </h2>
     <div class="collapse-row">
       <div class="about-experience small-12 medium-12 large-6 columns">
         <div>
@@ -469,7 +466,7 @@ laBWowAmGAPqlj1QbihWRUB3gSTKoR44i6wI5nBBIPsM1LoKqKLdKA6HOhakYBbQ2k50k5iApsDC
         <h3> Back-end </h3>
         <span class="devicons devicons-php icon-list-child experienced wow fadeInRight" data-wow-delay="0.5s" data-tooltip data-options="show_on:large" aria-haspopup="true" title="php" ></span>
         <span class="devicons devicons-mysql icon-list-child experienced wow fadeInRight" data-wow-delay="0.6s" data-tooltip data-options="show_on:large" aria-haspopup="true" title="MySQL" ></span>
-        <!-- <span class="devicons devicons-nodejs_small icon-list-child"></span> -->
+
         <span class="devicons devicons-wordpress icon-list-child experienced wow fadeInRight" data-wow-delay="0.7s" data-tooltip data-options="show_on:large" aria-haspopup="true" title="WordPress" ></span>
         <span class="icon-list-child mailchimp experienced wow fadeInRight" data-wow-delay="0.7s" data-tooltip data-options="show_on:large" aria-haspopup="true" title="Mailchimp" ><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    width="150px" height="75px" viewBox="0 0 600 300" enable-background="new 0 0 600 300" xml:space="preserve">
@@ -611,8 +608,8 @@ laBWowAmGAPqlj1QbihWRUB3gSTKoR44i6wI5nBBIPsM1LoKqKLdKA6HOhakYBbQ2k50k5iApsDC
     </div>
   </section>
 
-  <section data-magellan-destination="contact" id="contact" data-500-start="z-index:1;" data-1000-start="z-index:3;">
-    <div class="contact-fixed">
+  <section data-magellan-destination="contact" id="contact" data-1000-start="opacity:0" data-1100-start="opacity:1;">
+    <div class="contact-fixed no-fouc">
       <h2> Get in touch ! </h2>
       <div class="collapse-row">
         <div class="large-8 large-centered columns"> <p>I'd love to hear from you. For more information about me, about my work, for fun or just because, you can either shoot me an email or get in touch on social medias.</p>
@@ -626,23 +623,23 @@ laBWowAmGAPqlj1QbihWRUB3gSTKoR44i6wI5nBBIPsM1LoKqKLdKA6HOhakYBbQ2k50k5iApsDC
         </span> 
         <div class="small-12 medium-12 large-8 columns">
           <div id="contactForm" class="collapse-row">
-            <form id="myForm" method="post" action="php/mailer.php" data-abide>
+            <form id="myForm" method="post" data-abide="ajax">
               <div class="formName small-12 medium-6 large-6 columns">
                 <label>Name
-                  <input class="formInput" type="text" placeholder="Awesome name" required>
+                  <input name="name" class="formInput" type="text" placeholder="Awesome name" required>
                   <small class="error animated shake">What's your name?</small>
                 </label>
               </div>
               <div class="formEmail small-12 medium-6 large-6 columns">
                 <label>Email
-                  <input class="formInput" type="email" placeholder="awesomemail@mail.com" required>
-                  <small class="error animated shake">I need your email to send the message</small>
+                  <input name="email" class="formInput" type="email" placeholder="awesomemail@mail.com" required>
+                  <small class="error animated shake">I need your email to contact you back.</small>
                 </label>
               </div>
               <div class="formMessage small-12 medium-12 large-12 columns">
               <label>Your Message
                 <small class="error animated shake">You don't want to send me anything? :(</small>
-                <textarea placeholder="Your message" class="formTextarea formInput" required>Bonjour Franck,
+                <textarea name="message" placeholder="Your message" class="formTextarea formInput" required>Bonjour Franck,
 
 </textarea>
               </label>
@@ -652,7 +649,8 @@ laBWowAmGAPqlj1QbihWRUB3gSTKoR44i6wI5nBBIPsM1LoKqKLdKA6HOhakYBbQ2k50k5iApsDC
               </div>
             </form>
           </div>
-         <div class="email">
+
+         <div class="email small-10 small-centered">
            <h3>info@</h3>
            <h3>franckkerbiriou.com</h3>
          </div> 

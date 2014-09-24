@@ -170,7 +170,7 @@
 	}
 
 	#about{
-		height: 1950px;
+		height: 1700px;
 		p{
 			margin:0;
 		}
@@ -209,14 +209,17 @@
 
 	#contact{
 		height: 1100px;
+		background-size: cover;
+		z-index: $z_foreground;
+		background-image: url("../img/trianglify-background.svg");
 
 		.fa{
 			padding-top: 30px;
 			margin-top:0;
 		}
 		.email{
-			width: 100%;
-			padding-left: 7%;
+			// width: 100%;
+			// padding-left: 7%;
 
 			h3{
 				font-size: 1.75rem;
