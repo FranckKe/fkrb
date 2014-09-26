@@ -3,6 +3,11 @@
 @import "_settings";
 @import "_base.scss";
 
+/*TODO
+  skill legend 
+  Fix legend
+  XLARGE check
+*/
 
 body{
   box-sizing: border-box;
@@ -314,6 +319,7 @@ body{
   z-index         : $z_section;
   overflow        : hidden;
   background-color: $background_bright;
+  transition: height 0.5s ease;
 }
 
 .project-title{
@@ -388,6 +394,7 @@ body{
 }
 
 .project-content-wrapper{
+  height: 100%;
   margin-right: 10%;
   margin-left : 10%;
 }
@@ -401,6 +408,7 @@ body{
   z-index       : $z_foreground;
   height        : 90px;
   box-shadow    : 0 8px 10px 5px black;
+  background-color: white;
   
   div{
     width       : 16.6%;
@@ -572,6 +580,7 @@ polyline {
 
 #project_2 img,#project_3 img,#project_4 img,#project_5 img,#project_6 img,{
   box-shadow: 0px 10px 20px -5px black;
+  // height: 100%;
 }
 
 
@@ -587,6 +596,7 @@ polyline {
 
 .about-title{
   @extend .project-title;
+  margin-top: 0px;
 }
 
 .about-p{

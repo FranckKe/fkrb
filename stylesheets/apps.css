@@ -5274,6 +5274,11 @@ th.hide-for-touch {
                                    
 
 */
+/*TODO
+  skill legend 
+  Fix legend
+  XLARGE check
+*/
 body {
   -moz-box-sizing: border-box;
        box-sizing: border-box;
@@ -5551,7 +5556,9 @@ body {
   height: 850px;
   z-index: 5;
   overflow: hidden;
-  background-color: #fbfbfb; }
+  background-color: #fbfbfb;
+  -webkit-transition: height 0.5s ease;
+          transition: height 0.5s ease; }
 
 .project-title, .about-title, #contact h2 {
   width: 100%;
@@ -5608,6 +5615,7 @@ body {
   margin-right: 4%; }
 
 .project-content-wrapper {
+  height: 100%;
   margin-right: 10%;
   margin-left: 10%; }
 
@@ -5618,7 +5626,8 @@ body {
   bottom: 0;
   z-index: 20;
   height: 90px;
-  box-shadow: 0 8px 10px 5px black; }
+  box-shadow: 0 8px 10px 5px black;
+  background-color: white; }
   .slicker-nav div {
     width: 16.6%;
     float: left;
@@ -5770,6 +5779,9 @@ polyline {
   z-index: 20;
   overflow: hidden;
   background-color: #181716; }
+
+.about-title {
+  margin-top: 0px; }
 
 .about-p {
   margin-bottom: 60px;
@@ -6067,8 +6079,6 @@ polyline {
     height: 1500px; }
     .project .slicker {
       height: 1500px; }
-    .project .slick-slider .slick-list, .project .slick-track, .project .slick-slide, .project .slick-slide img {
-      height: 100%; }
     .project .slicker-nav {
       display: none; }
   .projects {
@@ -6192,7 +6202,7 @@ polyline {
     height: 900px;
     background-image: url("../img/trianglify-background.svg");
     background-size: cover;
-    z-index: 20; }
+    z-index: 5; }
     #contact .fa {
       padding-top: 30px;
       margin-top: 0;
@@ -6200,8 +6210,8 @@ polyline {
     #contact .email h3 {
       font-size: 1rem; }
   .contact-fixed {
-    position: relative;
-    margin-top: 0px; }
+    position: relative !important;
+    margin-top: 0px !important; }
   #contactForm .formInput {
     font-size: 1rem; }
   .social-linkedin {
@@ -6242,8 +6252,6 @@ polyline {
     height: 1500px; }
     .project .slicker {
       height: 1500px; }
-    .project .slick-slider .slick-list, .project .slick-track, .project .slick-slide, .project .slick-slide img {
-      height: 100%; }
     .project .slicker-nav {
       display: none; }
   .projects {
@@ -6368,7 +6376,7 @@ polyline {
     height: 885px;
     background-image: url("../img/trianglify-background.svg");
     background-size: cover;
-    z-index: 20; }
+    z-index: 5; }
     #contact .fa {
       padding-top: 30px;
       margin-top: 0;
@@ -6376,21 +6384,21 @@ polyline {
     #contact .email h3 {
       font-size: 1rem; }
   .contact-fixed {
-    position: relative;
-    margin-top: 0px; }
+    position: relative !important;
+    margin-top: 0px !important; }
   #contactForm .formInput {
     font-size: 1rem; }
   .social-linkedin {
     padding-left: 15%;
     height: 30px;
     left: 0;
-    bottom: -730px;
+    bottom: -720px;
     position: absolute; }
   .social-github {
     padding-left: 15%;
     height: 30px;
-    left: 40%;
-    bottom: -730px;
+    right: 30%;
+    bottom: -720px;
     position: absolute; } }
 
 @media only screen and (max-width: 40em) and (min-width: 30em) {
@@ -6415,8 +6423,6 @@ polyline {
     height: 1500px; }
     .project .slicker {
       height: 1500px; }
-    .project .slick-slider .slick-list, .project .slick-track, .project .slick-slide, .project .slick-slide img {
-      height: 100%; }
     .project .slicker-nav {
       display: none; }
   .projects {
@@ -6498,18 +6504,15 @@ polyline {
     height: 1000px;
     background-image: url("../img/trianglify-background.svg");
     background-size: cover;
-    z-index: 20; }
+    z-index: 5; }
     #contact .fa {
       padding-top: 30px;
       margin-top: 0; }
-    #contact .email {
-      width: 100%;
-      padding-left: 7%; }
-      #contact .email h3 {
-        font-size: 1.75rem; }
+    #contact .email h3 {
+      font-size: 1.75rem; }
   .contact-fixed {
-    position: relative;
-    margin-top: 0px; }
+    position: relative !important;
+    margin-top: 0px !important; }
   #contactForm .formInput {
     font-size: 1rem; }
   .social-linkedin {
@@ -6542,8 +6545,6 @@ polyline {
     height: 1500px; }
     .project .slicker {
       height: 1500px; }
-    .project .slick-slider .slick-list, .project .slick-track, .project .slick-slide, .project .slick-slide img {
-      height: 100%; }
     .project .slicker-nav {
       display: none; }
   .projects {
@@ -6611,41 +6612,42 @@ polyline {
     height: 1700px; }
     #about p {
       margin: 0; }
-  .about-skills h2 {
-    margin-bottom: 30px; }
-  .about-skills .sublime-text {
-    margin-left: 15%;
-    margin-left: 15%;
-    width: 64px;
-    height: 64px;
-    padding-top: 18px;
-    margin-top: 3px; }
+  .about-skills {
+    float: right !important; }
+    .about-skills h2 {
+      margin-bottom: 30px; }
+    .about-skills .sublime-text {
+      margin-left: 15%;
+      margin-left: 15%;
+      width: 64px;
+      height: 64px;
+      padding-top: 18px;
+      margin-top: 3px; }
   #contact {
-    height: 1100px;
+    height: 800px;
     background-size: cover;
-    z-index: 20;
+    z-index: 5;
     background-image: url("../img/trianglify-background.svg"); }
     #contact .fa {
+      font-size: 8rem;
       padding-top: 30px;
       margin-top: 0; }
     #contact .email h3 {
       font-size: 1.75rem; }
   .contact-fixed {
-    position: relative;
-    margin-top: 0px; }
+    position: relative !important;
+    margin-top: 0px !important; }
   #contactForm .formInput {
     font-size: 1rem; }
   .social-linkedin {
-    padding-left: 15%;
     height: 30px;
-    left: 0;
-    bottom: -730px;
+    left: 0%;
+    bottom: -555px;
     position: absolute; }
   .social-github {
-    padding-left: 15%;
     height: 30px;
-    left: 40%;
-    bottom: -730px;
+    right: 100px;
+    bottom: -555px;
     position: absolute; } }
 
 @media only screen and (min-width:64.063em) and (max-width:90em) {
@@ -6674,7 +6676,7 @@ polyline {
     padding-top: 17px;
     margin-top: 4px; }
   .contact-fixed {
-    margin-top: 0; }
+    margin-top: 0 !important; }
   .social-linkedin {
     padding-left: 1%; }
   #contactForm .formButton input {

@@ -28,9 +28,9 @@
 		.slicker{
 			height: 1500px;
 		}
-		.slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img{
-			height: 100%;
-		}
+		// .slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img{
+		// 	height: 100%;
+		// }
 		.slicker-nav{
 			display: none;
 		}
@@ -192,6 +192,7 @@
 	// }
 
 	.about-skills{
+		float: right !important;
 		h2{
 			margin-bottom: 30px;
 		}
@@ -208,12 +209,13 @@
 
 
 	#contact{
-		height: 1100px;
+		height: 800px;
 		background-size: cover;
-		z-index: $z_foreground;
+		z-index: $z_section;
 		background-image: url("../img/trianglify-background.svg");
 
 		.fa{
+			font-size: 8rem;
 			padding-top: 30px;
 			margin-top:0;
 		}
@@ -228,8 +230,8 @@
 	}
 
 	.contact-fixed{
-		position: relative;
-		margin-top: 0px;
+		position: relative !important;
+		margin-top: 0px !important;
 	}
 
 	#contactForm .formInput {
@@ -238,18 +240,18 @@
 	
 	.social-linkedin{
 		// padding-left: 60%;
-		padding-left: 15%;
+		// padding-left: 15%;
 		height: 30px;
-		left: 0;
-		bottom: -730px;
+		left: 0%;
+		bottom: -555px;
 		position: absolute;
 	}
 
 	.social-github{
-		padding-left: 15%;
+		// padding-left: 15%;
 		height: 30px;
-		left:40%;
-		bottom: -730px;
+		right:100px;
+		bottom: -555px;
 		position: absolute;
 
 	}

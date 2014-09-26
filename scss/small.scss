@@ -38,9 +38,9 @@
 		.slicker{
 			height: 1500px;
 		}
-		.slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img{
-			height: 100%;
-		}
+		// .slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img{
+		// 	height: 100%;
+		// }
 		.slicker-nav{
 			display: none;
 		}
@@ -172,15 +172,15 @@
 		height: 1000px;
 		background-image: url("../img/trianglify-background.svg");
 		background-size: cover;
-		z-index: $z_foreground;
+		z-index: $z_section;
 
 		.fa{
 			padding-top: 30px;
 			margin-top:0;
 		}
 		.email{
-			width: 100%;
-			padding-left: 7%;
+			// width: 100%;
+			// padding-left: 7%;
 
 			h3{
 				font-size: 1.75rem;
@@ -189,8 +189,8 @@
 	}
 
 	.contact-fixed{
-		position: relative;
-		margin-top: 0px;
+		position: relative !important;
+		margin-top: 0px !important;
 	}
 
 	#contactForm .formInput {

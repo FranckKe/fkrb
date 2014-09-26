@@ -46,9 +46,9 @@
 		.slicker{
 			height: 1500px;
 		}
-		.slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img{
-			height: 100%;
-		}
+		// .slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img{
+		// 	height: 100%;
+		// }
 		.slicker-nav{
 			display: none;
 		}
@@ -251,7 +251,7 @@
 		height: 900px;
 		background-image: url("../img/trianglify-background.svg");
 		background-size: cover;
-		z-index: $z_foreground;
+		z-index: $z_section;
 
 		.fa{
 			padding-top: 30px;
@@ -269,8 +269,8 @@
 	}
 
 	.contact-fixed{
-		position: relative;
-		margin-top: 0px;
+		position: relative !important;
+		margin-top: 0px !important;
 	}
 
 	#contactForm .formInput {
@@ -344,9 +344,7 @@
 		.slicker{
 			height: 1500px;
 		}
-		.slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img{
-			height: 100%;
-		}
+
 		.slicker-nav{
 			display: none;
 		}
@@ -550,7 +548,7 @@
 		height: 885px;
 		background-image: url("../img/trianglify-background.svg");
 		background-size: cover;
-		z-index: $z_foreground;
+		z-index: $z_section;
 
 		.fa{
 			padding-top: 30px;
@@ -568,8 +566,8 @@
 	}
 
 	.contact-fixed{
-		position: relative;
-		margin-top: 0px;
+		position: relative !important;
+		margin-top: 0px !important;
 	}
 
 	#contactForm .formInput {
@@ -581,16 +579,16 @@
 		padding-left: 15%;
 		height: 30px;
 		left: 0;
-		bottom: -730px;
+		bottom: -720px;
 		position: absolute;
 	}
 
 	.social-github{
 		padding-left: 15%;
-		height: 30px;
-		left:40%;
-		bottom: -730px;
-		position: absolute;
+		height		: 30px;
+		right		: 30%;
+		bottom		: -720px;
+		position	: absolute;
 
 	}
 
