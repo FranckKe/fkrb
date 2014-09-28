@@ -5274,11 +5274,6 @@ th.hide-for-touch {
                                    
 
 */
-/*TODO
-  skill legend 
-  Fix legend
-  XLARGE check
-*/
 body {
   -moz-box-sizing: border-box;
        box-sizing: border-box;
@@ -5286,6 +5281,7 @@ body {
   height: 100%;
   margin: 0;
   z-index: 0;
+  background: #f89406;
   font-family: 'Montserrat', sans-serif; }
 
 *::-moz-selection {
@@ -5538,11 +5534,14 @@ body {
   -webkit-transition: all 0.5s ease;
           transition: all 0.5s ease; }
   .magellan dd {
-    margin-left: 0; }
+    margin-left: 0;
+    padding: 0;
+    width: 20%; }
     .magellan dd a {
       font-family: 'Montserrat', sans-serif;
       font-size: 1.5rem;
-      color: white; }
+      color: white;
+      padding: 0; }
       .magellan dd a:hover {
         color: #181716; }
   .magellan svg {
@@ -5621,7 +5620,6 @@ body {
 
 .slicker-nav {
   width: 100%;
-  position: relative;
   position: absolute;
   bottom: 0;
   z-index: 20;
@@ -5774,7 +5772,7 @@ polyline {
 
 #about {
   position: relative;
-  height: 1000px;
+  height: auto;
   width: 100%;
   z-index: 20;
   overflow: hidden;
@@ -5784,7 +5782,6 @@ polyline {
   margin-top: 0px; }
 
 .about-p {
-  margin-bottom: 60px;
   margin-top: 40px;
   color: white; }
 
@@ -5804,6 +5801,23 @@ polyline {
 
 .about-experience p, .about-experience h3 {
   padding-left: 30px; }
+
+.download-cv, #contactForm .button {
+  margin-left: 30px;
+  background-color: #f89406;
+  border-color: #f89406; }
+  .download-cv:hover, #contactForm .button:hover {
+    background-color: #d35400; }
+  .download-cv:focus, #contactForm .button:focus {
+    border-color: #f89406;
+    outline: #f89406 auto 5px;
+    background-color: #d35400; }
+
+.download-cv a, .download-cv #contactForm .button, #contactForm .download-cv .button {
+  color: white;
+  font-family: 'Raleway', sans-serif; }
+  .download-cv a:hover, .download-cv #contactForm .button, #contactForm .download-cv .button {
+    text-decoration: none; }
 
 .contact-fixed {
   position: fixed;
@@ -5831,15 +5845,19 @@ polyline {
     -webkit-font-smoothing: antialiased;
     border: solid 2px white;
     border-radius: 5px;
-    -webkit-transition: color 0.6s ease;
-            transition: color 0.6s ease; }
+    -webkit-transition: all 0.6s ease;
+            transition: all 0.6s ease; }
   .about-skills .photoshop svg {
-    fill: white; }
+    fill: white;
+    -webkit-transition: all 0.6s ease;
+            transition: all 0.6s ease; }
   .about-skills .c-prog {
     line-height: 1;
     width: 20%; }
   .about-skills .mailchimp svg {
-    fill: white; }
+    fill: white;
+    -webkit-transition: all 0.6s ease;
+            transition: all 0.6s ease; }
   .about-skills span {
     font-size: 5rem;
     float: left; }
@@ -5852,6 +5870,31 @@ polyline {
 .tooltip > .nub {
   left: 60px;
   right: 5px !important; }
+
+.skills-legend-skilled {
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  right: 0;
+  margin-right: -50%;
+  margin-top: -30px;
+  visibility: visible;
+  color: #416CAD;
+  -webkit-transition: margin ease 0.5s;
+          transition: margin ease 0.5s; }
+
+.skills-legend-experienced {
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  right: 0;
+  margin-right: -50%;
+  margin-top: -30px;
+  visibility: visible;
+  color: #d35400;
+  -webkit-transition: all ease 0.5s;
+          transition: all ease 0.5s; }
+
+.legend-back-end-skilled, .legend-misc-skilled {
+  display: none; }
 
 .icon-list {
   width: 90%;
@@ -5907,68 +5950,35 @@ polyline {
     -webkit-transition: all 0.3s ease;
             transition: all 0.3s ease; }
 
-.skills-legend-skilled {
-  font-family: 'Raleway', sans-serif;
-  position: absolute;
-  right: 0;
-  top: 30px;
-  margin-right: 7%;
-  visibility: hidden;
-  color: #416CAD; }
-
-.skills-legend-experienced {
-  font-family: 'Raleway', sans-serif;
-  position: absolute;
-  right: 0;
-  top: 30px;
-  margin-right: 7%;
-  visibility: hidden;
-  color: #d35400; }
-
+.front-end .foundation .foundation-body, .front-end .foundation .foundation-accessories {
+  -webkit-transition: all 0.6s ease;
+          transition: all 0.6s ease; }
 .front-end:hover .foundation .foundation-body {
   fill: #416CAD;
-  -webkit-transition: color 0.3s ease;
-          transition: color 0.3s ease; }
+  -webkit-transition: all 0.6s ease;
+          transition: all 0.6s ease; }
 .front-end:hover .foundation .foundation-accessories {
   fill: #f89406;
-  -webkit-transition: color 0.3s ease;
-          transition: color 0.3s ease;
+  -webkit-transition: all 0.6s ease;
+          transition: all 0.6s ease;
   stroke: none; }
 
-.back-end .skills-legend-skilled {
-  right: 0;
-  top: 185px; }
-.back-end .skills-legend-experienced {
-  right: 0;
-  top: 185px; }
 .back-end:hover .mailchimp svg {
   fill: #d35400;
-  -webkit-transition: color 0.3s ease;
-          transition: color 0.3s ease; }
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
 
-.tools .skills-legend-skilled {
-  right: 0;
-  top: 340px; }
-.tools .skills-legend-experienced {
-  right: 0;
-  top: 340px; }
 .tools:hover .sublime-text {
   background-color: #416CAD;
   border-color: #416CAD;
   color: #f89406;
-  -webkit-transition: color 0.4s ease;
-          transition: color 0.4s ease; }
+  -webkit-transition: all 0.4s ease;
+          transition: all 0.4s ease; }
 
-.misc .skills-legend-skilled {
-  right: 0;
-  top: 475px; }
-.misc .skills-legend-experienced {
-  right: 0;
-  top: 495px; }
 .misc:hover .photoshop svg {
   fill: #d35400;
-  -webkit-transition: color 0.3s ease;
-          transition: color 0.3s ease; }
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
 
 .soon:hover span {
   color: #181716;
@@ -6001,27 +6011,22 @@ polyline {
   display: table; }
 
 .form-wrapper {
-  float: left; }
+  float: left;
+  width: 100%; }
 
-.social-github, .social-linkedin {
-  padding-left: 4%; }
+.contactFormWrapper {
+  padding: 1%; }
 
 #contactForm .button {
-  background-color: #f89406;
-  border-color: #f89406; }
-  #contactForm .button:hover {
-    background-color: #d35400; }
-  #contactForm .button:focus {
-    border-color: #f89406;
-    outline: #f89406 auto 5px; }
+  margin-left: 0; }
 #contactForm label {
   font-family: 'Montserrat', sans-serif; }
 #contactForm ::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.8); }
+  color: rgba(255, 255, 255, 0.8); }
 #contactForm ::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.8); }
+  color: rgba(255, 255, 255, 0.8); }
 #contactForm :-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.8); }
+  color: rgba(255, 255, 255, 0.8); }
 #contactForm .formInput {
   color: white;
   font-family: 'Raleway', sans-serif;
@@ -6053,8 +6058,6 @@ polyline {
   color: white; }
 
 @media only screen and (max-width: 20em) {
-  body {
-    background: blue; }
   .hamburger, .cross-close {
     visibility: visible; }
   .overlay nav {
@@ -6065,7 +6068,7 @@ polyline {
     background-position: 50% 50%; }
   #fkrb h3 {
     font-size: 3.5rem;
-    padding-top: 100px; }
+    padding-top: 10vh; }
   #fkrb p {
     font-size: 1.4rem; }
   #logo {
@@ -6128,6 +6131,16 @@ polyline {
     font-size: 2rem; }
   .about-experience p, .about-experience h3 {
     padding-left: 0; }
+  .skills-legend-experienced {
+    margin-right: 5%;
+    margin-top: -25px;
+    font-size: 1rem;
+    visibility: visible; }
+  .skills-legend-skilled {
+    margin-top: -25px;
+    margin-right: 38%;
+    font-size: 1rem;
+    visibility: visible; }
   .icon-list {
     background-color: #f89406;
     -webkit-transition: background 0.3s ease;
@@ -6191,7 +6204,7 @@ polyline {
     -webkit-transition: color 0.3s ease;
             transition: color 0.3s ease; }
   #about {
-    height: 2230px; }
+    height: auto; }
     #about p {
       margin: 0; }
   .about-skills {
@@ -6199,7 +6212,7 @@ polyline {
     .about-skills h2 {
       margin-bottom: 30px; }
   #contact {
-    height: 900px;
+    height: auto;
     background-image: url("../img/trianglify-background.svg");
     background-size: cover;
     z-index: 5; }
@@ -6213,19 +6226,10 @@ polyline {
     position: relative !important;
     margin-top: 0px !important; }
   #contactForm .formInput {
-    font-size: 1rem; }
-  .social-linkedin {
-    padding-left: 15%;
-    height: 30px;
-    left: 0;
-    bottom: -760px;
-    position: absolute; }
-  .social-github {
-    padding-left: 15%;
-    height: 30px;
-    left: 40%;
-    bottom: -760px;
-    position: absolute; } }
+    font-size: 1rem;
+    color: white; }
+  .social-linkedin, .social-github {
+    text-align: center; } }
 
 @media only screen and (max-width: 30em) and (min-width: 20em) {
   .hamburger, .cross-close {
@@ -6238,7 +6242,7 @@ polyline {
     background-position: 50% 50%; }
   #fkrb h3 {
     font-size: 3.5rem;
-    padding-top: 100px; }
+    padding-top: 10vh; }
   #fkrb p {
     font-size: 1.4rem; }
   #logo {
@@ -6301,6 +6305,18 @@ polyline {
     font-size: 2rem; }
   .about-experience p, .about-experience h3 {
     padding-left: 0; }
+  .skills-legend-experienced {
+    margin-right: 5%;
+    margin-top: -25px;
+    font-size: 1rem;
+    visibility: visible; }
+  .skills-legend-skilled {
+    margin-top: -25px;
+    margin-right: 38%;
+    font-size: 1rem;
+    visibility: visible; }
+  .legend-back-end-skilled, .legend-misc-skilled {
+    display: none; }
   .icon-list {
     background-color: #f89406;
     -webkit-transition: background 0.3s ease;
@@ -6364,16 +6380,15 @@ polyline {
     -webkit-transition: color 0.3s ease;
             transition: color 0.3s ease; }
   #about {
-    height: 2045px; }
+    height: auto; }
     #about p {
-      margin: auto;
-      max-width: 325px; }
+      margin: auto; }
   .about-skills {
     font-size: 3rem; }
     .about-skills h2 {
       margin-bottom: 30px; }
   #contact {
-    height: 885px;
+    height: auto;
     background-image: url("../img/trianglify-background.svg");
     background-size: cover;
     z-index: 5; }
@@ -6382,35 +6397,23 @@ polyline {
       margin-top: 0;
       font-size: 6rem; }
     #contact .email h3 {
-      font-size: 1rem; }
+      font-size: 1.25rem; }
   .contact-fixed {
     position: relative !important;
     margin-top: 0px !important; }
   #contactForm .formInput {
     font-size: 1rem; }
-  .social-linkedin {
-    padding-left: 15%;
-    height: 30px;
-    left: 0;
-    bottom: -720px;
-    position: absolute; }
-  .social-github {
-    padding-left: 15%;
-    height: 30px;
-    right: 30%;
-    bottom: -720px;
-    position: absolute; } }
+  .social-linkedin, .social-github {
+    text-align: center; } }
 
 @media only screen and (max-width: 40em) and (min-width: 30em) {
-  body {
-    background: red; }
   .hamburger, .cross-close {
     visibility: visible; }
   #back_picture {
     background-position: 50% 50%; }
   #fkrb h3 {
-    font-size: 5rem;
-    padding-top: 100px; }
+    font-size: 4.25rem;
+    padding-top: 15vh; }
   #fkrb p {
     font-size: 1.4rem; }
   #logo {
@@ -6439,6 +6442,16 @@ polyline {
       font-size: 1.5rem; }
   .project-title, .about-title, #contact h2 {
     font-size: 3rem; }
+  .skills-legend-experienced {
+    margin-right: 7%;
+    margin-top: -25px;
+    font-size: 1rem;
+    visibility: visible; }
+  .skills-legend-skilled {
+    margin-top: -25px;
+    margin-right: 25%;
+    font-size: 1rem;
+    visibility: visible; }
   .icon-list {
     background-color: #f89406;
     -webkit-transition: background 0.3s ease;
@@ -6484,7 +6497,7 @@ polyline {
     -webkit-transition: color 0.3s ease;
             transition: color 0.3s ease; }
   #about {
-    height: 1950px; }
+    height: auto; }
     #about p {
       margin: 0; }
   .about-experience h3, .about-experience p {
@@ -6501,7 +6514,7 @@ polyline {
   .about-skills .mailchimp svg {
     width: 100px; }
   #contact {
-    height: 1000px;
+    height: auto;
     background-image: url("../img/trianglify-background.svg");
     background-size: cover;
     z-index: 5; }
@@ -6515,26 +6528,17 @@ polyline {
     margin-top: 0px !important; }
   #contactForm .formInput {
     font-size: 1rem; }
-  .social-linkedin {
-    padding-left: 15%;
-    height: 30px;
-    left: 0;
-    bottom: -730px;
-    position: absolute; }
-  .social-github {
-    padding-left: 15%;
-    height: 30px;
-    left: 40%;
-    bottom: -730px;
-    position: absolute; } }
+  .social-linkedin, .social-github {
+    text-align: center; } }
 
 @media only screen and (min-width:40.063em) and (max-width:64em) {
-  body {
-    background: orange; }
   .hamburger, .cross-close {
     visibility: visible; }
   #back_picture {
     background-position: 50% 50%; }
+  #fkrb h3 {
+    font-size: 6rem;
+    padding-top: 10vh; }
   #logo {
     top: 30px; }
   .magellan {
@@ -6563,6 +6567,16 @@ polyline {
       margin-top: 50px; }
   .project-title, .about-title, #contact h2 {
     font-size: 3rem; }
+  .skills-legend-experienced {
+    margin-right: 8%;
+    margin-top: -30px;
+    font-size: 1.5rem;
+    visibility: visible; }
+  .skills-legend-skilled {
+    margin-top: -30px;
+    margin-right: 30%;
+    font-size: 1.5rem;
+    visibility: visible; }
   .icon-list {
     background-color: #f89406;
     -webkit-transition: background 0.3s ease;
@@ -6609,7 +6623,7 @@ polyline {
     -webkit-transition: color 0.3s ease;
             transition: color 0.3s ease; }
   #about {
-    height: 1700px; }
+    height: auto; }
     #about p {
       margin: 0; }
   .about-skills {
@@ -6624,7 +6638,7 @@ polyline {
       padding-top: 18px;
       margin-top: 3px; }
   #contact {
-    height: 800px;
+    height: auto;
     background-size: cover;
     z-index: 5;
     background-image: url("../img/trianglify-background.svg"); }
@@ -6639,32 +6653,39 @@ polyline {
     margin-top: 0px !important; }
   #contactForm .formInput {
     font-size: 1rem; }
-  .social-linkedin {
-    height: 30px;
-    left: 0%;
-    bottom: -555px;
-    position: absolute; }
-  .social-github {
-    height: 30px;
-    right: 100px;
-    bottom: -555px;
-    position: absolute; } }
+  .social-linkedin, .social-github {
+    text-align: center; } }
 
 @media only screen and (min-width:64.063em) and (max-width:90em) {
-  body {
-    background: blue; }
-  .hamburger, .cross-close {
-    visibility: visible; }
-  #back_picture {
-    background-position: 50% 50%; }
-  .magellan {
-    display: none; }
+  .magellan .sub-nav a {
+    font-size: 1.5rem;
+    line-height: 1.8em; }
+  .skills-legend-skilled {
+    font-family: 'Raleway', sans-serif;
+    position: absolute;
+    right: 0;
+    margin-right: -50%;
+    margin-top: -30px;
+    visibility: visible;
+    color: #416CAD;
+    -webkit-transition: margin ease 0.5s;
+            transition: margin ease 0.5s; }
+  .skills-legend-experienced {
+    font-family: 'Raleway', sans-serif;
+    position: absolute;
+    right: 0;
+    margin-right: -50%;
+    margin-top: -30px;
+    visibility: visible;
+    color: #d35400;
+    -webkit-transition: all ease 0.5s;
+            transition: all ease 0.5s; }
   .project-content-wrapper {
     margin: 0; }
   .nav-title {
     font-size: 1.3rem; }
   #about {
-    height: 1000px; }
+    height: auto; }
     #about p {
       margin: 0; }
   .back-end .mailchimp svg {
@@ -6676,12 +6697,6 @@ polyline {
     padding-top: 17px;
     margin-top: 4px; }
   .contact-fixed {
-    margin-top: 0 !important; }
-  .social-linkedin {
-    padding-left: 1%; }
+    margin-top: 42px; }
   #contactForm .formButton input {
     font-size: 2rem; } }
-
-@media only screen and (min-width:90.063em) {
-  body {
-    background: green; } }

@@ -1,13 +1,17 @@
-@media #{$medium-only} { 
-  body {background: orange;}
-
-	
+@media #{$medium-only} { 	
 	.hamburger,.cross-close{
 	  visibility: visible;
 	}
 
 	#back_picture{
 		background-position: 50% 50%;
+	}
+
+	#fkrb{
+		h3{
+			font-size: 6rem;
+			padding-top: 10vh;
+		}
 	}
 
 	#logo{
@@ -28,9 +32,6 @@
 		.slicker{
 			height: 1500px;
 		}
-		// .slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img{
-		// 	height: 100%;
-		// }
 		.slicker-nav{
 			display: none;
 		}
@@ -46,7 +47,6 @@
 			font-size: 2.5rem;
 		}
 		.button{
-			// bottom: -750px;
 			padding-right: 0;
 			padding-left: 0;
 			width: 100%;
@@ -60,7 +60,19 @@
 	.project-title{
 		font-size: 3rem;
 	}
-	
+	.skills-legend-experienced{
+		margin-right: 8%;
+		margin-top	: -30px;
+		font-size	: 1.5rem;
+		visibility	: visible;
+	}
+
+	.skills-legend-skilled{
+		margin-top	: -30px;
+		margin-right: 30%;
+		font-size	: 1.5rem;
+		visibility	: visible;
+	}
 	.icon-list{
 		background-color: $second_color;
 		transition : background 0.3s ease;
@@ -80,7 +92,6 @@
       	}
 
       .experienced{
-        // color: #316EA5;
         color: $experienced;
       }
 
@@ -99,27 +110,9 @@
 	    transition: color 0.3s ease;
 	    stroke: none;
 	  }
-	  // .skills-legend-skilled{
-	  //   right:145px;
-	  //   top:850px;
-	  // }
-
-	  // .skills-legend-experienced{
-	  //   right:0;
-	  //   top:850px;
-	  // }
 	}
 
 	.back-end{
-		// .skills-legend-skilled{
-		//   right:145px;
-		//   top:1005px;
-		// }
-
-		// .skills-legend-experienced{
-		//   right:0;
-		//   top:1005px;
-		// }
 		.mailchimp svg{
 	   		fill: $experienced;
 	    	transition: color 0.3s ease;
@@ -128,15 +121,6 @@
 	}
 
 	.tools{
-		// .skills-legend-skilled{
-		//   right:145px;
-		//   top:1160px;
-		// }
-
-		// .skills-legend-experienced{
-		//   right:0;
-		//   top:1160px;
-		// }
 		.sublime-text{
 			background-color: $skilled;
 			border-color: $skilled;
@@ -146,15 +130,6 @@
 	}
 
 	.misc{
-		// .skills-legend-skilled{
-		//   right:145px;
-		//   top:1315px;
-		// }
-
-		// .skills-legend-experienced{
-		//   right:0;
-		//   top:1315px;
-		// }
 	 .photoshop svg{
 	    fill: $experienced;
 	    transition: color 0.3s ease;
@@ -170,26 +145,12 @@
 	}
 
 	#about{
-		height: 1700px;
+		height: auto;
 		p{
 			margin:0;
 		}
 	}
 
-	// .skills-legend-skilled{
-	//   position        : absolute;
-	//   right:0;
-	//   top:30px;
-	//   margin-right: 7%;
-	//   visibility: visible;
-	// }
-
-	// .skills-legend-experienced{
-	//   right:0;
-	//   top:30px;
-	//   margin-right: 7%;
-	//   visibility: visible;
-	// }
 
 	.about-skills{
 		float: right !important;
@@ -209,7 +170,7 @@
 
 
 	#contact{
-		height: 800px;
+		height  : auto;
 		background-size: cover;
 		z-index: $z_section;
 		background-image: url("../img/trianglify-background.svg");
@@ -220,9 +181,6 @@
 			margin-top:0;
 		}
 		.email{
-			// width: 100%;
-			// padding-left: 7%;
-
 			h3{
 				font-size: 1.75rem;
 			}
@@ -238,22 +196,8 @@
     	font-size: 1rem; 
 	}
 	
-	.social-linkedin{
-		// padding-left: 60%;
-		// padding-left: 15%;
-		height: 30px;
-		left: 0%;
-		bottom: -555px;
-		position: absolute;
-	}
-
-	.social-github{
-		// padding-left: 15%;
-		height: 30px;
-		right:100px;
-		bottom: -555px;
-		position: absolute;
-
+	.social-linkedin, .social-github{
+		text-align: center;
 	}
 } 
  

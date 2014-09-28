@@ -1,5 +1,4 @@
 @media only screen and (max-width: 40em) and (min-width:30em){ 
-	 body {background: red;}
 	
 	.hamburger,.cross-close{
 	  visibility: visible;
@@ -11,8 +10,8 @@
 
 	#fkrb{
 		h3{
-			font-size: 5rem;
-			padding-top: 100px;
+			font-size: 4.25rem;
+			padding-top: 15vh;
 		}
 
 		p{
@@ -38,9 +37,6 @@
 		.slicker{
 			height: 1500px;
 		}
-		// .slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img{
-		// 	height: 100%;
-		// }
 		.slicker-nav{
 			display: none;
 		}
@@ -56,16 +52,29 @@
 			font-size: 2.5rem;
 		}
 		.button{
-			// bottom: -750px;
-			padding-right: 0;
-			padding-left: 0;
-			width: 100%;
-			font-size: 1.5rem;
+			padding-right	: 0;
+			padding-left	: 0;
+			width			: 100%;
+			font-size		: 1.5rem;
 		}
 	}
 
 	.project-title{
 		font-size: 3rem;
+	}	
+
+	.skills-legend-experienced{
+		margin-right: 7%;
+		margin-top	: -25px;
+		font-size	: 1rem;
+		visibility	: visible;
+	}
+
+	.skills-legend-skilled{
+		margin-top	: -25px;
+		margin-right: 25%;
+		font-size	: 1rem;
+		visibility	: visible;
 	}
 	
 	.icon-list{
@@ -81,13 +90,12 @@
       		h3{
 				margin-top:-30px !important;
       		}
-			}
+		}
       .skilled{
         color: $skilled;
       }
 
       .experienced{
-        // color: #316EA5;
         color: $experienced;
       }
 
@@ -140,7 +148,7 @@
 	}
 
 	#about{
-		height: 1950px;
+		height: auto;
 		p{
 			margin:0;
 		}
@@ -169,7 +177,7 @@
 
 
 	#contact{
-		height: 1000px;
+		height  : auto;
 		background-image: url("../img/trianglify-background.svg");
 		background-size: cover;
 		z-index: $z_section;
@@ -179,9 +187,6 @@
 			margin-top:0;
 		}
 		.email{
-			// width: 100%;
-			// padding-left: 7%;
-
 			h3{
 				font-size: 1.75rem;
 			}
@@ -197,21 +202,7 @@
     	font-size: 1rem; 
 	}
 	
-	.social-linkedin{
-		// padding-left: 60%;
-		padding-left: 15%;
-		height: 30px;
-		left: 0;
-		bottom: -730px;
-		position: absolute;
-	}
-
-	.social-github{
-		padding-left: 15%;
-		height: 30px;
-		left:40%;
-		bottom: -730px;
-		position: absolute;
-
+	.social-linkedin, .social-github{
+		text-align: center;
 	}
 } 

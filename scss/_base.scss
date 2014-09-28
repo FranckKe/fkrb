@@ -97,25 +97,4 @@ $size_project : $nb_project*100vh;
 	font-family: $font-family, sans-serif;
 }
 
-@mixin border-box{
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing   : border-box;    /* Firefox, other Gecko */
-  box-sizing        : border-box;	
-}
-
-@mixin transition($transitions...){
-  transition        : $transitions;
-  -webkit-transition: $transitions;
-  -moz-transition   : $transitions;
-  -ms-transition    : $transitions;
-  -o-transition     : $transitions;
-}
-
-@mixin transform($transformation...){
-  transform        : $transformation;
-  -webkit-transform: $transformation;
-  -moz-transform   : $transformation;
-  -ms-transform    : $transformation;
-  -o-transform     : $transformation;
-}
 

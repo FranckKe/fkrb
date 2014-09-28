@@ -1,17 +1,32 @@
 @media #{$large-only} { 
-  body {background: blue;} 
 
-  .hamburger,.cross-close{
-  	  visibility: visible;
-  	}
+    .magellan .sub-nav a{
+      font-size: 1.5rem;
+      line-height: 1.8em;
+    }
+    
+    .skills-legend-skilled{
+        @include font($second_font);
+        position    : absolute;
+        right       : 0;
+        margin-right: -50%;
+        margin-top  : -30px;
+        visibility  : visible;
+        color       : $skilled;
+        transition  : margin ease 0.5s;
+      }
 
-  	#back_picture{
-  		background-position: 50% 50%;
-  	}
+      .skills-legend-experienced{
+        @include font($second_font);
+        position    : absolute;
+        right       : 0;
+        margin-right: -50%;
+        margin-top  : -30px;
+        visibility  : visible;
+        color       : $experienced;
+        transition  : all ease 0.5s;
+      }
 
-  	.magellan{
-  		display: none;
-  	}
   	.project-content-wrapper{
   		margin: 0;
   	}
@@ -21,7 +36,7 @@
   	}
 
 	#about{
-		height: 1000px;
+		height: auto;
 		p{
 			margin:0;
 		}
@@ -44,61 +59,11 @@
 	}
 
 	.contact-fixed{
-		margin-top: 0!important;
-	}
-
-	.social-linkedin{
-		padding-left:1%;
-	}
-	
-	.email{
-		// padding-left: 7%;
+		margin-top: 42px;
 	}
 
 	#contactForm .formButton input{
 		font-size: 2rem;
 	}
-  	// #contact{
-  	// 	height: 1100px;
 
-  	// 	.fa{
-  	// 		padding-top: 30px;
-  	// 		margin-top:0;
-  	// 	}
-  	// 	.email{
-  	// 		width: 100%;
-  	// 		padding-left: 7%;
-
-  	// 		h3{
-  	// 			font-size: 1.75rem;
-  	// 		}
-  	// 	}
-  	// }
-
-  	// .contact-fixed{
-  	// 	position: relative;
-  	// 	margin-top: 0px;
-  	// }
-
-  	// #contactForm .formInput {
-   //    	font-size: 1rem; 
-  	// }
-  	
-  	// .social-linkedin{
-  	// 	// padding-left: 60%;
-  	// 	padding-left: 15%;
-  	// 	height: 30px;
-  	// 	left: 0;
-  	// 	bottom: -730px;
-  	// 	position: absolute;
-  	// }
-
-  	// .social-github{
-  	// 	padding-left: 15%;
-  	// 	height: 30px;
-  	// 	left:40%;
-  	// 	bottom: -730px;
-  	// 	position: absolute;
-
-  	// }
 }

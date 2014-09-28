@@ -3,23 +3,17 @@
 @import "_settings";
 @import "_base.scss";
 
-/*TODO
-  skill legend 
-  Fix legend
-  XLARGE check
-*/
-
 body{
   box-sizing: border-box;
   width     : 100%;
   height    : 100%;
   margin    : 0;
   z-index   : 0;
+  background: $second_color;
   @include font($main_font);
 }
 
 *::selection{background-color: rgba(0,0,0,0.3); color:$main_color;}
-
 
 
 .hamburger,.cross-close{
@@ -292,10 +286,13 @@ body{
 
   dd{
     margin-left: 0;
+    padding:0;
+    width: 20%;
     a{
       @include font($main_font);
       font-size: 1.5rem;
       color    : white;
+      padding:0;
        &:hover{
         color: $background_dark;
        }
@@ -402,7 +399,6 @@ body{
 
 .slicker-nav{
   width         : 100%;
-  position      : relative;
   position      : absolute;
   bottom        : 0;
   z-index       : $z_foreground;
@@ -580,13 +576,12 @@ polyline {
 
 #project_2 img,#project_3 img,#project_4 img,#project_5 img,#project_6 img,{
   box-shadow: 0px 10px 20px -5px black;
-  // height: 100%;
 }
 
 
 #about{
   position        : relative;
-  height          : 1000px;
+  height          : auto;
   width           : 100%;
   z-index         : $z_foreground;
   overflow        : hidden;
@@ -600,7 +595,7 @@ polyline {
 }
 
 .about-p{
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
   margin-top   : 40px;
   color        : white;
 }
@@ -631,6 +626,28 @@ polyline {
   padding-left: 30px;
 }
 
+.download-cv{
+  
+  margin-left: 30px;
+  background-color: $second_color;
+  border-color    :$second_color;
+  &:hover{
+    background-color: $main_color;
+  }
+  &:focus{
+    border-color:$second_color;
+    outline     : $second_color auto 5px;
+    background-color: $main_color;
+  } 
+}
+.download-cv  a{
+    color: white;
+    @include font($second_font);
+    &:hover{
+      text-decoration: none;
+    }
+  }
+
 .contact-fixed{
   position  : fixed;
   width     : 100%;
@@ -659,11 +676,12 @@ polyline {
     -webkit-font-smoothing: antialiased;
     border                : solid 2px white;
     border-radius         : 5px;
-    transition            : color 0.6s ease;
+    transition            : all 0.6s ease;
   }
 
   .photoshop svg{
     fill: white;
+    transition: all 0.6s ease;
   }
 
   .c-prog{
@@ -673,6 +691,7 @@ polyline {
 
   .mailchimp svg{
     fill: white;
+    transition: all 0.6s ease;
   }
 
   span{
@@ -691,6 +710,31 @@ polyline {
   left : 60px; 
   right: 5px !important;
 }
+
+.skills-legend-skilled{
+    @include font($second_font);
+    position    : absolute;
+    right       : 0;
+    margin-right: -50%;
+    margin-top  : -30px;
+    visibility  : visible;
+    color       : $skilled;
+    transition  : margin ease 0.5s;
+  }
+
+  .skills-legend-experienced{
+    @include font($second_font);
+    position    : absolute;
+    right       : 0;
+    margin-right: -50%;
+    margin-top  : -30px;
+    visibility  : visible;
+    color       : $experienced;
+    transition  : all ease 0.5s;
+  }
+  .legend-back-end-skilled, .legend-misc-skilled{
+    display: none;
+  }
 
 .icon-list{
   width          : 90%;
@@ -741,87 +785,44 @@ polyline {
     transition: all 0.3s ease;
   }
 
-
 }
-  .skills-legend-skilled{
-    @include font($second_font);
-    position    : absolute;
-    right       : 0;
-    top         : 30px;
-    margin-right: 7%;
-    visibility  : hidden;
-    color       : $skilled;
-  }
 
-  .skills-legend-experienced{
-    @include font($second_font);
-    position    : absolute;
-    right       : 0;
-    top         : 30px;
-    margin-right: 7%;
-    visibility  : hidden;
-    color       : $experienced;
-  }
 
 .front-end{
+  .foundation .foundation-body, .foundation .foundation-accessories{
+    transition: all 0.6s ease;
+  }
   &:hover .foundation .foundation-body{
     fill      : $skilled;
-    transition: color 0.3s ease;
+    transition: all 0.6s ease;
   }  
   &:hover .foundation .foundation-accessories{
     fill      : $second-color;
-    transition: color 0.3s ease;
+    transition: all 0.6s ease;
     stroke    : none;
   }
 }
 
 .back-end{
-  .skills-legend-skilled{
-    right:0;
-    top  :185px;
-  }
-
-  .skills-legend-experienced{
-    right:0;
-    top  :185px;
-  }
   &:hover .mailchimp svg{
     fill      : $experienced;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
   }
 }
 
 .tools{
-  .skills-legend-skilled{
-    right:0;
-    top  :340px;
-  }
-
-  .skills-legend-experienced{
-    right:0;
-    top  :340px;
-  }
   &:hover .sublime-text{
     background-color: $skilled;
     border-color    : $skilled;
     color           : $second_color;
-    transition      : color 0.4s ease;
+    transition      : all 0.4s ease;
   }
 }
 
 .misc{
-  .skills-legend-skilled{
-    right:0;
-    top  :475px;
-  }
-
-  .skills-legend-experienced{
-    right:0;
-    top  :495px;
-  }
   &:hover .photoshop svg{
     fill      : $experienced;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
   }
 }
 
@@ -832,7 +833,6 @@ polyline {
     transition: color 0.3s ease;
   }
 }
-
 
 
 #contact{
@@ -872,38 +872,33 @@ polyline {
 
 .form-wrapper{
   float:left;
+  width: 100%;
 }
 
-.social-github, .social-linkedin{
-  padding-left: 4%;
+
+.contactFormWrapper{
+  padding:1%;
 }
 
 #contactForm{
   .button{
-    background-color: $second_color;
-    border-color    :$second_color;
-    &:hover{
-      background-color: $main_color;
-    }
-    &:focus{
-      border-color:$second_color;
-      outline     : $second_color auto 5px;
-    }
+    @extend .download-cv;
+    margin-left: 0;
   }
 
   label{
     @include font($main_font);
   }
   ::-webkit-input-placeholder {
-     color: rgba(0,0,0,0.8);
+     color: rgba(255,255,255,0.8);
   }
 
   ::-moz-placeholder {
-     color: rgba(0,0,0,0.8);  
+     color: rgba(255,255,255,0.8);  
   }
 
   :-ms-input-placeholder {  
-     color: rgba(0,0,0,0.8);  
+     color: rgba(255,255,255,0.8);  
   }
 
   .formInput{
@@ -949,4 +944,3 @@ polyline {
 @import "small.scss";
 @import "medium.scss";
 @import "large.scss";
-@import "xlarge.scss";

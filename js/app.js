@@ -12,12 +12,6 @@ $( document ).ready(function() {
   });
   var slicker_s     = $(".slicker");
   var overlay_s     = $(".overlay");
-  var skilled_s     = $(".skilled");
-  var experienced_s = $(".experienced");
-  var legend_s      = ".skills-legend-skilled";
-  var legend_e      = ".skills-legend-experienced";
-  var exp_a         = $(".about-experience");
-  var sk_a          = $(".about-skills");
   var about         = $("#about");
   var contact_fixed = $(".contact-fixed");
   var navTitlte_s   = $(".nav-title");
@@ -30,7 +24,6 @@ $( document ).ready(function() {
   var o_skrollr     = 0;
   var form = $('#myForm');
   var formMessages = $('.formButton');
-  var okay=false;
 
   slicker_s.slick({
     infinite: true,
@@ -44,12 +37,10 @@ $( document ).ready(function() {
       }
   });
 
-   if ($(window).width() > 700){
-    skillHovering(true);
+   if ($(window).width() > 1024){
+    skillHover();
     o_wow = new WOW().init();
-    o_skrollr = skrollr.init();
-  }else{
-    skillHovering(false);
+    o_skrollr = skrollr.init({forceHeight: false});
   }
   
  /* ====== NAV ======*/
@@ -71,25 +62,18 @@ $( document ).ready(function() {
   });
   /* ====== /NAV ======*/
 
-
-
-   if ($(window).width() < 1023){
-    aboutHeight = exp_a.height() + sk_a.height() + 100;
-    about.css("height",aboutHeight);
-  }else{
-
-    about.css("height","1000px");
-  }
-
   $(window).on('resize', function(){
     projectResize(global_index);
 
-    if ($(window).width() > 700){
-      if(o_wow === 0){console.log("o_wow",o_wow); o_wow = new WOW().init();}
-      if(o_skrollr === 0){console.log("o_skrollr",o_skrollr); o_skrollr = skrollr.init();}
-      skillHovering(true);
-      
+    if ($(window).width() > 1024){
+
+      if(o_wow === 0){o_wow = new WOW().init();}
+      if(o_skrollr === 0){ o_skrollr = skrollr.init({forceHeight: false});}
+
+      skillHover();
+
       if ($(window).height() < 710){
+        $("body").css("height","100%");
         contact_fixed.css("position","relative");
         contact_fixed.css("margin-top","0px");
       }else{
@@ -97,16 +81,8 @@ $( document ).ready(function() {
         contact_fixed.css("margin-top","42px");
       }
     }else{
-      skillHovering(false);
       contact_fixed.css("position","relative");
       contact_fixed.css("margin-top","0px");
-    }
-
-     if ($(window).width() < 1010){
-      aboutHeight = exp_a.height() + sk_a.height() + 100;
-      about.css("height",aboutHeight);
-    }else{
-      about.css("height","1000px");
     }
   });
 
@@ -178,41 +154,63 @@ $( document ).ready(function() {
           });
   });
 
-function projectResize(targetIndex){
-  activeSlide = '.projects[index="'+targetIndex+'"]';
-  activeSlideContent = '.projects[index="'+targetIndex+'"] ';
-  var projectHeight = $(activeSlideContent).height() + $(".slicker-nav").height() + $(".project-title").height() +50;
-  $("#project").css("height",projectHeight);
+  function projectResize(targetIndex){
+    activeSlide = '.projects[index="'+targetIndex+'"]';
+    activeSlideContent = '.projects[index="'+targetIndex+'"] ';
+    var projectHeight = $(activeSlideContent).height() + $(".slicker-nav").height() + $(".project-title").height() +50;
+    $("#project").css("height",projectHeight);
+  }
 
-}
-
-function skillHovering(okay){
-  if(okay){
-    skilled_s.hover(function(){
-      $(this).parent().find(legend_s).css("visibility","visible");
+  function skillHover(){
+    // ====== Front end ======
+    $(".front-end .skilled").hover(function(){
+      $(".legend-front-end-skilled").css("margin-right","8%");
       },
       function(){
-      $(this).parent().find(legend_s).css("visibility","hidden");
+       $(".legend-front-end-skilled").css("margin-right","-50%");
     });
 
-    experienced_s.hover(function(){
-      $(this).parent().find(legend_e).css("visibility","visible");
+    $(".front-end .experienced").hover(function(){
+      $(".legend-front-end-experienced").css("margin-right","8%");
       },
       function(){
-      $(this).parent().find(legend_e).css("visibility","hidden");
+      $(".legend-front-end-experienced").css("margin-right","-50%");
     });
-    }else{
-      skilled_s.hover(function(){
-        },
-        function(){
-      });
+    // ====== /Front end ======
 
-      experienced_s.hover(function(){
-        },
-        function(){
-      });
-    }
-}
+    // ====== Back end ======
+    $(".back-end .experienced").hover(function(){
+      $(".legend-back-end-experienced").css("margin-right","8%");
+      },
+      function(){
+      $(".legend-back-end-experienced").css("margin-right","-50%");
+    });
+    // ====== /Back end ======
 
+    // ====== Tools ======
+    $(".tools .skilled").hover(function(){
+      $(".legend-tools-skilled").css("margin-right","8%");
+      },
+      function(){
+       $(".legend-tools-skilled").css("margin-right","-50%");
+    });
+
+    $(".tools .experienced").hover(function(){
+      $(".legend-tools-experienced").css("margin-right","8%");
+      },
+      function(){
+      $(".legend-tools-experienced").css("margin-right","-50%");
+    });
+    // ====== /Tools ======
+
+    // ====== Misc ======
+    $(".misc .experienced").hover(function(){
+      $(".legend-misc-experienced").css("margin-right","8%");
+      },
+      function(){
+      $(".legend-misc-experienced").css("margin-right","-50%");
+    });
+    // ====== /Misc ======
+  }
 
 });
