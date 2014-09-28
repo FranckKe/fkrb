@@ -3,34 +3,35 @@ $( document ).ready(function() {
 
   $(document).foundation({
     "magellan-expedition": {
-      active_class: 'magellan-active-custom', // specify the class used for active sections
-      threshold: 0, // how many pixels until the magellan bar sticks, 0 = auto
+      active_class         : 'magellan-active-custom', // specify the class used for active sections
+      threshold            : 0, // how many pixels until the magellan bar sticks, 0 = auto
       destination_threshold: 5, // pixels from the top of destination for it to be considered active
-      throttle_delay: 50, // calculation throttling to increase framerate
-      fixed_top: 0, // top distance in pixels assigned to the fixed element on scroll
+      throttle_delay       : 50, // calculation throttling to increase framerate
+      fixed_top            : 0, // top distance in pixels assigned to the fixed element on scroll
     }
   });
-  var slicker_s     = $(".slicker");
-  var overlay_s     = $(".overlay");
-  var about         = $("#about");
-  var contact_fixed = $(".contact-fixed");
-  var navTitlte_s   = $(".nav-title");
-  var targetIndex = 0;
-  var activeSlide = '.projects[index="'+targetIndex+'"]';
+
+  var slicker_s          = $(".slicker");
+  var overlay_s          = $(".overlay");
+  var about              = $("#about");
+  var contact_fixed      = $(".contact-fixed");
+  var navTitlte_s        = $(".nav-title");
+  var targetIndex        = 0;
+  var activeSlide        = '.projects[index="'+targetIndex+'"]';
   var activeSlideContent = '.projects[index="'+targetIndex+'"] ';
-  var global_index = 0;
-  var $root         = $('html, body');
-  var o_wow         = 0;
-  var o_skrollr     = 0;
-  var form = $('#myForm');
-  var formMessages = $('.formButton');
+  var global_index       = 0;
+  var $root              = $('html, body');
+  var o_wow              = 0;
+  var o_skrollr          = 0;
+  var form               = $('#myForm');
+  var formMessages       = $('.formButton');
 
   slicker_s.slick({
-    infinite: true,
+    infinite      : true,
     slidesToScroll: 1,
-    arrows:false,
-    fade: false,
-    speed: 700,
+    arrows        :false,
+    fade          : false,
+    speed         : 700,
     onBeforeChange: 
       function(slider,currentIndex, targetIndex){
         beforeChangeFunc(targetIndex);
@@ -39,7 +40,7 @@ $( document ).ready(function() {
 
    if ($(window).width() > 1024){
     skillHover();
-    o_wow = new WOW().init();
+    o_wow     = new WOW().init();
     o_skrollr = skrollr.init({forceHeight: false});
   }
   

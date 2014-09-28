@@ -10,8 +10,8 @@
 
 	#fkrb{
 		h3{
-			font-size: 4.25rem;
-			padding-top: 15vh;
+			font-size	: 4.25rem;
+			padding-top	: 15vh;
 		}
 
 		p{
@@ -45,8 +45,8 @@
 	.projects{
 		padding: 0;		
 		img{
-			float: none;
-			margin: auto;
+			float	: none;
+			margin	: auto;
 		}
 		h2{
 			font-size: 2.5rem;
@@ -79,11 +79,11 @@
 	
 	.icon-list{
 		background-color: $second_color;
-		transition : background 0.3s ease;
+		transition		: background 0.3s ease;
 		h3{
-			color: $second_color;
-			margin-top:-30px;
-			transition : all 0.3s ease;
+			color		: $second_color;
+			margin-top	:-30px;
+			transition	: all 0.3s ease;
 		
       }
       	&:hover{
@@ -106,44 +106,44 @@
 
 	.front-end{
 	  .foundation .foundation-body{
-	    fill: $skilled;
-	    transition: color 0.3s ease;
+	    fill		: $skilled;
+	    transition	: color 0.3s ease;
 	  }  
 	  .foundation .foundation-accessories{
-	    fill: $second-color;
-	    transition: color 0.3s ease;
-	    stroke: none;
+	    fill		: $second-color;
+	    transition	: color 0.3s ease;
+	    stroke		: none;
 	  }
 	}
 
 	.back-end{
 		.mailchimp svg{
-	   		fill: $experienced;
-	    	transition: color 0.3s ease;
+	   		fill		: $experienced;
+	    	transition	: color 0.3s ease;
 	  	}
 	}
 
 	.tools{
 		.sublime-text{
 			background-color: $skilled;
-			border-color: $skilled;
-			color: $second_color;
-			transition: color 0.4s ease;
+			border-color	: $skilled;
+			color			: $second_color;
+			transition		: color 0.4s ease;
 		}
 	}
 
 	.misc{
 	 .photoshop svg{
-	    fill: $experienced;
-	    transition: color 0.3s ease;
+	    fill		: $experienced;
+	    transition	: color 0.3s ease;
 	  }
 	}
 
 
 	.soon{
 	  span{
-	    color: $background_dark;
-	    transition: color 0.3s ease;
+	    color		: $background_dark;
+	    transition	: color 0.3s ease;
 	  }
 	}
 
@@ -156,6 +156,11 @@
 	.about-experience h3, .about-experience p{
 		padding-left: 10px;
 	}
+	.download-cv{
+		width		: 100%;
+		margin-top	: 15px;
+		margin-left	: 0;
+	}
 
 	.about-skills{
 		h2{
@@ -163,12 +168,12 @@
 		}
 
 	.sublime-text{
-		margin-left:15%;
-		margin-left: 15%;
-		width: 64px;
-		height: 64px;
-		padding-top: 18px;
-		margin-top: 3px;
+		margin-left	:15%;
+		margin-left	: 15%;
+		width		: 64px;
+		height		: 64px;
+		padding-top	: 18px;
+		margin-top	: 3px;
 	}
 	.mailchimp svg{
 		width: 100px;
@@ -177,14 +182,14 @@
 
 
 	#contact{
-		height  : auto;
+		height			: auto;
 		background-image: url("../img/trianglify-background.svg");
-		background-size: cover;
-		z-index: $z_section;
+		background-size	: cover;
+		z-index			: $z_section;
 
 		.fa{
-			padding-top: 30px;
-			margin-top:0;
+			padding-top	: 30px;
+			margin-top	:0;
 		}
 		.email{
 			h3{
@@ -194,8 +199,8 @@
 	}
 
 	.contact-fixed{
-		position: relative !important;
-		margin-top: 0px !important;
+		position	: relative !important;
+		margin-top	: 0px !important;
 	}
 
 	#contactForm .formInput {

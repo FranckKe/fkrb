@@ -17,8 +17,8 @@
 
 	#fkrb{
 		h3{
-			font-size: 3.5rem;
-			padding-top: 10vh;
+			font-size	: 3.5rem;
+			padding-top	: 10vh;
 		}
 
 		p{
@@ -27,7 +27,7 @@
 	}
 
 	#logo{
-		top: 15px;
+		top			: 15px;
 		padding-left: 12%;
 	}
 	
@@ -53,8 +53,8 @@
 	.projects{
 		padding: 0;		
 		img{
-			float: none;
-			margin: auto;
+			float	: none;
+			margin	: auto;
 		}
 		h2{
 			font-size: 1.5rem;
@@ -98,8 +98,8 @@
 		.foundation {
 			padding:0;
 			svg{
-				height: 48px;
-				width:50px;
+				height	: 48px;
+				width	:50px;
 			}
 		}
 	}
@@ -119,6 +119,11 @@
 	.about-experience {
 		p,h3{
 			padding-left: 0;
+		}
+		.download-cv{
+			width		: 100%;
+			margin-top	: 15px;
+			margin-left	: 0;
 		}
 	}
 
@@ -217,9 +222,9 @@
 
 	.misc{
 	 .photoshop svg{
-	 	width: 50px;
-	    fill: $experienced;
-	    transition: color 0.3s ease;
+	 	width		: 50px;
+	    fill		: $experienced;
+	    transition	: color 0.3s ease;
 	  }
 	  .c-prog{
 	  	font-size: 3rem;
@@ -229,8 +234,8 @@
 
 	.soon{
 	  span{
-	    color: $background_dark;
-	    transition: color 0.3s ease;
+	    color		: $background_dark;
+	    transition	: color 0.3s ease;
 	  }
 	}
 
@@ -257,9 +262,9 @@
 		z-index			: $z_section;
 
 		.fa{
-			padding-top: 30px;
-			margin-top:0;
-			font-size: 6rem;
+			padding-top	: 30px;
+			margin-top	:0;
+			font-size	: 6rem;
 		}
 		.email{
 			h3{
@@ -269,13 +274,13 @@
 	}
 
 	.contact-fixed{
-		position: relative !important;
-		margin-top: 0px !important;
+		position	: relative !important;
+		margin-top	: 0px !important;
 	}
 
 	#contactForm .formInput {
-    	font-size: 1rem; 
-    	color: white;
+    	font-size	: 1rem; 
+    	color		: white;
 	}
 	
 	.social-linkedin, .social-github{
@@ -303,8 +308,8 @@
 
 	#fkrb{
 		h3{
-			font-size: 3.5rem;
-			padding-top: 10vh;
+			font-size	: 3.5rem;
+			padding-top	: 10vh;
 		}
 
 		p{
@@ -340,17 +345,17 @@
 	.projects{
 		padding: 0;		
 		img{
-			float: none;
-			margin: auto;
+			float	: none;
+			margin	: auto;
 		}
 		h2{
 			font-size: 1.5rem;
 		}
 		.button{
-			padding-right: 0;
-			padding-left: 0;
-			width: 100%;
-			font-size: 1.5rem;
+			padding-right	: 0;
+			padding-left	: 0;
+			width			: 100%;
+			font-size		: 1.5rem;
 		}
 		.devicons{
 			font-size: 3em;
@@ -359,34 +364,31 @@
 	.techno {
 		margin-bottom: -15px;
 		i{
-			font-size: 2.5rem;
-			padding: 0;
-			padding-top: 4px;
-		}
-		.xdk{
-			margin-top: 0;
+			font-size	: 2.5rem;
+			padding		: 0;
+			padding-top	: 4px;
 		}
 		.photoshop svg{
-			width: 50px;
-			height: 50px;
+			width	: 50px;
+			height	: 50px;
 		}
 		.mailchimp{
 			display: none;
 		}
 		.lemonstand{
-			width: 25px;
-			padding-top: 4px;
+			width		: 25px;
+			padding-top	: 4px;
 			padding-left: 2px;
 			svg{
-				width: 25px;
-				height: 25px;
+				width	: 25px;
+				height	: 25px;
 			}
 		}
 		.foundation {
 			padding:0;
 			svg{
-				height: 48px;
-				width:50px;
+				height	: 48px;
+				width	:50px;
 			}
 		}
 	}
@@ -403,12 +405,14 @@
 		font-size: 2rem;
 	}
 
-
-
-
 	.about-experience {
 		p,h3{
 			padding-left: 0;
+		}
+		.download-cv{
+			width		: 100%;
+			margin-top	: 15px;
+			margin-left	: 0;
 		}
 	}
 	.skills-legend-experienced{
@@ -430,13 +434,13 @@
 
 	.icon-list{
 		background-color: $second_color;
-		transition : background 0.3s ease;
-		width: 100%;
-		height: 100px;
+		transition		: background 0.3s ease;
+		width			: 100%;
+		height			: 100px;
 		h3{
-			color: $second_color;
-			margin-top:-30px;
-			transition : all 0.3s ease;
+			color		: $second_color;
+			margin-top	:-30px;
+			transition	: all 0.3s ease;
 		
       	}
       	&:hover{
@@ -473,46 +477,46 @@
 				width: 50px;
 			}
 			.foundation-body{
-			fill: $skilled;
-			transition: color 0.3s ease;
+			fill		: $skilled;
+			transition	: color 0.3s ease;
 			}  
 
 			.foundation-accessories{
-			fill: $second-color;
-			transition: color 0.3s ease;
-			stroke: none;
+			fill		: $second-color;
+			transition	: color 0.3s ease;
+			stroke		: none;
 			}
 		}
 	}
 
 	.back-end{
 		.mailchimp svg{
-			width: 50px;
-	   		fill: $experienced;
-	    	transition: color 0.3s ease;
+			width		: 50px;
+	   		fill		: $experienced;
+	    	transition	: color 0.3s ease;
 	  	}
 	}
 
 	.tools{
 		.sublime-text{
 			background-color: $skilled;
-			border-color: $skilled;
-			color: $second_color;
-			transition: color 0.4s ease;
-			margin-left: 6px;
-			width: 40px;
-			height: 40px;
-			padding-top: 6px;
-			margin-top: 3px;
-			font-size: 2rem;
+			border-color	: $skilled;
+			color			: $second_color;
+			transition		: color 0.4s ease;
+			margin-left		: 6px;
+			width			: 40px;
+			height			: 40px;
+			padding-top		: 6px;
+			margin-top		: 3px;
+			font-size		: 2rem;
 		}
 	}
 
 	.misc{
 	 .photoshop svg{
-	 	width: 50px;
-	    fill: $experienced;
-	    transition: color 0.3s ease;
+	 	width		: 50px;
+	    fill		: $experienced;
+	    transition	: color 0.3s ease;
 	  }
 	  .c-prog{
 	  	font-size: 3rem;
@@ -522,8 +526,8 @@
 
 	.soon{
 	  span{
-	    color: $background_dark;
-	    transition: color 0.3s ease;
+	    color		: $background_dark;
+	    transition	: color 0.3s ease;
 	  }
 	}
 
@@ -544,15 +548,15 @@
 
 
 	#contact{
-		height  : auto;
+		height			: auto;
 		background-image: url("../img/trianglify-background.svg");
-		background-size: cover;
-		z-index: $z_section;
+		background-size	: cover;
+		z-index			: $z_section;
 
 		.fa{
-			padding-top: 30px;
-			margin-top:0;
-			font-size: 6rem;
+			padding-top	: 30px;
+			margin-top	:0;
+			font-size	: 6rem;
 		}
 		.email{
 			h3{
@@ -562,8 +566,8 @@
 	}
 
 	.contact-fixed{
-		position: relative !important;
-		margin-top: 0px !important;
+		position	: relative !important;
+		margin-top	: 0px !important;
 	}
 
 	#contactForm .formInput {

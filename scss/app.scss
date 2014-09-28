@@ -312,6 +312,7 @@ body{
 
 .project{
   position        : relative;
+  width: 100%;
   height          : 850px;
   z-index         : $z_section;
   overflow        : hidden;
@@ -386,8 +387,10 @@ body{
   }
 }
 
-#project_4 .devicons{
-  margin-right: 4%;
+#project_4 {
+  .devicons,.lemonstand{
+    margin-right: 4%;
+  }
 }
 
 .project-content-wrapper{
@@ -627,8 +630,10 @@ polyline {
 }
 
 .download-cv{
-  
-  margin-left: 30px;
+  width: 50%;
+  margin-top: 15px;
+  margin-left: 25%;
+  // margin-left: 30px;
   background-color: $second_color;
   border-color    :$second_color;
   &:hover{
@@ -656,10 +661,11 @@ polyline {
 }
 
 .about-skills{
-  position: relative;
-  display : block;
-  height  : 50%;
-  float   : left;
+  position     : relative;
+  display      : block;
+  height       : 50%;
+  float        : left;
+  margin-bottom: 30px;
 
   .sublime-text{
     margin-left           : 30px;
@@ -868,6 +874,7 @@ polyline {
   width  : auto;
   margin : auto;
   display: table;
+  clear  : both;
 }
 
 .form-wrapper{
@@ -882,7 +889,16 @@ polyline {
 
 #contactForm{
   .button{
-    @extend .download-cv;
+    background-color: $second_color;
+    border-color    :$second_color;
+    &:hover{
+      background-color: $main_color;
+    }
+    &:focus{
+      border-color:$second_color;
+      outline     : $second_color auto 5px;
+      background-color: $main_color;
+    } 
     margin-left: 0;
   }
 
@@ -940,7 +956,22 @@ polyline {
   }
 }
 
+#fkrb .error404{
+  padding-top: 10%;
+  display    : inline-block;
+  color      : white;
+  text-align : center;
+  font-size  : 7em;
+  font-weight: bold;
+  opacity    : 0.9;
+  z-index    : 10;
+  width      : 100%;
+
+}
+
 @import "xsmall.scss";
 @import "small.scss";
 @import "medium.scss";
 @import "large.scss";
+
+@import "slick.scss";

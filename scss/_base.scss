@@ -1,98 +1,60 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import "normalize.scss";
 @import "foundation/components/grid";
-@import "foundation/components/accordion";
-@import "foundation/components/alert-boxes";
-@import "foundation/components/block-grid";
-@import "foundation/components/breadcrumbs";
-@import "foundation/components/button-groups";
+// @import "foundation/components/accordion";
+// @import "foundation/components/alert-boxes";
+// @import "foundation/components/block-grid";
+// @import "foundation/components/breadcrumbs";
+// @import "foundation/components/button-groups";
 @import "foundation/components/buttons";
-@import "foundation/components/clearing";
-@import "foundation/components/dropdown";
-@import "foundation/components/dropdown-buttons";
-@import "foundation/components/flex-video";
+// @import "foundation/components/clearing";
+// @import "foundation/components/dropdown";
+// @import "foundation/components/dropdown-buttons";
+// @import "foundation/components/flex-video";
 @import "foundation/components/forms";
-@import "foundation/components/icon-bar";
-@import "foundation/components/inline-lists";
-@import "foundation/components/joyride";
-@import "foundation/components/keystrokes";
-@import "foundation/components/labels";
+// @import "foundation/components/icon-bar";
+// @import "foundation/components/inline-lists";
+// @import "foundation/components/joyride";
+// @import "foundation/components/keystrokes";
+// @import "foundation/components/labels";
 @import "foundation/components/magellan";
-@import "foundation/components/orbit";
-@import "foundation/components/pagination";
-@import "foundation/components/panels";
-@import "foundation/components/pricing-tables";
-@import "foundation/components/progress-bars";
-@import "foundation/components/range-slider";
-@import "foundation/components/reveal";
-@import "foundation/components/side-nav";
-@import "foundation/components/split-buttons";
-@import "foundation/components/sub-nav";
-@import "foundation/components/switches";
-@import "foundation/components/tables";
-@import "foundation/components/tabs";
-@import "foundation/components/thumbs";
+// @import "foundation/components/orbit";
+// @import "foundation/components/pagination";
+// @import "foundation/components/panels";
+// @import "foundation/components/pricing-tables";
+// @import "foundation/components/progress-bars";
+// @import "foundation/components/range-slider";
+// @import "foundation/components/reveal";
+// @import "foundation/components/side-nav";
+// @import "foundation/components/split-buttons";
+// @import "foundation/components/sub-nav";
+// @import "foundation/components/switches";
+// @import "foundation/components/tables";
+// @import "foundation/components/tabs";
+// @import "foundation/components/thumbs";
 @import "foundation/components/tooltips";
-@import "foundation/components/top-bar";
+// @import "foundation/components/top-bar";
 @import "foundation/components/type";
-@import "foundation/components/offcanvas";
+// @import "foundation/components/offcanvas";
 @import "foundation/components/visibility";
 
-// @mixin box-shadow($shadows...) {
-//   -moz-box-shadow: $shadows;
-//   -webkit-box-shadow: $shadows;
-//   box-shadow: $shadows;
-// }
 
-
-/*
-
-██╗   ██╗ █████╗ ██████╗ ██╗ █████╗ ██████╗ ██╗     ███████╗███████╗
-██║   ██║██╔══██╗██╔══██╗██║██╔══██╗██╔══██╗██║     ██╔════╝██╔════╝
-██║   ██║███████║██████╔╝██║███████║██████╔╝██║     █████╗  ███████╗
-╚██╗ ██╔╝██╔══██║██╔══██╗██║██╔══██║██╔══██╗██║     ██╔══╝  ╚════██║
- ╚████╔╝ ██║  ██║██║  ██║██║██║  ██║██████╔╝███████╗███████╗███████║
-  ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝╚══════╝
-                                                                    
-
-*/
 $main_font        :'Montserrat';
 $second_font      :'Raleway';
 $main_color       : #d35400; //rgb(211,84,0)
 $second_color     : #f89406; //rgb(248,148,6)
 $third_color      : #416CAD;
-$background_dark : #181716; //rgb(24,23,22)
+$background_dark  : #181716; //rgb(24,23,22)
 $background_bright: #fbfbfb;
 $skilled          : $third_color;
 $experienced      : $main_color;
-$transparent: rgba(0,0,0,0);
-// Breakpoint
+$transparent      : rgba(0,0,0,0);
 
-$z_background    : 1;
-$z_section       : 5;
-$z_foreground    : 20;
-$z_overlay    : 50;
-// $hex_size_project: 250px;
-// $hex_size_project_i: 90%;
-$nb_project : 3;
-// $size_project : $nb_project*100vh;
-$size_project : $nb_project*100vh;
+$z_background: 1;
+$z_section   : 5;
+$z_foreground: 20;
+$z_overlay   : 50;
 
 
-/*
-
-███╗   ███╗██╗██╗  ██╗██╗███╗   ██╗
-████╗ ████║██║╚██╗██╔╝██║████╗  ██║
-██╔████╔██║██║ ╚███╔╝ ██║██╔██╗ ██║
-██║╚██╔╝██║██║ ██╔██╗ ██║██║╚██╗██║
-██║ ╚═╝ ██║██║██╔╝ ██╗██║██║ ╚████║
-╚═╝     ╚═╝╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
-                                   
-
-*/
 @mixin font($font-family) {
 	font-family: $font-family, sans-serif;
 }
