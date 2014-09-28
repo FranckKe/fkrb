@@ -44,6 +44,15 @@ $( document ).ready(function() {
     o_skrollr = skrollr.init({forceHeight: false});
   }
   
+  if ($(window).height() < 710){
+    $("body").css("height","100%");
+    contact_fixed.css("position","relative");
+    contact_fixed.css("margin-top","0px");
+  }else{
+    contact_fixed.css("position","fixed");        
+    contact_fixed.css("margin-top","42px");
+  }
+  
  /* ====== NAV ======*/
   $(".hamburger").click(function(){
     overlay_s.toggleClass("overlay-slidedown");

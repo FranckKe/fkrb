@@ -113,7 +113,7 @@ body{
   z-index : $z_section;
   top     : 0px;
   h3{
-    padding-top: 20%;
+    padding-top: 12%;
     display    : inline-block;
     color      : white;
     text-align : center;
@@ -867,6 +867,9 @@ polyline {
     display   : inline-block;
     color     : white;
 
+  }
+  .social-linkedin, .social-github{
+    text-align: center;
   }
 }
 
