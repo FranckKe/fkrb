@@ -60,7 +60,7 @@ body{
     text-align: center;
     position  : relative;
     top       : 50%;
-    height    : 80%;
+    height    : 95%;
     transform : translateY(-50%);
   }
   ul{
@@ -505,7 +505,7 @@ body{
 
 .arrow-left {
   left        : 0%;
-  padding-left: 10px;
+  padding-left: 30px;
   &:hover{
     padding-left: 20px;
   }
@@ -878,6 +878,12 @@ polyline {
   margin : auto;
   display: table;
   clear  : both;
+  a{
+    color: $second_color;
+    &:hover{
+      color: $main_color;
+    }
+  }
 }
 
 .form-wrapper{

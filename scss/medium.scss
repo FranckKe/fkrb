@@ -41,7 +41,9 @@
 		padding: 0;		
 		img{
 			float	: none;
-			margin	: auto;
+			// margin	: auto;
+			width: 70%;
+			margin-left: 15%;
 		}
 		h2{
 			font-size: 2.5rem;
@@ -56,7 +58,12 @@
 			margin-top: 50px;
 		}
 	}
-
+	#project_1{
+		img{
+			width: auto;
+			margin-left: 0;
+		}
+	}
 	.project-title{
 		font-size: 3rem;
 	}

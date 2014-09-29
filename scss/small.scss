@@ -46,7 +46,9 @@
 		padding: 0;		
 		img{
 			float	: none;
-			margin	: auto;
+			// margin	: auto;
+			width: 70%;
+			margin-left: 15%;
 		}
 		h2{
 			font-size: 2.5rem;
@@ -56,6 +58,12 @@
 			padding-left	: 0;
 			width			: 100%;
 			font-size		: 1.5rem;
+		}
+	}
+	#project_1{
+		img{
+			width: auto;
+			margin-left: 0;
 		}
 	}
 
