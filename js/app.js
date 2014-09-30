@@ -50,7 +50,7 @@ $( document ).ready(function() {
     contact_fixed.css("margin-top","0px");
   }else{
     contact_fixed.css("position","fixed");        
-    contact_fixed.css("margin-top","42px");
+    contact_fixed.css("margin-top","65px");
   }
   
  /* ====== NAV ======*/
@@ -65,6 +65,13 @@ $( document ).ready(function() {
   });
 
   $("nav a").click(function() {
+      $root.animate({
+          scrollTop: $( $.attr(this, 'href') ).offset().top
+      }, 500);
+      return false;
+  });
+
+  $(".magellan a").click(function() {
       $root.animate({
           scrollTop: $( $.attr(this, 'href') ).offset().top
       }, 500);
@@ -88,7 +95,7 @@ $( document ).ready(function() {
         contact_fixed.css("margin-top","0px");
       }else{
         contact_fixed.css("position","fixed");        
-        contact_fixed.css("margin-top","42px");
+        contact_fixed.css("margin-top","65px");
       }
     }else{
       contact_fixed.css("position","relative");
@@ -113,7 +120,6 @@ $( document ).ready(function() {
   function beforeChangeFunc(targetIndex){
     global_index=targetIndex;
     projectResize(targetIndex);
-
     navTitlte_s.each(function(){
       if($(this).attr("index") == targetIndex){
         $(this).toggleClass("active-slide-title");

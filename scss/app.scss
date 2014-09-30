@@ -263,13 +263,12 @@ body{
 
 
 
-
 .sub-nav{
   padding-top: 1px;
 }
 
 .magellan[style="position: fixed; top: 0px;"]{
-  box-shadow      :0 5px 25px -7px black;
+  box-shadow      : 0 5px 25px -7px black;
   background-color: rgba(153,153,153,0.8);
   margin-top      : 0px;
 
@@ -280,7 +279,7 @@ body{
   height          : 42px;
   text-align      : center;
   position        : relative;
-  margin-top      : -42px;
+  margin-top      : -50px;
   background-color: $transparent;
   transition      : all 0.5s ease;
 
@@ -312,12 +311,12 @@ body{
 
 .project{
   position        : relative;
-  width: 100%;
+  width           : 100%;
   height          : 850px;
   z-index         : $z_section;
   overflow        : hidden;
   background-color: $background_bright;
-  transition: height 0.5s ease;
+  transition      : height 0.5s ease;
 }
 
 .project-title{
@@ -656,8 +655,16 @@ polyline {
 .contact-fixed{
   position  : fixed;
   width     : 100%;
-  margin-top: 42px; 
+  height    : 100%;
+  margin-top: 65px; 
   top       : 0;
+}
+
+.contact-wrapper{
+  height: 800px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .about-skills{
@@ -673,6 +680,7 @@ polyline {
     height                : 62px;
     padding-top           : 17px;
     margin-top            : 3%;
+    margin                : auto;
     background-color      : #FAFAFA;
     color                 : $background_dark;
     text-align            : center;
@@ -879,9 +887,9 @@ polyline {
   display: table;
   clear  : both;
   a{
-    color: $second_color;
+    color: white;
     &:hover{
-      color: $main_color;
+      color: $background_dark;
     }
   }
 }

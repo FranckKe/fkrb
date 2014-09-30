@@ -398,8 +398,8 @@
 	}
 	#project_1{
 		img{
-			width: auto;
-			margin-left: 0;
+			width	: auto;
+			margin	: auto;
 		}
 	}
 
@@ -514,11 +514,11 @@
 			border-color	: $skilled;
 			color			: $second_color;
 			transition		: color 0.4s ease;
-			margin-left		: 6px;
 			width			: 40px;
 			height			: 40px;
 			padding-top		: 6px;
 			margin-top		: 3px;
+			margin			: auto;
 			font-size		: 2rem;
 		}
 	}

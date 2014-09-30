@@ -59,11 +59,18 @@
 	}
 
 	.contact-fixed{
-		margin-top: 42px;
+		margin-top: 65px;
+    height: 100%;
 	}
 
 	#contactForm .formButton input{
 		font-size: 2rem;
 	}
 
+}
+
+@media #{$xlarge-up} { 
+  #contact{
+    height: 735px;
+  }
 }
