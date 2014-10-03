@@ -1,9 +1,10 @@
 $( document ).ready(function() {
+  "use strict";
   $('.no-fouc').removeClass('no-fouc');
 
   $(document).foundation({
     "magellan-expedition": {
-      active_class         : 'magellan-active-custom', // specify the class used for active sections
+      active_class         : "magellan-active-custom", // specify the class used for active sections
       threshold            : 0, // how many pixels until the magellan bar sticks, 0 = auto
       destination_threshold: 5, // pixels from the top of destination for it to be considered active
       throttle_delay       : 50, // calculation throttling to increase framerate
@@ -14,7 +15,13 @@ $( document ).ready(function() {
   var slicker_s          = $(".slicker");
   var overlay_s          = $(".overlay");
   var about              = $("#about");
-  var contact_fixed      = $(".contact-fixed");
+  var contactFixed      = $(".contact-fixed");
+  var contactWrapper    = $(".contact-wrapper");
+  var contactP           = $(".p-wrapper");
+  var contactTitle       = $(".contact-wrapper h2");
+  var contactForm        = $(".form-wrapper");
+  var contact            = $("#contact");
+  var contactHeight      = 0;
   var navTitlte_s        = $(".nav-title");
   var targetIndex        = 0;
   var activeSlide        = '.projects[index="'+targetIndex+'"]';
@@ -45,12 +52,13 @@ $( document ).ready(function() {
   }
   
   if ($(window).height() < 710){
-    $("body").css("height","100%");
-    contact_fixed.css("position","relative");
-    contact_fixed.css("margin-top","0px");
+    contactResize("relative");
+    contactFixed.css("position","relative");
+    contactFixed.css("margin-top","0px");
   }else{
-    contact_fixed.css("position","fixed");        
-    contact_fixed.css("margin-top","65px");
+    contactResize("fixed");
+    contactFixed.css("position","fixed");        
+    contactFixed.css("margin-top","42px");
   }
   
  /* ====== NAV ======*/
@@ -81,25 +89,26 @@ $( document ).ready(function() {
 
   $(window).on('resize', function(){
     projectResize(global_index);
-
     if ($(window).width() > 1024){
-
+      contactResize("fixed");
       if(o_wow === 0){o_wow = new WOW().init();}
       if(o_skrollr === 0){ o_skrollr = skrollr.init({forceHeight: false});}
 
       skillHover();
 
       if ($(window).height() < 710){
-        $("body").css("height","100%");
-        contact_fixed.css("position","relative");
-        contact_fixed.css("margin-top","0px");
+        contactResize("relative");
+        contactFixed.css("position","relative");
+        contactFixed.css("margin-top","0px");
       }else{
-        contact_fixed.css("position","fixed");        
-        contact_fixed.css("margin-top","65px");
+        contactResize("fixed");
+        contactFixed.css("position","fixed");        
+        contactFixed.css("margin-top","42px");
       }
     }else{
-      contact_fixed.css("position","relative");
-      contact_fixed.css("margin-top","0px");
+      contactResize("relative");
+      contactFixed.css("position","relative");
+      contactFixed.css("margin-top","0px");
     }
   });
 
@@ -175,6 +184,16 @@ $( document ).ready(function() {
     activeSlideContent = '.projects[index="'+targetIndex+'"] ';
     var projectHeight = $(activeSlideContent).height() + $(".slicker-nav").height() + $(".project-title").height() +50;
     $("#project").css("height",projectHeight);
+  }
+  function contactResize(contactPosition){
+    if (contactPosition === "relative") {
+      contactHeight = contactP.height() + contactForm.height() + contactTitle.height();
+      contact.css("height",contactHeight);
+      contactWrapper.css("height",contactHeight);
+    }else if(contactPosition === "fixed"){
+      contact.css("height","100vh");
+      contactWrapper.css("height","100%");
+    }
   }
 
   function skillHover(){
