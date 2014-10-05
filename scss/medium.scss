@@ -30,7 +30,7 @@
 		height: 1500px;
 
 		.slicker{
-			height: 1500px;
+			// height: 1500px;
 		}
 		.slicker-nav{
 			display: none;
@@ -42,8 +42,8 @@
 		img{
 			float	: none;
 			// margin	: auto;
-			width: 70%;
-			margin-left: 15%;
+			// width: 70%;
+			// margin-left: 15%;
 		}
 		h2{
 			font-size: 2.5rem;
@@ -57,11 +57,15 @@
 		p{
 			margin-top: 50px;
 		}
+		.img-wrapper{
+			float	: none;
+			margin	:auto;
+		}
 	}
+
 	#project_1{
-		img{
-			width	: auto;
-			margin	: auto;
+		.img-wrapper{
+			padding: 0;
 		}
 	}
 	.project-title{

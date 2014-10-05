@@ -53,6 +53,7 @@ gulp.task('scripts-foundation', function() {
         'js/foundation/foundation.tooltip.js'])
         .pipe(concat('foundation.min.js'))
         .pipe(uglify())
+        .on('error', errorLog)
         .pipe(gulp.dest('js'))
 });
 
@@ -61,6 +62,7 @@ gulp.task('scripts-min', function() {
         'js/app.js'])
         .pipe(rename('app.min.js'))
         .pipe(uglify())
+        .on('error', errorLog)
         .pipe(gulp.dest('js'))
 });
 
@@ -74,6 +76,7 @@ gulp.task('scripts-combining', function() {
         'js/app.min.js',
         ])
         .pipe(concat('all.min.js'))
+        .on('error', errorLog)
         .pipe(gulp.dest('dist'))
 });
 

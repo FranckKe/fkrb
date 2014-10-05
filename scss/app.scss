@@ -335,7 +335,8 @@ body{
 
 .projects{
   border-width        : 75%;
-  height              : 500px;
+  // height              : 500px;
+  height              : 100%;
   padding             : 5px 30px 30px 30px;
   margin-bottom       : 50px;
   
@@ -381,9 +382,20 @@ body{
     padding-left: 8px;
   }
 
+  .img-wrapper{
+    float   : right;
+    height  : 100%;
+    position: relative;
+    // margin-top: 10%;
+  }
   img{
     float: right;
   }
+}
+#project_1{
+  .img-wrapper{
+    padding-left: 10%;
+  } 
 }
 
 #project_4 {
@@ -393,7 +405,8 @@ body{
 }
 
 .project-content-wrapper{
-  height: 100%;
+  height      : 100%;
+  display: inline-block;
   margin-right: 10%;
   margin-left : 10%;
 }
@@ -570,14 +583,6 @@ polyline {
     margin-top: -10px;
     padding   : 0;
   }
-}
-
-#project_2 img{
-  padding: 0;
-}
-
-#project_2 img,#project_3 img,#project_4 img,#project_5 img,#project_6 img,{
-  box-shadow: 0px 10px 20px -5px black;
 }
 
 
@@ -860,6 +865,7 @@ polyline {
   h2{
 
     @extend .project-title;
+    margin-top: 40px;
   }
   .fa{
     font-size : 10rem;

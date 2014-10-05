@@ -35,7 +35,7 @@
 		height: 1500px;
 
 		.slicker{
-			height: 1500px;
+			// height: 1500px;
 		}
 		.slicker-nav{
 			display: none;
@@ -47,8 +47,8 @@
 		img{
 			float	: none;
 			// margin	: auto;
-			width: 70%;
-			margin-left: 15%;
+			// width: 70%;
+			// margin-left: 15%;
 		}
 		h2{
 			font-size: 2.5rem;
@@ -60,7 +60,11 @@
 			font-size		: 1.5rem;
 		}
 	}
+
 	#project_1{
+		.img-wrapper{
+			padding: 0;
+		}
 		img{
 			width	: auto;
 			margin	: auto;

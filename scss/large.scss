@@ -4,31 +4,49 @@
       font-size  : 1.5rem;
       line-height: 1.8em;
     }
-    
-    .skills-legend-skilled{
-        @include font($second_font);
-        position    : absolute;
-        right       : 0;
-        margin-right: -50%;
-        margin-top  : -30px;
-        visibility  : visible;
-        color       : $skilled;
-        transition  : margin ease 0.5s;
+  
+  #project_4{
+     .mailchimp{
+      svg{
+        width: 60px;
       }
+    }     
 
-      .skills-legend-experienced{
-        @include font($second_font);
-        position    : absolute;
-        right       : 0;
-        margin-right: -50%;
-        margin-top  : -30px;
-        visibility  : visible;
-        color       : $experienced;
-        transition  : all ease 0.5s;
-      }
+    .lemonstand {
+      width: 40px;
+    }
+  }
+
+  .projects .img-wrapper{
+    position: inherit;
+    margin-top: 0;
+  }
+  
+  .skills-legend-skilled{
+    @include font($second_font);
+    position    : absolute;
+    right       : 0;
+    margin-right: -50%;
+    margin-top  : -30px;
+    visibility  : visible;
+    color       : $skilled;
+    transition  : margin ease 0.5s;
+  }
+
+  .skills-legend-experienced{
+    @include font($second_font);
+    position    : absolute;
+    right       : 0;
+    margin-right: -50%;
+    margin-top  : -30px;
+    visibility  : visible;
+    color       : $experienced;
+    transition  : all ease 0.5s;
+  }
 
   	.project-content-wrapper{
-  		margin: 0;
+      margin-right: 5%;
+  		margin-left: 5%;
   	}
 
   	.nav-title{

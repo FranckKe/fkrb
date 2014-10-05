@@ -15,17 +15,19 @@ $( document ).ready(function() {
   var slicker_s          = $(".slicker");
   var overlay_s          = $(".overlay");
   var about              = $("#about");
-  var contactFixed      = $(".contact-fixed");
-  var contactWrapper    = $(".contact-wrapper");
+  var contact            = $("#contact");
+  var project            = $("#project");
+  var projectHeight      = 0;
+  var contactFixed       = $(".contact-fixed");
+  var contactWrapper     = $(".contact-wrapper");
   var contactP           = $(".p-wrapper");
   var contactTitle       = $(".contact-wrapper h2");
   var contactForm        = $(".form-wrapper");
-  var contact            = $("#contact");
   var contactHeight      = 0;
   var navTitlte_s        = $(".nav-title");
   var targetIndex        = 0;
-  var activeSlide        = '.projects[index="'+targetIndex+'"]';
-  var activeSlideContent = '.projects[index="'+targetIndex+'"] ';
+  var activeSlideContent = '.projects[index="'+targetIndex+'"]';
+  var activeShowcase     = $(activeSlideContent).find(".img-wrapper");
   var global_index       = 0;
   var $root              = $('html, body');
   var o_wow              = 0;
@@ -60,7 +62,9 @@ $( document ).ready(function() {
     contactFixed.css("position","fixed");        
     contactFixed.css("margin-top","42px");
   }
-  
+
+ 
+
  /* ====== NAV ======*/
   $(".hamburger").click(function(){
     overlay_s.toggleClass("overlay-slidedown");
@@ -180,11 +184,19 @@ $( document ).ready(function() {
   });
 
   function projectResize(targetIndex){
-    activeSlide = '.projects[index="'+targetIndex+'"]';
     activeSlideContent = '.projects[index="'+targetIndex+'"] ';
-    var projectHeight = $(activeSlideContent).height() + $(".slicker-nav").height() + $(".project-title").height() +50;
-    $("#project").css("height",projectHeight);
+    projectHeight = $(activeSlideContent).height() + $(".slicker-nav").height() + $(".project-title").height() +40;
+    project.css("height",projectHeight);
+    var activeShowcase     = $(activeSlideContent).find(".img-wrapper");
+    if($(window).width() > 1024){
+      if(targetIndex!==0){
+        activeShowcase.css("margin-top", projectHeight/8 );
+      }
+    }else{
+      activeShowcase.css("margin-top", 0);
+    }
   }
+
   function contactResize(contactPosition){
     if (contactPosition === "relative") {
       contactHeight = contactP.height() + contactForm.height() + contactTitle.height();
@@ -247,5 +259,5 @@ $( document ).ready(function() {
     });
     // ====== /Misc ======
   }
-
+  projectResize(global_index);
 });
