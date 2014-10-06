@@ -271,13 +271,6 @@ body{
   padding-top: 1px;
 }
 
-.magellan[style="position: fixed; top: 0px;"]{
-  box-shadow      : 0 5px 25px -7px black;
-  background-color: rgba(153,153,153,0.8);
-  margin-top      : 0px;
-
-}
-
 .magellan{
   @include font($main_font);
   height          : 42px;
@@ -286,6 +279,12 @@ body{
   margin-top      : -52px;
   background-color: $transparent;
   transition      : all 0.5s ease;
+  
+  &.fixed{
+    box-shadow      : 0 5px 25px -7px black;
+    background-color: rgba(153,153,153,0.8);
+    margin-top      : 0px;
+  }
 
   dd{
     margin-left: 0;
@@ -618,7 +617,7 @@ polyline {
   h2{
     text-align: center;
     color     : $main_color;
-    @include font(main_font);
+    @include font($main_font);
   }
 
   h3{
@@ -632,6 +631,9 @@ polyline {
       text-decoration: underline;
     }
   }
+  p{
+    @include font($second_font);
+  }
 }
 
 .about-experience p, .about-experience h3{
@@ -644,13 +646,13 @@ polyline {
   margin-left: 25%;
   // margin-left: 30px;
   background-color: $second_color;
-  border-color    :$second_color;
+  border-color    : $second_color;
   &:hover{
     background-color: $main_color;
   }
   &:focus{
-    border-color:$second_color;
-    outline     : $second_color auto 5px;
+    border-color    : $second_color;
+    outline         : $second_color auto 5px;
     background-color: $main_color;
   } 
 }
@@ -773,7 +775,6 @@ polyline {
   flex-direction : row;
   justify-content: center;
   align-items    : center;
-
   transition     : background 0.4s ease;
   h3{
     position  : absolute;
@@ -872,6 +873,20 @@ polyline {
     @extend .project-title;
     margin-top: 40px;
   }
+
+  h3{
+    text-align: center;
+    @include font($main_font);
+    font-size : 3rem;
+    display   : inline-block;
+    color     : white;
+
+  }
+
+  p{
+    @include font($second_font);
+  }
+
   .fa{
     font-size : 10rem;
     color     :$background_dark;
@@ -881,14 +896,7 @@ polyline {
       color:black;
     }
   }
-  h3{
-    text-align: center;
-    @include font($main_font);
-    font-size : 3rem;
-    display   : inline-block;
-    color     : white;
 
-  }
   .social-linkedin, .social-github{
     text-align: center;
   }
@@ -950,16 +958,16 @@ polyline {
   }
 
   .formInput{
-    color           : black;
+    color           : white;
     @include font($second_font);
-    background-color: rgba(0,0,0,0.0);
+    background-color: rgba(0,0,0,0.2);
     height          : 50px;
     font-size       : 1.5rem;
     border          :none;
     border-bottom   : 2px solid $background_dark;
     box-shadow      : none;
     &:focus{
-      background-color: rgba(0,0,0,0.0);
+      background-color: rgba(0,0,0,0.5);
     }
   }
 

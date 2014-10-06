@@ -189,7 +189,7 @@ $( document ).ready(function() {
     project.css("height",projectHeight);
     activeShowcase = $(activeSlideContent).find(".img-wrapper");
     if($(window).width() > 1024){
-      if((targetIndex==1)||(targetIndex==4)){
+      if((targetIndex==1)||(targetIndex==3)){
         activeShowcase.css("margin-top", "0px");
       }else{
         activeShowcase.css("margin-top", projectHeight/8 );
