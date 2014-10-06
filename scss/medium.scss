@@ -29,9 +29,6 @@
 	.project{
 		height: 1500px;
 
-		.slicker{
-			// height: 1500px;
-		}
 		.slicker-nav{
 			display: none;
 		}
@@ -41,9 +38,6 @@
 		padding: 0;		
 		img{
 			float	: none;
-			// margin	: auto;
-			// width: 70%;
-			// margin-left: 15%;
 		}
 		h2{
 			font-size: 2.5rem;
@@ -186,14 +180,13 @@
 
 
 	#contact{
-		// height			: auto;
 		background-size	: cover;
 		z-index			: $z_section;
 		background-image: url("../img/trianglify-background.svg");
 
 		.fa{
-			font-size	: 8rem;
-			padding-top	: 30px;
+			font-size	: 7rem;
+			padding-top	: 10px;
 			margin-top	: 0;
 		}
 		.email{

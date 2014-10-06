@@ -187,13 +187,16 @@ $( document ).ready(function() {
     activeSlideContent = '.projects[index="'+targetIndex+'"] ';
     projectHeight = $(activeSlideContent).height() + $(".slicker-nav").height() + $(".project-title").height() +40;
     project.css("height",projectHeight);
-    var activeShowcase     = $(activeSlideContent).find(".img-wrapper");
+    activeShowcase = $(activeSlideContent).find(".img-wrapper");
     if($(window).width() > 1024){
-      if(targetIndex!==0){
+      if((targetIndex==1)||(targetIndex==4)){
+        activeShowcase.css("margin-top", "0px");
+      }else{
         activeShowcase.css("margin-top", projectHeight/8 );
       }
     }else{
-      activeShowcase.css("margin-top", 0);
+      activeShowcase.css("margin-top", "30px");
+      console.log("height","30px");
     }
   }
 

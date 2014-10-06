@@ -3,6 +3,10 @@
 @import "_settings";
 @import "_base.scss";
 
+/* TODO
+Fix contact... Again...
+*/
+
 body{
   box-sizing: border-box;
   width     : 100%;
@@ -471,7 +475,7 @@ body{
 }
 
 .project .slicker {
-  height: 95vh;
+  height: 100%;
   width : 100%;
 }
 
@@ -652,6 +656,7 @@ polyline {
 }
 .download-cv  a{
     color: white;
+    font-size: 1.5rem;
     @include font($second_font);
     &:hover{
       text-decoration: none;
@@ -933,25 +938,28 @@ polyline {
     @include font($main_font);
   }
   ::-webkit-input-placeholder {
-     color: rgba(255,255,255,0.8);
+     color: rgba(0,0,0,0.5);
   }
 
   ::-moz-placeholder {
-     color: rgba(255,255,255,0.8);  
+     color: rgba(0,0,0,0.5);  
   }
 
   :-ms-input-placeholder {  
-     color: rgba(255,255,255,0.8);  
+     color: rgba(0,0,0,0.5);  
   }
 
   .formInput{
-    color           :white;
+    color           : black;
     @include font($second_font);
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.0);
     height          : 50px;
     font-size       : 1.5rem;
+    border          :none;
+    border-bottom   : 2px solid $background_dark;
+    box-shadow      : none;
     &:focus{
-      background-color: rgba(0,0,0,0.6);
+      background-color: rgba(0,0,0,0.0);
     }
   }
 
@@ -963,7 +971,7 @@ polyline {
 
   .formButton input{
     @include font($main_font);
-    color    :white;
+    color    : white;
     font-size: 1.5rem;
     transition: all 0.5s ease; 
   }
