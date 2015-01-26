@@ -42,6 +42,7 @@ body{
 
 
 .cross-close{
+  visibility: visible;
   background-color: transparent;
   svg{
     width : 60px;
@@ -315,7 +316,7 @@ body{
 .project{
   position        : relative;
   width           : 100%;
-  height          : 100vh;
+  height          : 900px;
   z-index         : $z_section;
   overflow        : hidden;
   background-color: $background_bright;
@@ -640,36 +641,34 @@ polyline {
   padding-left: 30px;
 }
 
-.download-cv{
-  width: 50%;
-  margin-top: 15px;
-  margin-left: 25%;
-  // margin-left: 30px;
+.download-cv, .download-cv button{
+  width           : 50%;
+  margin-top      : 10%;
+  margin-left     : 25%;
+  // margin-left  : 30px;
   background-color: $second_color;
   border-color    : $second_color;
+  display         : inline-block;
+  color           : white;
+  font-size       : 1.5rem;
+  @include font($second_font);
   &:hover{
     background-color: $main_color;
+    text-decoration : none;
   }
   &:focus{
     border-color    : $second_color;
     outline         : $second_color auto 5px;
     background-color: $main_color;
-  } 
-}
-.download-cv  a{
-    color: white;
-    font-size: 1.5rem;
-    @include font($second_font);
-    &:hover{
-      text-decoration: none;
-    }
   }
+}
+
 
 .contact-fixed{
   position  : fixed;
   width     : 100%;
   height    : 100%;
-  margin-top: 65px; 
+  // margin-top: 65px; 
   top       : 0;
 }
 
